@@ -15,18 +15,16 @@ jobs:
           name: Pulling docker image
           command: |
             docker pull registry.heroku.com/metadecidim/web || true
+            docker pull registry.heroku.com/metadecidim/worker || true
       - run:
           name: Build image
           command: |
-            docker build -t registry.heroku.com/metadecidim/web --cache-from registry.heroku.com/metadecidim/web .
+            docker build -f Dockerfile.web -t registry.heroku.com/metadecidim/web --cache-from registry.heroku.com/metadecidim/web .
+            docker build -f Dockerfile.worker -t registry.heroku.com/metadecidim/worker --cache-from registry.heroku.com/metadecidim/worker.
       - run:
           name: Push image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker push registry.heroku.com/metadecidim/web
+              docker push registry.heroku.com/metadecidim/worker
             fi
-deployment:
-  production:
-    branch: production
-    commands:
-      - ./deploy_prod.sh
