@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.4.2
 MAINTAINER david.morcillo@codegram.com
 
 ARG rails_env=production
@@ -21,6 +21,5 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 ADD . $APP_HOME
 
-RUN bundle exec rake DATABASE_URL=postgresql://user:pass@127.0.0.1/dbname assets:precompile
-
+RUN bundle exec rake assets:precompile
 CMD ["bundle", "exec", "rails", "s", "-b 0.0.0.0"]
