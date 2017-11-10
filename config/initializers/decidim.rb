@@ -2,11 +2,11 @@
 
 Decidim.configure do |config|
   config.application_name = "Metadecidim"
-  config.mailer_sender = "change-me@domain.org"
+  config.mailer_sender = Rails.application.secrets.email
   config.authorization_handlers = []
 
   # Change these lines to set your preferred locales
-  config.default_locale = :en
+  config.default_locale = :ca
   config.available_locales = [:en, :ca, :es]
 
   # Geocoder configuration
