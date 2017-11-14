@@ -37,4 +37,5 @@ group :production do
   gem 'lograge'
   gem 'sentry-raven'
   gem 'sidekiq'
+  gem 'rails_autoscale_agent'
 end
