@@ -3,6 +3,7 @@ services:
   app:
     build:
       context: .
+      dockerfile: Dockerfile.web
       args:
         rails_env: development
     volumes:
@@ -16,6 +17,21 @@ services:
       - pg
       - redis
     command: bundle exec rails s
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+      args:
+        rails_env: development
+    volumes:
+      - .:/code
+    environment:
+      - DATABASE_HOST=pg
+      - DATABASE_USERNAME=postgres
+    links:
+      - pg
+      - redis
+    command: bundle exec sidekiq
   pg:
     image: postgres
     volumes:
