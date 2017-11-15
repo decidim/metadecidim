@@ -4,6 +4,9 @@ MAINTAINER david.morcillo@codegram.com
 ARG rails_env=production
 ARG secret_key_base=
 
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+
 ENV APP_HOME /code
 ENV RAILS_ENV $rails_env
 ENV SECRET_KEY_BASE $secret_key_base
@@ -15,8 +18,10 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
+ADD Gemfile Gemfile
+ADD Gemfile.lock Gemfile.lock
+RUN bundle install
 
 ADD . $APP_HOME
-RUN bundle install
 RUN bundle exec rake assets:precompile
 CMD bundle exec passenger start -p ${PORT:-3000} --max-pool-size ${WEB_CONCURRENCY:-5}

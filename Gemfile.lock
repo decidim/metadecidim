@@ -1,5 +1,6 @@
-PATH
-  remote: decidim-debates
+GIT
+  remote: https://github.com/AjuntamentdeBarcelona/decidim-barcelona
+  revision: 9b05118e2365a436a1afa16c113c5eabfcee2b69
   specs:
     decidim-debates (0.0.1)
       date_validator (~> 0.9)
