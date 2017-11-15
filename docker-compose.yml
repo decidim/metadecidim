@@ -1,33 +1,30 @@
 version: '2'
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile.web
-      args:
-        rails_env: development
+    image: decidim/decidim:0.7.2-dev
     volumes:
-      - .:/code
+      - .:/app
+      - bundle:/usr/local/bundle
+      - node_modules:/app/node_modules
     environment:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
+      - RAILS_ENV=development
     ports:
       - 3000:3000
     links:
       - pg
       - redis
     command: bundle exec rails s
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile.worker
-      args:
-        rails_env: development
+  worker:
+    image: decidim/decidim:0.7.2-dev
     volumes:
-      - .:/code
+      - .:/app
+      - bundle:/usr/local/bundle
     environment:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
+      - RAILS_ENV=development
     links:
       - pg
       - redis
@@ -41,5 +38,7 @@ services:
     volumes:
       - redis-data:/data
 volumes:
+  node_modules: {}
+  bundle: {}
   pg-data: {}
   redis-data: {}

@@ -1,27 +1,11 @@
-FROM ruby:2.4.2
-MAINTAINER david.morcillo@codegram.com
+FROM decidim/decidim:0.7.2
+MAINTAINER info@codegram.com
 
-ARG rails_env=production
-ARG secret_key_base=
+ENV RAILS_ENV production
 
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
-
-ENV APP_HOME /code
-ENV RAILS_ENV $rails_env
-ENV SECRET_KEY_BASE $secret_key_base
-
-RUN apt-get update
-
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
-    apt-get install -y nodejs
-
-RUN mkdir -p $APP_HOME
-WORKDIR $APP_HOME
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
+COPY Gemfile .
+COPY Gemfile.lock .
 RUN bundle install
-
-ADD . $APP_HOME
+COPY . .
 RUN bundle exec rake assets:precompile
 CMD bundle exec passenger start -p ${PORT:-3000} --max-pool-size ${WEB_CONCURRENCY:-5}
