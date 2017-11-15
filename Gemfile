@@ -8,7 +8,7 @@ gem "decidim", "0.7.2"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 gem "decidim-assemblies"
-gem "decidim-debates", git: "https://github.com/AjuntamentdeBarcelona/decidim-barcelona"
+gem "decidim-debates", path: "decidim-debates"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
