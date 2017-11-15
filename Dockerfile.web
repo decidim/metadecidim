@@ -15,10 +15,8 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
-RUN bundle install
 
 ADD . $APP_HOME
+RUN bundle install
 RUN bundle exec rake assets:precompile
 CMD bundle exec passenger start -p ${PORT:-3000} --max-pool-size ${WEB_CONCURRENCY:-5}
