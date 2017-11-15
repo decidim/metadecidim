@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109104147) do
+ActiveRecord::Schema.define(version: 20171115133553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -186,6 +186,21 @@ ActiveRecord::Schema.define(version: 20171109104147) do
     t.index ["decidim_author_id"], name: "decidim_comments_comment_author"
     t.index ["decidim_commentable_type", "decidim_commentable_id"], name: "decidim_comments_comment_commentable"
     t.index ["decidim_root_commentable_type", "decidim_root_commentable_id"], name: "decidim_comments_comment_root_commentable"
+  end
+
+  create_table "decidim_debates_debates", id: :serial, force: :cascade do |t|
+    t.jsonb "title"
+    t.jsonb "description"
+    t.jsonb "instructions"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string "image"
+    t.integer "decidim_feature_id"
+    t.integer "decidim_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_category_id"], name: "index_decidim_debates_debates_on_decidim_category_id"
+    t.index ["decidim_feature_id"], name: "index_decidim_debates_debates_on_decidim_feature_id"
   end
 
   create_table "decidim_features", id: :serial, force: :cascade do |t|
