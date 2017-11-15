@@ -30,7 +30,6 @@ group :development do
 end
 
 group :production do
-  gem 'passenger'
   gem 'fog-aws'
   gem 'dalli'
   gem 'sendgrid-ruby'

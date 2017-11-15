@@ -6,6 +6,10 @@ ENV RAILS_ENV production
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
+
 COPY . .
 RUN bundle exec rake assets:precompile
+
+ENTRYPOINT []
+CMD bundle exec puma
 CMD bundle exec sidekiq -e ${RACK_ENV:-development} -C config/sidekiq.yml

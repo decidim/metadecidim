@@ -422,9 +422,6 @@ GEM
     parallel (1.12.0)
     parser (2.4.0.0)
       ast (~> 2.2)
-    passenger (5.1.11)
-      rack
-      rake (>= 0.8.1)
     pg (0.21.0)
     poltergeist (1.16.0)
       capybara (~> 2.1)
@@ -644,7 +641,6 @@ DEPENDENCIES
   listen (~> 3.1.0)
   lograge
   newrelic_rpm
-  passenger
   puma (~> 3.0)
   rails_autoscale_agent
   sendgrid-ruby

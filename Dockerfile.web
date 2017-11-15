@@ -6,6 +6,9 @@ ENV RAILS_ENV production
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
+
 COPY . .
 RUN bundle exec rake assets:precompile
-CMD bundle exec passenger start -p ${PORT:-3000} --max-pool-size ${WEB_CONCURRENCY:-5}
+
+ENTRYPOINT []
+CMD bundle exec puma
