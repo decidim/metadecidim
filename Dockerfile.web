@@ -1,15 +1,1 @@
-FROM decidim/decidim:0.7.2
-MAINTAINER info@codegram.com
-
-ENV RAILS_ENV production
-
-COPY Gemfile .
-COPY Gemfile.lock .
-RUN bundle install
-
-COPY . .
-RUN bundle exec rake assets:precompile
-
-ENTRYPOINT []
-ENV RAILS_SERVE_STATIC_FILES true
-CMD bundle exec rails s
+FROM decidim/decidim:latest-deploy
