@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.7.2"
+gem "decidim", "0.7.4"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 gem "decidim-assemblies"
