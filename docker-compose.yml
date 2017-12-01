@@ -3,9 +3,9 @@ services:
   app:
     image: decidim/decidim:0.7.4-dev
     volumes:
-      - .:/app
+      - .:/code
       - bundle:/usr/local/bundle
-      - node_modules:/app/node_modules
+      - node_modules:/code/node_modules
     environment:
       - PORT=3000
       - DATABASE_HOST=pg
@@ -21,7 +21,7 @@ services:
   worker:
     image: decidim/decidim:0.7.4-dev
     volumes:
-      - .:/app
+      - .:/code
       - bundle:/usr/local/bundle
     environment:
       - DATABASE_HOST=pg
