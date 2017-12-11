@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.8.0"
+gem "decidim", "0.8.1"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 gem "decidim-assemblies"
@@ -20,6 +20,7 @@ group :development, :test do
   gem "byebug", platform: :mri
 
   gem "decidim-dev"
+  gem "rspec-rails"
 end
 
 group :development do
