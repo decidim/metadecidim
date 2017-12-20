@@ -12,12 +12,13 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-initiatives
-  revision: 47ac55f612ee21ff5ebaaf861bd1033362b74ab8
+  revision: a2de7968bf5c64bb2fe562b967097342cb1d4901
   specs:
-    decidim-initiatives (0.1.53)
+    decidim-initiatives (0.2.5)
       decidim-admin
       decidim-comments
-      decidim-core (>= 0.7.4, < 0.9.0)
+      decidim-core (~> 0.8.3)
+      decidim-verifications
       kaminari (~> 1.0.1)
       rails (~> 5.1.4)
       rectify
@@ -331,7 +332,7 @@ GEM
       rails
     graphql (1.6.8)
     hashdiff (0.3.7)
-    hashie (3.5.6)
+    hashie (3.5.7)
     high_voltage (3.0.0)
     highline (1.7.10)
     htmlentities (4.3.4)
