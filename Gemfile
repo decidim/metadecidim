@@ -10,6 +10,7 @@ gem "decidim", "0.8.3"
 gem "decidim-assemblies"
 gem "decidim-debates", git: "https://github.com/AjuntamentdeBarcelona/decidim-barcelona"
 gem "decidim-initiatives", git: "https://github.com/decidim/decidim-initiatives"
+gem "decidim-sortitions", git: "https://github.com/decidim/decidim-module-sortitions"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"

@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211143237) do
+ActiveRecord::Schema.define(version: 20180108165033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
-  enable_extension "pg_stat_statements"
 
   create_table "decidim_accountability_results", id: :serial, force: :cascade do |t|
     t.jsonb "title"
@@ -159,7 +158,7 @@ ActiveRecord::Schema.define(version: 20171211143237) do
 
   create_table "decidim_categorizations", force: :cascade do |t|
     t.bigint "decidim_category_id", null: false
-    t.string "categorizable_type"
+    t.string "categorizable_type", null: false
     t.bigint "categorizable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -210,23 +209,6 @@ ActiveRecord::Schema.define(version: 20171211143237) do
     t.jsonb "extra"
     t.index ["decidim_category_id"], name: "index_decidim_debates_debates_on_decidim_category_id"
     t.index ["decidim_feature_id"], name: "index_decidim_debates_debates_on_decidim_feature_id"
-  end
-
-  create_table "decidim_dummy_resources", force: :cascade do |t|
-    t.string "title"
-    t.text "address"
-    t.float "latitude"
-    t.float "longitude"
-    t.bigint "decidim_feature_id"
-    t.bigint "decidim_author_id"
-    t.bigint "decidim_category_id"
-    t.bigint "decidim_scope_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["decidim_author_id"], name: "index_decidim_dummy_resources_on_decidim_author_id"
-    t.index ["decidim_category_id"], name: "index_decidim_dummy_resources_on_decidim_category_id"
-    t.index ["decidim_feature_id"], name: "index_decidim_dummy_resources_on_decidim_feature_id"
-    t.index ["decidim_scope_id"], name: "index_decidim_dummy_resources_on_decidim_scope_id"
   end
 
   create_table "decidim_features", id: :serial, force: :cascade do |t|
@@ -660,6 +642,29 @@ ActiveRecord::Schema.define(version: 20171211143237) do
     t.index ["parent_id"], name: "index_decidim_scopes_on_parent_id"
     t.index ["part_of"], name: "index_decidim_scopes_on_part_of", using: :gin
     t.index ["scope_type_id"], name: "index_decidim_scopes_on_scope_type_id"
+  end
+
+  create_table "decidim_sortitions_sortitions", force: :cascade do |t|
+    t.bigint "decidim_feature_id"
+    t.integer "decidim_proposals_feature_id"
+    t.integer "dice", null: false
+    t.integer "target_items", null: false
+    t.datetime "request_timestamp", null: false
+    t.jsonb "selected_proposals"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.jsonb "witnesses"
+    t.jsonb "additional_info"
+    t.bigint "decidim_author_id"
+    t.string "reference"
+    t.jsonb "title"
+    t.jsonb "cancel_reason"
+    t.datetime "cancelled_on"
+    t.integer "cancelled_by_user_id"
+    t.jsonb "candidate_proposals"
+    t.index ["decidim_author_id"], name: "index_decidim_sortitions_sortitions_on_decidim_author_id"
+    t.index ["decidim_feature_id"], name: "index_sortitions__on_feature"
+    t.index ["decidim_proposals_feature_id"], name: "index_sortitions__on_proposals_feature"
   end
 
   create_table "decidim_static_pages", id: :serial, force: :cascade do |t|
