@@ -163,6 +163,17 @@ GIT
       truncato
       wicked
 
+GIT
+  remote: https://github.com/decidim/decidim-module-sortitions
+  revision: 44bb4b1b70a5c2c87bb5e6df21f097e6d4ca5d34
+  specs:
+    decidim-sortitions (0.2.1)
+      decidim-admin (~> 0.9.0.pre)
+      decidim-comments (~> 0.9.0.pre)
+      decidim-core (~> 0.9.0.pre)
+      rails (~> 5.1.4)
+      social-share-button (~> 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -675,6 +686,7 @@ DEPENDENCIES
   decidim-debates!
   decidim-dev!
   decidim-initiatives!
+  decidim-sortitions!
   faker (~> 1.8.4)
   fog-aws
   letter_opener_web (~> 1.3.0)
