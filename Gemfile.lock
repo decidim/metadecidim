@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/AjuntamentdeBarcelona/decidim-barcelona
-  revision: 4d7ed8b2373f7d57d7fb3e68713e845eccb543fc
+  revision: 34f96e5a6016de914bebf745b394cbbf4d64a82a
   specs:
     decidim-debates (0.0.1)
       date_validator (~> 0.9)
@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 2004ee402b9120a2635dd8bc03464a3d84e6799c
+  revision: 79a9985c3247ca59a1eaeed14e6ef83c7f1bd329
   specs:
     decidim (0.9.0.pre)
       decidim-accountability (= 0.9.0.pre)
