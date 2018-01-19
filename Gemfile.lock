@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/AjuntamentdeBarcelona/decidim-barcelona
-  revision: 34f96e5a6016de914bebf745b394cbbf4d64a82a
+  revision: 3e8793b99a872b6ec3fc683dd663653168eb7204
   specs:
     decidim-debates (0.0.1)
       date_validator (~> 0.9)
@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 79a9985c3247ca59a1eaeed14e6ef83c7f1bd329
+  revision: 303b66443712b807c8d10634c3ce17d13cfaef8f
   specs:
     decidim (0.9.0.pre)
       decidim-accountability (= 0.9.0.pre)
@@ -473,7 +473,7 @@ GEM
       actionmailer (>= 3, < 6)
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (3.0.1)
-    puma (3.11.0)
+    puma (3.11.1)
     rack (2.0.3)
     rack-cors (1.0.2)
     rack-protection (2.0.0)
@@ -661,7 +661,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (3.2.1)
+    webmock (3.3.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
