@@ -1,2 +1,2 @@
-FROM decidim/decidim:0.7.4-deploy
+FROM decidim/decidim:0.9-deploy
 CMD bundle exec sidekiq -C config/sidekiq.yml
