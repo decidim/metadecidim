@@ -7,8 +7,6 @@ ruby RUBY_VERSION
 gem "decidim", git: "https://github.com/decidim/decidim"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
-gem "decidim-assemblies", git: "https://github.com/decidim/decidim"
-gem "decidim-debates", git: "https://github.com/AjuntamentdeBarcelona/decidim-barcelona"
 gem "decidim-initiatives", git: "https://github.com/decidim/decidim-initiatives"
 gem "decidim-sortitions", git: "https://github.com/decidim/decidim-module-sortitions"
 
