@@ -1,11 +1,11 @@
 version: '2'
 services:
   app:
-    image: decidim/decidim:0.7.4-dev
+    image: decidim/decidim:0.9-dev
     volumes:
-      - .:/code
-      - bundle:/usr/local/bundle
-      - node_modules:/code/node_modules
+      - .:/code:delegated
+      - bundle:/usr/local/bundle:delegated
+      - node_modules:/code/node_modules:delegated
     environment:
       - PORT=3000
       - DATABASE_HOST=pg
@@ -21,8 +21,8 @@ services:
   worker:
     image: decidim/decidim:0.7.4-dev
     volumes:
-      - .:/code
-      - bundle:/usr/local/bundle
+      - .:/code:delegated
+      - bundle:/usr/local/bundle:delegated
     environment:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
