@@ -16,9 +16,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-sortitions
-  revision: cd7899c07615b4a63334acaa60789a16d94b54ff
+  revision: ce2ca3b56ecf0cb228eecb71d523483731477967
   specs:
-    decidim-sortitions (0.2.1)
+    decidim-sortitions (0.2.2)
       decidim-admin (~> 0.9.0.pre)
       decidim-comments (~> 0.9.0.pre)
       decidim-core (~> 0.9.0.pre)
@@ -293,7 +293,7 @@ GEM
       i18n (>= 0.7)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.18)
+    ffi (1.9.21)
     file_validators (2.1.0)
       activemodel (>= 3.0)
       mime-types (>= 1.0)
