@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209143733) do
+ActiveRecord::Schema.define(version: 20180212105204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -218,7 +218,6 @@ ActiveRecord::Schema.define(version: 20180209143733) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "end_voting_date", null: false
-    t.boolean "enable_highlighted_banner", default: true, null: false
     t.date "results_published_at"
     t.index ["decidim_highlighted_scope_id"], name: "index_decidim_consultations_on_decidim_highlighted_scope_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_consultation_slug_and_organization", unique: true
