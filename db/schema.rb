@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212105204) do
+ActiveRecord::Schema.define(version: 20180222111240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
   enable_extension "pg_trgm"
 
   create_table "decidim_accountability_results", id: :serial, force: :cascade do |t|
@@ -167,7 +168,7 @@ ActiveRecord::Schema.define(version: 20180212105204) do
 
   create_table "decidim_categorizations", force: :cascade do |t|
     t.bigint "decidim_category_id", null: false
-    t.string "categorizable_type", null: false
+    t.string "categorizable_type"
     t.bigint "categorizable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -903,7 +904,7 @@ ActiveRecord::Schema.define(version: 20180212105204) do
     t.boolean "managed", default: false, null: false
     t.string "roles", default: [], array: true
     t.boolean "email_on_notification", default: false, null: false
-    t.string "nickname", limit: 20
+    t.string "nickname", limit: 20, default: "", null: false
     t.string "personal_url"
     t.text "about"
     t.datetime "officialized_at"

@@ -4,7 +4,9 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.9-stable" }
+
+gem "decidim", DECIDIM_VERSION
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 gem "decidim-initiatives", git: "https://github.com/decidim/decidim-initiatives"
