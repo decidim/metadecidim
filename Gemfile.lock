@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 47b1809eb34c6cf5551ab25bf780f01cbcfd30c0
+  revision: 4852f9049f108d9fe0c9320904a91cde9e97de49
   branch: 0.10-stable
   specs:
     decidim (0.10.0.pre)
@@ -587,7 +587,7 @@ GEM
       sprockets-rails
       tilt
     searchlight (4.1.0)
-    selenium-webdriver (3.10.0)
+    selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     sendgrid-ruby (5.2.0)
@@ -612,7 +612,7 @@ GEM
       tilt (~> 2.0)
     social-share-button (1.0.0)
       coffee-rails
-    spreadsheet (1.1.5)
+    spreadsheet (1.1.6)
       ruby-ole (>= 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
