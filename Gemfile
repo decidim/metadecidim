@@ -4,14 +4,12 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "~> 0.10.0"
+DECIDIM_VERSION = "~> 0.11.0.pre"
 
 gem "decidim", DECIDIM_VERSION
-
-# Uncomment the following line if you want to use decidim-assemblies plugin
-gem "decidim-initiatives", git: "https://github.com/decidim/decidim-initiatives", branch: "0.10-stable"
-gem "decidim-sortitions", git: "https://github.com/decidim/decidim-module-sortitions", branch: "0.10-stable"
-gem "decidim-consultations", git: "https://github.com/decidim/decidim-module-consultations", branch: "0.10-stable"
+gem "decidim-initiatives"
+gem "decidim-sortitions"
+gem "decidim-consultations"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
