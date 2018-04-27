@@ -4,12 +4,12 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "~> 0.11.0.pre"
+DECIDIM_VERSION = "0.11.0.pre1"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-initiatives"
-gem "decidim-sortitions"
-gem "decidim-consultations"
+gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-sortitions", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
