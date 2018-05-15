@@ -1,0 +1,50 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: decidim/decidim@sha256:2643b48944b2a2aedfb84ef6e48c1beec285c167319923422522bfa6df53d287
+      environment:
+        BUNDLE_GEMFILE: /app/Gemfile
+        SIMPLECOV: true
+        DATABASE_USERNAME: postgres
+        FAIL_FAST: true
+    - image: postgres
+      environment:
+        POSTGRES_USER: postgres
+  working_directory: /app
+
+jobs:
+  tests:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - bundler-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install ruby dependencies
+          command: bundle install --jobs=4 --retry=3
+      - save_cache:
+          key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /usr/local/bundle/
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Create test DB
+          command: RAILS_ENV=test bundle exec rails db:create db:schema:load
+      - run:
+          name: Precompile assets
+          command: RAILS_ENV=test bundle exec rake assets:precompile
+      - run:
+          name: Run tests
+          command: bundle exec rake
+      - store_artifacts:
+          path: /app/tmp/capybara
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - tests
