@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 8e42ca10b54b89840d4cba65e08abdd00615c080
-  branch: fix_past_processes
+  revision: 8c123928b34727e5bf51970ff31f75aa661aab9a
+  branch: metadecidim
   specs:
     decidim (0.12.0.dev)
       decidim-accountability (= 0.12.0.dev)
