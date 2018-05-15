@@ -8,6 +8,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "fix_past
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
 gem "passenger"
 
 gem "puma", "~> 3.0"

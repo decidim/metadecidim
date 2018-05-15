@@ -57,6 +57,10 @@ GIT
     decidim-comments (0.12.0.dev)
       decidim-core (= 0.12.0.dev)
       jquery-rails (~> 4.0)
+    decidim-consultations (0.12.0.dev)
+      decidim-admin (= 0.12.0.dev)
+      decidim-comments (= 0.12.0.dev)
+      decidim-core (= 0.12.0.dev)
     decidim-core (0.12.0.dev)
       active_link_to (~> 1.0)
       autoprefixer-rails (~> 8.0)
@@ -719,6 +723,7 @@ DEPENDENCIES
   byebug
   dalli
   decidim!
+  decidim-consultations!
   decidim-dev!
   decidim-initiatives!
   faker (~> 1.8.4)
