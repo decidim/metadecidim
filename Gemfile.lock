@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 83dec3c8e18d3d7404a8f5d3bfe47033e4da7ea1
+  revision: ba046bfb4a380b38dcd2c11b0e4f56d4e7a1ca0e
   branch: metadecidim
   specs:
     decidim (0.12.0.dev)
@@ -234,7 +234,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
     better_html (1.0.10)
       actionview (>= 4.0)
       activesupport (>= 4.0)
