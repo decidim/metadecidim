@@ -9,9 +9,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "metadeci
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "passenger"
 
-gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
@@ -21,6 +19,7 @@ group :development, :test do
 
   gem "decidim-dev", DECIDIM_VERSION
   gem "rspec-rails"
+  gem "puma", "~> 3.0"
 end
 
 group :development do
@@ -40,4 +39,5 @@ group :production do
   gem 'sentry-raven'
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
+  gem "passenger"
 end
