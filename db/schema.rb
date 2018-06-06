@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_124820) do
+ActiveRecord::Schema.define(version: 2018_06_06_124930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_124820) do
     t.datetime "updated_at", null: false
     t.integer "children_count", default: 0
     t.integer "legacy_id"
+    t.float "weight", default: 1.0
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id", "external_id"], name: "decidim_accountability_results_on_external_id", unique: true
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
@@ -537,6 +538,28 @@ ActiveRecord::Schema.define(version: 2018_05_29_124820) do
     t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_votes_on_decidim_initiative_id"
   end
 
+  create_table "decidim_meetings_agenda_items", force: :cascade do |t|
+    t.bigint "decidim_agenda_id"
+    t.integer "position"
+    t.bigint "parent_id"
+    t.integer "duration"
+    t.jsonb "title"
+    t.jsonb "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_agenda_id"], name: "index_decidim_meetings_agenda_items_on_decidim_agenda_id"
+    t.index ["parent_id"], name: "index_decidim_meetings_agenda_items_on_parent_id"
+  end
+
+  create_table "decidim_meetings_agendas", force: :cascade do |t|
+    t.jsonb "title"
+    t.bigint "decidim_meeting_id", null: false
+    t.boolean "visible"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
+  end
+
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|
     t.jsonb "title"
     t.jsonb "description"
@@ -707,6 +730,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_124820) do
     t.jsonb "highlighted_content_banner_action_subtitle"
     t.string "highlighted_content_banner_action_url"
     t.string "highlighted_content_banner_image"
+    t.datetime "tos_version"
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
@@ -923,6 +947,27 @@ ActiveRecord::Schema.define(version: 2018_05_29_124820) do
     t.index ["scope_type_id"], name: "index_decidim_scopes_on_scope_type_id"
   end
 
+  create_table "decidim_searchable_resources", force: :cascade do |t|
+    t.text "content_a"
+    t.text "content_b"
+    t.text "content_c"
+    t.text "content_d"
+    t.string "locale", null: false
+    t.datetime "datetime"
+    t.bigint "decidim_scope_id"
+    t.string "decidim_participatory_space_type"
+    t.bigint "decidim_participatory_space_id"
+    t.bigint "decidim_organization_id"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_searchable_resources_on_decidim_organization_id"
+    t.index ["decidim_participatory_space_type", "decidim_participatory_space_id"], name: "index_decidim_searchable_resource_on_pspace_type_and_pspace_id"
+    t.index ["decidim_scope_id"], name: "index_decidim_searchable_resources_on_decidim_scope_id"
+    t.index ["resource_type", "resource_id"], name: "index_decidim_searchable_rsrcs_on_s_type_and_s_id"
+  end
+
   create_table "decidim_sortitions_sortitions", force: :cascade do |t|
     t.bigint "decidim_component_id"
     t.integer "decidim_proposals_component_id"
@@ -1091,6 +1136,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_124820) do
     t.text "about"
     t.datetime "officialized_at"
     t.jsonb "officialized_as"
+    t.datetime "accepted_tos_version"
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false))"
