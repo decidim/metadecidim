@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_27_074922) do
+ActiveRecord::Schema.define(version: 2018_07_16_132549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -572,6 +572,18 @@ ActiveRecord::Schema.define(version: 2018_06_27_074922) do
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
   end
 
+  create_table "decidim_meetings_invites", force: :cascade do |t|
+    t.bigint "decidim_user_id", null: false
+    t.bigint "decidim_meeting_id", null: false
+    t.datetime "sent_at"
+    t.datetime "accepted_at"
+    t.datetime "rejected_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_invites_on_decidim_meeting_id"
+    t.index ["decidim_user_id"], name: "index_decidim_meetings_invites_on_decidim_user_id"
+  end
+
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|
     t.jsonb "title"
     t.jsonb "description"
@@ -624,6 +636,7 @@ ActiveRecord::Schema.define(version: 2018_06_27_074922) do
     t.bigint "decidim_meeting_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "code"
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_registrations_on_decidim_meeting_id"
     t.index ["decidim_user_id", "decidim_meeting_id"], name: "decidim_meetings_registrations_user_meeting_unique", unique: true
     t.index ["decidim_user_id"], name: "index_decidim_meetings_registrations_on_decidim_user_id"
@@ -853,7 +866,7 @@ ActiveRecord::Schema.define(version: 2018_06_27_074922) do
     t.bigint "decidim_user_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "decidim_proposal_id, decidim_author_id, (COALESCE(decidim_user_group_id, ('-1'::integer)::bigint))", name: "decidim_proposals_proposal_endorsmt_proposal_auth_ugroup_uniq", unique: true
+    t.index "decidim_proposal_id, decidim_author_id, COALESCE(decidim_user_group_id, ('-1'::integer)::bigint)", name: "decidim_proposals_proposal_endorsmt_proposal_auth_ugroup_uniq", unique: true
     t.index ["decidim_author_id"], name: "decidim_proposals_proposal_endorsement_author"
     t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_endorsement_proposal"
     t.index ["decidim_user_group_id"], name: "decidim_proposals_proposal_endorsement_user_group"
@@ -933,6 +946,15 @@ ActiveRecord::Schema.define(version: 2018_06_27_074922) do
     t.index ["from_type", "from_id"], name: "index_decidim_resource_links_on_from_type_and_from_id"
     t.index ["name"], name: "index_decidim_resource_links_on_name"
     t.index ["to_type", "to_id"], name: "index_decidim_resource_links_on_to_type_and_to_id"
+  end
+
+  create_table "decidim_resource_permissions", force: :cascade do |t|
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.jsonb "permissions", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resource_type", "resource_id"], name: "index_decidim_resource_permissions_on_r_type_and_r_id", unique: true
   end
 
   create_table "decidim_scope_types", id: :serial, force: :cascade do |t|
