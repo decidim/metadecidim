@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: b9e7a769b1544a42ee419f52fd666b2ca556cef0
-  branch: master
+  revision: 3eb0578ca8825f2bfec5f1f9786d9df6288f870e
+  branch: fix_asset_linking
   specs:
     decidim (0.14.0.dev)
       decidim-accountability (= 0.14.0.dev)
