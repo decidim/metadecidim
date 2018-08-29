@@ -9,6 +9,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "master" 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
+gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 
 gem "uglifier", ">= 1.3.0"
 
