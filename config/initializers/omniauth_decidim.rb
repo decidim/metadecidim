@@ -1,9 +1,14 @@
-Devise.setup do |config|
-  config.omniauth :decidim,
-    ENV["DECIDIM_CLIENT_ID"],
-    ENV["DECIDIM_CLIENT_SECRET"],
-    ENV["DECIDIM_SITE_URL"],
-    scope: :public
-end
+# frozen_string_literal: true
 
-Decidim::User.omniauth_providers << :decidim
+if Rails.application.secrets.dig(:omniauth, :decidim, :enabled)
+  byebug
+  Devise.setup do |config|
+    config.omniauth :decidim,
+                    Rails.application.secrets.dig(:omniauth, :decidim, :client_id),
+                    Rails.application.secrets.dig(:omniauth, :decidim, :client_secret),
+                    Rails.application.secrets.dig(:omniauth, :decidim, :site_url),
+                    scope: :public
+  end
+
+  Decidim::User.omniauth_providers << :decidim
+end
