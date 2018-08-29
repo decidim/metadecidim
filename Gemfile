@@ -4,12 +4,11 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "fix_asset_linking" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "master" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "rails", "5.2.0"
 
 gem "uglifier", ">= 1.3.0"
 
