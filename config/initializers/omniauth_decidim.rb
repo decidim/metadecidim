@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 if Rails.application.secrets.dig(:omniauth, :decidim, :enabled)
-  byebug
   Devise.setup do |config|
     config.omniauth :decidim,
                     Rails.application.secrets.dig(:omniauth, :decidim, :client_id),
