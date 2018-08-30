@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_130057) do
+ActiveRecord::Schema.define(version: 2018_08_30_122357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -425,6 +425,7 @@ ActiveRecord::Schema.define(version: 2018_08_28_130057) do
     t.jsonb "settings"
     t.datetime "published_at"
     t.integer "weight"
+    t.jsonb "images", default: {}
     t.index ["decidim_organization_id", "scope", "manifest_name"], name: "idx_dcdm_content_blocks_uniq_org_id_scope_manifest_name", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_content_blocks_on_decidim_organization_id"
     t.index ["manifest_name"], name: "index_decidim_content_blocks_on_manifest_name"
@@ -465,6 +466,15 @@ ActiveRecord::Schema.define(version: 2018_08_28_130057) do
     t.string "badge_name", null: false
     t.integer "value", default: 0, null: false
     t.index ["user_id"], name: "index_decidim_gamification_badge_scores_on_user_id"
+  end
+
+  create_table "decidim_hashtags", force: :cascade do |t|
+    t.bigint "decidim_organization_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_hashtags_on_decidim_organization_id"
+    t.index ["name"], name: "index_decidim_hashtags_on_name"
   end
 
   create_table "decidim_identities", id: :serial, force: :cascade do |t|
@@ -738,8 +748,6 @@ ActiveRecord::Schema.define(version: 2018_08_28_130057) do
     t.string "host", null: false
     t.string "default_locale", null: false
     t.string "available_locales", default: [], array: true
-    t.jsonb "welcome_text"
-    t.string "homepage_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.jsonb "description"
