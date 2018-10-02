@@ -1,0 +1,63 @@
+es:
+  activemodel:
+    attributes:
+      postal_letter_address:
+        full_address: Dirección completa
+      postal_letter_confirmation:
+        verification_code: Código de verificación
+      postal_letter_postage:
+        full_address: Dirección completa
+        verification_code: Código de verificación
+  decidim:
+    authorization_handlers:
+      admin:
+        postal_letter:
+          help:
+            - Los usuarios solicitan que se envíe un código de verificación a su dirección.
+            - Envías la carta a su dirección con el código de verificación.
+            - Marcas la carta como enviada.
+            - Una vez hayas marcado la carta como enviada, el usuario podrá introducir el código y ser verificado.
+      direct: Directo
+      help: Ayuda
+      id_documents:
+        explanation: Sube tus documentos de identidad para que podamos verificar tu identidad
+        name: Documentos de identidad
+      multistep: Con varios pasos
+      name: Nombre
+      postal_letter:
+        explanation: Te enviaremos una carta postal con un código que deberás ingresar para que podamos verificar tu dirección
+        name: Código por carta postal
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            postal_letter: Verifícate recibiendo un código de verificación a través de correo postal
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              address: Dirección
+              letter_sent_at: Carta enviada el
+              mark_as_sent: Marcar como enviada
+              not_yet_sent: Aún no se ha enviado
+              title: Verificaciones en curso
+              username: Nombre de usuario
+              verification_code: Código de verificación
+          postages:
+            create:
+              error: Error al marcar la carta como enviada
+              success: Carta marcada como enviada correctamente
+        authorizations:
+          create:
+            error: Hubo un problema con su petición
+            success: '¡Gracias! Te enviaremos un código de verificación a tu dirección'
+          edit:
+            send: Confirmar
+            title: Introduce el código de verificación que recibiste
+            waiting_for_letter: Pronto enviaremos una carta a tu dirección con tu código de verificación
+          new:
+            send: Mándame una carta
+            title: Solicita tu código de verificación
+          update:
+            error: Tu código de verificación no coincide con el nuestro. Por favor, revisa la carta que te enviamos
+            success: Felicidades. Has sido verificado correctamente

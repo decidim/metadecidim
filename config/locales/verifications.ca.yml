@@ -1,0 +1,63 @@
+ca:
+  activemodel:
+    attributes:
+      postal_letter_address:
+        full_address: Adreça completa
+      postal_letter_confirmation:
+        verification_code: Codi de verificació
+      postal_letter_postage:
+        full_address: Adreça completa
+        verification_code: Codi de verificació
+  decidim:
+    authorization_handlers:
+      admin:
+        postal_letter:
+          help:
+            - Els usuaris sol·liciten un codi de verificació que s'enviarà a la seva adreça.
+            - Envies la carta a la seva adreça amb el codi de verificació.
+            - Marques la carta com a enviada.
+            - Una vegada la carta està marcada com a enviada, l'usuari podrà introduir el codi i verificar-se.
+      direct: Directe
+      help: Ajuda
+      id_documents:
+        explanation: Carrega els teus documents d'identitat per a que puguem comprovar la teva identitat
+        name: Documents d'identitat
+      multistep: Amb múltiples passos
+      name: Nom
+      postal_letter:
+        explanation: T'enviarem una carta postal amb un codi que hauràs d'introduir perquè puguem verificar la teva adreça
+        name: Codi per carta postal
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            postal_letter: Verifica't rebent un codi de verificació per correu postal
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              address: Adreça
+              letter_sent_at: Carta enviada el
+              mark_as_sent: Marca com a enviada
+              not_yet_sent: Encara no s'ha enviat
+              title: Verificacions en curs
+              username: Nom d'usuari
+              verification_code: Codi de verificació
+          postages:
+            create:
+              error: S'ha produït un error en marcar la carta com a enviada
+              success: La carta s'ha marcat com a enviada correctament
+        authorizations:
+          create:
+            error: S'ha produït un problema amb la teva sol·licitud
+            success: Gràcies! Enviarem un codi de verificació a la teva adreça
+          edit:
+            send: Confirmar
+            title: Introduïeix el codi de verificació que has rebut
+            waiting_for_letter: En breu enviarem una carta a la teva adreça amb el teu codi de verificació
+          new:
+            send: Envia'm una carta
+            title: Sol·licita el teu codi de verificació
+          update:
+            error: El teu codi de verificació no coincideix amb el nostre. Si us plau, revisa la carta que t'hem enviat
+            success: Felicitats. T'has verificat correctament
