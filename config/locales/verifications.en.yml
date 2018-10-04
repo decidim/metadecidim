@@ -1,0 +1,63 @@
+en:
+  activemodel:
+    attributes:
+      postal_letter_address:
+        full_address: E-mail address
+      postal_letter_confirmation:
+        verification_code: Verification code
+      postal_letter_postage:
+        full_address: E-mail address
+        verification_code: Verification code
+  decidim:
+    authorization_handlers:
+      admin:
+        postal_letter:
+          help:
+          - Users request a verification code to be sent to their E-mail address.
+          - You send the e-mail with the verification code.
+          - You mark the e-mail as sent.
+          - Once you mark the e-mail as sent, the user will be able to introduce the code and get verified.
+      direct: Direct
+      help: Help
+      id_documents:
+        explanation: Upload your identity documents so we can check your identity
+        name: Identity documents
+      multistep: Multi-Step
+      name: Name
+      postal_letter:
+        explanation: We'll send you an e-mail with a code that you'll have to enter so we can verify your account
+        name: Code by e-mail address
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            postal_letter: Get verified by receiving a verification code through e-mail address
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              address: E-mail address
+              letter_sent_at: E-mail sent at
+              mark_as_sent: Mark as sent
+              not_yet_sent: Not yet sent
+              title: Ongoing verifications
+              username: Username
+              verification_code: Verification code
+          postages:
+            create:
+              error: Error marking e-mail as sent
+              success: E-mail successfully marked as sent
+        authorizations:
+          create:
+            error: There was a problem with your request
+            success: Thanks! We'll send a verification code to your e-mail
+          edit:
+            send: Confirm
+            title: Introduce the verification code you received
+            waiting_for_letter: We'll be sending an e-mail with your verification code soon
+          new:
+            send: Send me an e-mail
+            title: Request your verification code
+          update:
+            error: Your verification code doesn't match ours. Please double-check the e-mail we sent to you
+            success: Congratulations. You've been successfully verified

@@ -1,0 +1,63 @@
+es:
+  activemodel:
+    attributes:
+      postal_letter_address:
+        full_address: Correo electrónico
+      postal_letter_confirmation:
+        verification_code: Código de verificación
+      postal_letter_postage:
+        full_address: Correo electrónico
+        verification_code: Código de verificación
+  decidim:
+    authorization_handlers:
+      admin:
+        postal_letter:
+          help:
+            - Los usuarios solicitan que se envíe un código de verificación a su correo electrónico.
+            - Envías el correo electrónico con el código de verificación.
+            - Marcas el correo como enviado.
+            - Una vez hayas marcado el correo como enviado, el usuario podrá introducir el código y ser verificado.
+      direct: Directo
+      help: Ayuda
+      id_documents:
+        explanation: Sube tus documentos de identidad para que podamos verificar tu identidad
+        name: Documentos de identidad
+      multistep: Con varios pasos
+      name: Nombre
+      postal_letter:
+        explanation: Te enviaremos un correo electrónico con un código que deberás ingresar para que podamos verificar tu cuenta
+        name: Código por correo electrónico
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            postal_letter: Verifícate recibiendo un código de verificación por correo electrónico
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              address: Correo electrónico
+              letter_sent_at: Correo electrónico enviado el
+              mark_as_sent: Marcar como enviado
+              not_yet_sent: Aún no se ha enviado
+              title: Verificaciones en curso
+              username: Nombre de usuario
+              verification_code: Código de verificación
+          postages:
+            create:
+              error: Error al marcar el correo como enviado
+              success: Correo electrónico marcado como enviado correctamente
+        authorizations:
+          create:
+            error: Hubo un problema con su petición
+            success: '¡Gracias! Te enviaremos un código de verificación a tu correo electrónico'
+          edit:
+            send: Confirmar
+            title: Introduce el código de verificación que recibiste
+            waiting_for_letter: Pronto enviaremos una carta a tu correo electrónico con tu código de verificación
+          new:
+            send: Mándame una correo electrónico
+            title: Solicita tu código de verificación
+          update:
+            error: Tu código de verificación no coincide con el nuestro. Por favor, revisa el correo electrónico que te enviamos
+            success: Felicidades. Has sido verificado correctamente
