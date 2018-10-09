@@ -25,7 +25,7 @@ ca:
       multistep: Amb múltiples passos
       name: Nom
       postal_letter:
-        explanation: T'enviarem un correu electrònic amb un codi que hauràs d'introduir perquè puguem verificar el teu compte
+        explanation: El Comité de Verificació es posarà en contacte amb tu a través d'un missatge intern per la plataforma per comprovar que es compleix algun dels criteris establerts.
         name: Codi per correu electrònic
     verifications:
       authorizations:

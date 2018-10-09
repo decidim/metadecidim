@@ -25,7 +25,7 @@ es:
       multistep: Con varios pasos
       name: Nombre
       postal_letter:
-        explanation: Te enviaremos un correo electrónico con un código que deberás ingresar para que podamos verificar tu cuenta
+        explanation: El Comité de Verificación se pondrá en contacto contigo a través de un mensaje interno de la plataforma para comprobar que se cumple alguno de los criterios establecidos
         name: Código por correo electrónico
     verifications:
       authorizations:
