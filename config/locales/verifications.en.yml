@@ -25,7 +25,7 @@ en:
       multistep: Multi-Step
       name: Name
       postal_letter:
-        explanation: We'll send you an e-mail with a code that you'll have to enter so we can verify your account
+        explanation: The Verification Committee will contact you through an internal message of the platform to verify that one of the established criteria is met
         name: Code by e-mail address
     verifications:
       authorizations:
