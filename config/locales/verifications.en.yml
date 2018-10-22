@@ -50,11 +50,11 @@ en:
         authorizations:
           create:
             error: There was a problem with your request
-            success: Thanks! We'll send a verification code to your e-mail
+            success: Thanks! The Verification Committee will contact you through an internal message of the platform to verify that one of the established criteria is met.
           edit:
             send: Confirm
             title: Introduce the verification code you received
-            waiting_for_letter: We'll be sending an e-mail with your verification code soon
+            waiting_for_letter: The Verification Committee will contact you through an internal message of the platform to verify that one of the established criteria is met.
           new:
             send: Send me an e-mail
             title: Request your verification code
