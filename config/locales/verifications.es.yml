@@ -50,11 +50,11 @@ es:
         authorizations:
           create:
             error: Hubo un problema con su petición
-            success: '¡Gracias! Te enviaremos un código de verificación a tu correo electrónico'
+            success: '¡Gracias! El Comité de Verificación se pondrá en contacto contigo a través de un mensaje interno de la plataforma para comprobar que se cumple alguno de los criterios establecidos'
           edit:
             send: Confirmar
             title: Introduce el código de verificación que recibiste
-            waiting_for_letter: Pronto enviaremos una carta a tu correo electrónico con tu código de verificación
+            waiting_for_letter: El Comité de Verificación se pondrá en contacto contigo a través de un mensaje interno de la plataforma para comprobar que se cumple alguno de los criterios establecidos
           new:
             send: Mándame una correo electrónico
             title: Solicita tu código de verificación

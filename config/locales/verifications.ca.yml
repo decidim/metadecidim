@@ -50,11 +50,12 @@ ca:
         authorizations:
           create:
             error: S'ha produït un problema amb la teva sol·licitud
-            success: Gràcies! Enviarem un codi de verificació al teu correu electrònic
+            success: Gràcies! El Comité de Verificació es posarà en contacte amb tu a través d'un missatge intern per la plataforma per comprovar que es compleix algun dels criteris establerts.
           edit:
             send: Confirmar
             title: Introduïeix el codi de verificació que has rebut
-            waiting_for_letter: En breu t'enviarem un correu electrònic amb el teu codi de verificació
+            waiting_for_letter: En breu el Comité de Verificació es posarà en contacte amb tu a través d'un missatge intern per la plataforma per comprovar que es compleix algun dels criteris establerts.
+
           new:
             send: Envia'm un correu electrònic
             title: Sol·licita el teu codi de verificació
