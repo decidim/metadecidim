@@ -2,20 +2,13 @@
 # This migration comes from decidim_sortitions (originally 20181017110803)
 
 class MakeSortitionsAuthorsPolymorphic < ActiveRecord::Migration[5.2]
-  class Sortition < ApplicationRecord
-    self.table_name = :decidim_sortitions_sortitions
-  end
-  class User < ApplicationRecord
-    self.table_name = :decidim_users
-  end
-
   def change
     add_column :decidim_sortitions_sortitions, :decidim_author_type, :string
 
-    Sortition.reset_column_information
-    Sortition.includes(:author).find_each do |sortition|
+    Decidim::Sortitions::Sortition.reset_column_information
+    Decidim::Sortitions::Sortition.includes(:author).find_each do |sortition|
       author = if sortition.decidim_author_id.present?
-                 User.find(sortition.decidim_author_id)
+                 Decidim::User.find(sortition.decidim_author_id)
                else
                  sortition.organization
                end
