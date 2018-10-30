@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 63a08501a01c6fdf3cb2632317751b7a5e8fe7c4
+  revision: 05d069472e2295b0b845008d2cd03bed7a4b9046
   branch: 0.15-stable
   specs:
     decidim (0.15.0.dev)
@@ -58,6 +58,9 @@ GIT
     decidim-comments (0.15.0.dev)
       decidim-core (= 0.15.0.dev)
       jquery-rails (~> 4.0)
+    decidim-conferences (0.15.0.dev)
+      decidim-core (~> 0.15.a)
+      decidim-meetings (~> 0.15.a)
     decidim-consultations (0.15.0.dev)
       decidim-admin (= 0.15.0.dev)
       decidim-comments (= 0.15.0.dev)
@@ -244,7 +247,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_list (0.9.16)
+    acts_as_list (0.9.17)
       activerecord (>= 3.0)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
@@ -411,13 +414,14 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.27)
+    i18n-tasks (0.9.28)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
       highline (>= 2.0.0)
       i18n
       parser (>= 2.2.3.0)
+      rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
     icalendar (2.5.0)
@@ -769,6 +773,7 @@ DEPENDENCIES
   byebug
   dalli
   decidim!
+  decidim-conferences!
   decidim-consultations!
   decidim-dev!
   decidim-initiatives!
