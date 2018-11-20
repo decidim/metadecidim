@@ -15,13 +15,12 @@ gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
+gem "puma"
 
 group :development, :test do
   gem "byebug", platform: :mri
-
   gem "decidim-dev", DECIDIM_VERSION
   gem "rspec-rails"
-  gem "puma", "~> 3.0"
 end
 
 group :development do
@@ -41,5 +40,4 @@ group :production do
   gem 'sentry-raven'
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
-  gem "passenger"
 end
