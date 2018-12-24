@@ -1,0 +1,5 @@
+---
+ca:
+  decidim:
+    sms:
+      text: "El teu codi per verificar-te a Metadecidim és: %{code}"

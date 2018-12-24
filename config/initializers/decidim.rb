@@ -42,6 +42,10 @@ Decidim.configure do |config|
   # take over user accounts.
   #
   config.enable_html_header_snippets = true
+
+  if Rails.application.secrets.sms.values.all?(&:present?)
+    config.sms_gateway_service = "SmsGateway"
+  end
 end
 
 Decidim::Initiatives.do_not_require_authorization = true
