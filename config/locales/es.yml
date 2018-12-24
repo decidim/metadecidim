@@ -1,5 +1,5 @@
 ---
-ca:
+es:
   decidim:
     sms:
       text: "Tu código para verificarte en Metadecidim es: %{code}"
