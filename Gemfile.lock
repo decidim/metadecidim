@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: d587a420e0f6c43aec7ed65a16f4b6f666bdac5c
+  revision: f523607d186ee4bcd6c662446c7488755c72f6f1
   branch: 0.16-stable
   specs:
     decidim (0.16.0)
@@ -328,7 +328,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    css_parser (1.6.0)
+    css_parser (1.7.0)
       addressable
     dalli (2.7.8)
     date_validator (0.9.0)
