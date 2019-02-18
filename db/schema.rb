@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_112308) do
+ActiveRecord::Schema.define(version: 2019_02_18_160126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1253,14 +1253,14 @@ ActiveRecord::Schema.define(version: 2019_01_23_112308) do
     t.string "participatory_text_level"
     t.integer "position"
     t.boolean "created_in_meeting", default: false
-    t.index ["body"], name: "decidim_proposals_proposal_body_search"
+    t.index "md5(body)", name: "decidim_proposals_proposal_body_search"
+    t.index "md5(title)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"
     t.index ["decidim_component_id"], name: "index_decidim_proposals_proposals_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_proposals_proposals_on_decidim_scope_id"
     t.index ["proposal_endorsements_count"], name: "idx_decidim_proposals_proposals_on_proposal_endorsemnts_count"
     t.index ["proposal_votes_count"], name: "index_decidim_proposals_proposals_on_proposal_votes_count"
     t.index ["state"], name: "index_decidim_proposals_proposals_on_state"
-    t.index ["title"], name: "decidim_proposals_proposal_title_search"
   end
 
   create_table "decidim_reports", id: :serial, force: :cascade do |t|
