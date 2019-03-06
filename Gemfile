@@ -4,8 +4,9 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.16-stable" }
-TERM_CUSTOMIZER_VERSION = { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.16-stable" }
+BRANCH = "0.16-stable"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: BRANCH }
+TERM_CUSTOMIZER_VERSION = { git: "https://github.com/mainio/decidim-module-term_customizer", branch: BRANCH }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
