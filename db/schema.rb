@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_18_160126) do
+ActiveRecord::Schema.define(version: 2019_03_26_080224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -799,6 +799,13 @@ ActiveRecord::Schema.define(version: 2019_02_18_160126) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "banner_image"
+    t.boolean "collect_user_extra_fields", default: false
+    t.boolean "online_signature_enabled", default: true, null: false
+    t.jsonb "extra_fields_legal_information"
+    t.integer "minimum_committee_members"
+    t.boolean "validate_sms_code_on_votes", default: false
+    t.string "document_number_authorization_handler"
+    t.boolean "undo_online_signatures_enabled", default: true, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_initiative_types_on_decidim_organization_id"
   end
 
@@ -808,6 +815,9 @@ ActiveRecord::Schema.define(version: 2019_02_18_160126) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "decidim_user_group_id"
+    t.text "encrypted_metadata"
+    t.string "timestamp"
+    t.string "hash_id"
     t.index ["decidim_author_id"], name: "index_decidim_initiatives_votes_on_decidim_author_id"
     t.index ["decidim_initiative_id", "decidim_author_id", "decidim_user_group_id"], name: "decidim_initiatives_voutes_author_uniqueness_index", unique: true
     t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_votes_on_decidim_initiative_id"
@@ -1046,6 +1056,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_160126) do
     t.string "id_documents_methods", default: ["online"], array: true
     t.jsonb "id_documents_explanation_text", default: {}
     t.boolean "user_groups_enabled", default: false, null: false
+    t.jsonb "colors", default: {}
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
@@ -1529,6 +1540,14 @@ ActiveRecord::Schema.define(version: 2019_02_18_160126) do
     t.index ["reset_password_token"], name: "index_decidim_users_on_reset_password_token", unique: true
   end
 
+  create_table "decidim_verifications_csv_data", force: :cascade do |t|
+    t.string "email"
+    t.bigint "decidim_organization_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_verifications_csv_census_to_organization"
+  end
+
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer "resource_owner_id", null: false
     t.bigint "application_id", null: false
@@ -1604,6 +1623,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_160126) do
   add_foreign_key "decidim_scopes", "decidim_scopes", column: "parent_id"
   add_foreign_key "decidim_static_pages", "decidim_organizations"
   add_foreign_key "decidim_users", "decidim_organizations"
+  add_foreign_key "decidim_verifications_csv_data", "decidim_organizations"
   add_foreign_key "oauth_access_grants", "decidim_users", column: "resource_owner_id"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "decidim_users", column: "resource_owner_id"
