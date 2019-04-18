@@ -3,15 +3,12 @@
 //Overwrite Admin custom colors with our theme
 html:root {
   --primary: #{$primary};
-  // --secondary: #{$secondary};
-  // --success: #{$success};
-  // --warning: #{$warning};
-  // --alert: #{$alert};
+  --secondary: #{$secondary};
+  --success: #{$success};
+  --warning: #{$warning};
+  --alert: #{$alert};
   // --proposals: #{$proposals};
   // --actions: #{$actions};
   // --debates: #{$debates};
   // --meetings: #{$meetings};
-  // --twitter: #{$twitter};
-  // --facebook: #{$facebook};
-  // --google: #{$google};
 }
