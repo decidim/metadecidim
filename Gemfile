@@ -4,12 +4,15 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.17-stable" }
+BRANCH = "0.17-stable"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: BRANCH }
+TERM_CUSTOMIZER_VERSION = { git: "https://github.com/mainio/decidim-module-term_customizer", branch: BRANCH }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
+gem "decidim-term_customizer", TERM_CUSTOMIZER_VERSION
 gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 
 gem "uglifier", ">= 1.3.0"

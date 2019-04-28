@@ -216,6 +216,15 @@ GIT
       omniauth (~> 1.5)
       omniauth-oauth2 (>= 1.4.0, < 2.0)
 
+GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer
+  revision: ae1905c908cb4aad2956bdc85ea9555e3d0f692e
+  branch: 0.17-stable
+  specs:
+    decidim-term_customizer (0.17.0)
+      decidim-admin (~> 0.17.0)
+      decidim-core (~> 0.17.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -817,6 +826,7 @@ DEPENDENCIES
   decidim-consultations!
   decidim-dev!
   decidim-initiatives!
+  decidim-term_customizer!
   faker (~> 1.8.4)
   fog-aws
   letter_opener_web (~> 1.3.0)
