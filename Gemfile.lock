@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 92798e52ec90444b02b15135d32ed387092b7993
+  revision: f371e38936928797f2999300e8ac09c5537867a1
   branch: 0.17-stable
   specs:
     decidim (0.17.0)
@@ -279,7 +279,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    batch-loader (1.3.0)
+    batch-loader (1.4.0)
     bcrypt (3.1.12)
     better_html (1.0.13)
       actionview (>= 4.0)
@@ -292,7 +292,7 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.16.1)
+    capybara (3.20.2)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -316,13 +316,13 @@ GEM
       actionpack (>= 3.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.6)
-    childprocess (0.9.0)
-      ffi (~> 1.0, >= 1.0.11)
+    childprocess (1.0.1)
+      rake (< 13.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    coffee-rails (4.2.2)
+    coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
+      railties (>= 5.2.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -430,7 +430,7 @@ GEM
       railties
       sprockets-rails
     graphql (1.8.10)
-    hashdiff (0.3.8)
+    hashdiff (0.3.9)
     hashie (3.6.0)
     highline (2.0.2)
     html_tokenizer (0.0.7)
@@ -467,7 +467,7 @@ GEM
     jquery-tmpl-rails (1.1.0)
       rails (>= 3.1.0)
     json (2.2.0)
-    jwt (2.1.0)
+    jwt (2.2.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -523,14 +523,14 @@ GEM
       tomlrb
     multi_json (1.13.1)
     multi_xml (0.6.0)
-    multipart-post (2.0.0)
+    multipart-post (2.1.1)
     mustache (1.1.0)
     mustermann (1.0.3)
     netrc (0.11.0)
     newrelic_rpm (5.3.0.346)
     nio4r (2.3.1)
     nobspw (0.4.0)
-    nokogiri (1.10.2)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     oauth2 (1.4.1)
@@ -566,10 +566,10 @@ GEM
       request_store (~> 1.1)
     paper_trail-association_tracking (1.1.1)
     parallel (1.17.0)
-    parser (2.6.2.1)
+    parser (2.6.3.0)
       ast (~> 2.4.0)
     pg (1.1.4)
-    pg_search (2.1.5)
+    pg_search (2.1.7)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
     powerpack (0.1.2)
@@ -640,8 +640,8 @@ GEM
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
     redcarpet (3.4.0)
-    redis (4.1.0)
-    regexp_parser (1.4.0)
+    redis (4.1.1)
+    regexp_parser (1.5.1)
     request_store (1.4.1)
       rack (>= 1.4)
     responders (2.4.1)
@@ -660,7 +660,7 @@ GEM
       rspec-rails (~> 3.2)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.2)
+    rspec-expectations (3.8.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-html-matchers (0.9.1)
@@ -694,7 +694,7 @@ GEM
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     ruby_http_client (3.3.0)
-    rubyzip (1.2.2)
+    rubyzip (1.2.3)
     safe_yaml (1.0.5)
     sass (3.4.25)
     sassc (1.12.1)
@@ -708,8 +708,8 @@ GEM
       sprockets-rails
       tilt
     searchlight (4.1.0)
-    selenium-webdriver (3.141.0)
-      childprocess (~> 0.5)
+    selenium-webdriver (3.142.3)
+      childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     sendgrid-ruby (5.2.0)
       ruby_http_client (~> 3.2)
@@ -730,7 +730,7 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.3)
       tilt (~> 2.0)
-    smart_properties (1.13.1)
+    smart_properties (1.14.0)
     social-share-button (1.2.0)
       coffee-rails
     spreadsheet (1.2.3)
@@ -770,8 +770,8 @@ GEM
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
-    unicode-display_width (1.5.0)
+    unf_ext (0.0.7.6)
+    unicode-display_width (1.6.0)
     valid_email2 (2.3.1)
       activemodel (>= 3.2)
       mail (~> 2.5)
@@ -798,7 +798,7 @@ GEM
     websocket-extensions (0.1.3)
     wicked (1.3.3)
       railties (>= 3.0.7)
-    wicked_pdf (1.2.2)
+    wicked_pdf (1.4.0)
       activesupport
     wisper (2.0.0)
     wisper-rspec (1.1.0)
