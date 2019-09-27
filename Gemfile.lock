@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: bdfe8e7289de302fea58cc41417ba760c1d160bf
+  revision: 1c6c5a46ff1c62d5e5f4ffa72a50f17d32ee264b
   branch: master
   specs:
     decidim (0.19.0.dev)
@@ -382,7 +382,7 @@ GEM
       smart_properties
     erbse (0.1.3)
       temple
-    erubi (1.8.0)
+    erubi (1.9.0)
     etherpad-lite (0.3.0)
       rest-client (>= 1.6)
     excon (0.64.0)
@@ -695,13 +695,13 @@ GEM
     rubocop-rails (2.0.1)
       rack (>= 1.1)
       rubocop (>= 0.70.0)
-    rubocop-rspec (1.35.0)
-      rubocop (>= 0.60.0)
+    rubocop-rspec (1.36.0)
+      rubocop (>= 0.68.1)
     ruby-ole (1.2.12.2)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     ruby_http_client (3.3.0)
-    rubyzip (1.2.4)
+    rubyzip (1.3.0)
     safe_yaml (1.0.5)
     sass (3.4.25)
     sassc (1.12.1)
@@ -767,7 +767,7 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    uglifier (4.1.20)
+    uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
