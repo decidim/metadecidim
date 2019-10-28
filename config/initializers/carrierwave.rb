@@ -18,7 +18,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       provider:              'AWS',                                             # required
       aws_access_key_id:     Rails.application.secrets.aws_access_key_id,     # required
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required
-      region:                'eu-central-1',                                       # optional, defaults to 'us-east-1'
+      region:                'eu-west-3',                                       # optional, defaults to 'us-east-1'
       host:                  's3.eu-central-1.amazonaws.com',                                  # optional, defaults to nil
     }
     config.fog_directory  = 'meta-decidim-production'                                 # required
