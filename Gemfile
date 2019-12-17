@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.19-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "master" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
@@ -15,7 +15,7 @@ gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
-gem "puma"
+gem "puma", ">= 3.12.2"
 
 group :development, :test do
   gem "byebug", platform: :mri
@@ -33,6 +33,8 @@ end
 
 group :production do
   gem 'fog-aws'
+  # security fix for excon gem, which is a fog-aws dependency
+  gem 'excon', '>= 0.71.0'
   gem 'dalli'
   gem 'sendgrid-ruby'
   gem 'newrelic_rpm'
