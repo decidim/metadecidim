@@ -10,8 +10,6 @@ class MoveSignatureTypeToInitativeType < ActiveRecord::Migration[5.2]
     if !ActiveRecord::Base.connection.table_exists?("decidim_initiatives_types")
       Rails.logger.info "Skipping migration since there's no InitiativesType table"
       return
-    elsif InitiativesType.count.positive?
-      raise "You need to edit this migration to continue"
     end
 
     # This flag says when mixed and face-to-face voting methods
