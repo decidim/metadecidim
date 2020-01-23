@@ -10,6 +10,8 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
+# Change dependency to ruby-gems after term-customizer is compatible with decidim >= 0.20
+gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
 gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 
 gem "uglifier", ">= 1.3.0"

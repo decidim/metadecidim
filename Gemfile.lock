@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/CodiTramuntana/decidim-module-term_customizer
+  revision: 602f108dc611dfd125fffa94f92d6b9eae9f934c
+  specs:
+    decidim-term_customizer (0.18.0)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
+
+GIT
   remote: https://github.com/decidim/decidim
   revision: a070c97872cd9d1ff305251aaea0ab27982318bd
   branch: master
@@ -819,6 +827,7 @@ DEPENDENCIES
   decidim-consultations!
   decidim-dev!
   decidim-initiatives!
+  decidim-term_customizer!
   excon (>= 0.71.0)
   faker (~> 1.8.4)
   fog-aws
