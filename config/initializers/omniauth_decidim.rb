@@ -8,6 +8,4 @@ if Rails.application.secrets.dig(:omniauth, :decidim, :enabled)
                     Rails.application.secrets.dig(:omniauth, :decidim, :site_url),
                     scope: :public
   end
-
-  # Decidim::User.omniauth_providers << :decidim
 end
