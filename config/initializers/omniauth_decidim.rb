@@ -9,5 +9,5 @@ if Rails.application.secrets.dig(:omniauth, :decidim, :enabled)
                     scope: :public
   end
 
-  Decidim::User.omniauth_providers << :decidim
+  # Decidim::User.omniauth_providers << :decidim
 end
