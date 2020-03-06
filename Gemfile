@@ -17,7 +17,7 @@ gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
-gem "puma", ">= 3.12.2"
+gem "puma", ">= 4.3"
 
 group :development, :test do
   gem "byebug", platform: :mri
