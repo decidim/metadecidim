@@ -18,6 +18,7 @@ gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
 gem "puma", ">= 4.3"
+gem "geocoder", "~> 1.5.2"
 
 group :development, :test do
   gem "byebug", platform: :mri
