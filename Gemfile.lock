@@ -295,6 +295,9 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    barnes (0.0.8)
+      multi_json (~> 1)
+      statsd-ruby (~> 1.1)
     batch-loader (1.4.1)
     bcrypt (3.1.13)
     better_html (1.0.14)
@@ -774,6 +777,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    statsd-ruby (1.4.0)
     system_test_html_screenshots (0.1.2)
       actionpack (>= 5.2, < 6.0.a)
     temple (0.8.2)
@@ -833,6 +837,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  barnes
   byebug
   dalli
   decidim!

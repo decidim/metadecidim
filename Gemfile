@@ -21,6 +21,9 @@ gem "deface"
 gem "puma", ">= 4.3"
 gem "geocoder", "~> 1.5.2"
 
+# Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
+gem "barnes"
+
 group :development, :test do
   gem "byebug", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION

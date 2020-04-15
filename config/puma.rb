@@ -13,3 +13,11 @@ on_worker_boot do
   # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
   ActiveRecord::Base.establish_connection
 end
+
+# Enable Heroku Ruby Metrics: https://devcenter.heroku.com/articles/language-runtime-metrics-ruby#getting-started
+require 'barnes'
+before_fork do
+  # worker specific setup
+
+  Barnes.start # Must have enabled worker mode for this to block to be called
+end
