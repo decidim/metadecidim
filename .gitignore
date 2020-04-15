@@ -21,3 +21,5 @@
 # Ignore public uploads
 public/uploads
 public/assets/
+
+.rspec-failures
