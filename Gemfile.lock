@@ -738,6 +738,8 @@ GEM
       sprockets (> 2.11)
       sprockets-rails
       tilt
+    scout_apm (2.6.7)
+      parser
     searchlight (4.1.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -859,6 +861,7 @@ DEPENDENCIES
   puma (>= 4.3)
   rails_autoscale_agent
   rspec-rails
+  scout_apm
   sendgrid-ruby
   sentry-raven
   sidekiq

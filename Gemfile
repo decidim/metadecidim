@@ -19,6 +19,7 @@ gem "uglifier", ">= 1.3.0"
 gem "faker", "~> 1.8.4"
 gem "deface"
 gem "puma", ">= 4.3"
+# geocoder can not be upgraded to 1.6 until the Here maps api key is changed for the new one
 gem "geocoder", "~> 1.5.2"
 
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
@@ -49,4 +50,5 @@ group :production do
   gem 'sentry-raven'
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
+  gem 'scout_apm'
 end
