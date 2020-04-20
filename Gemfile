@@ -45,7 +45,6 @@ group :production do
   gem 'excon', '>= 0.71.0'
   gem 'dalli'
   gem 'sendgrid-ruby'
-  gem 'newrelic_rpm'
   gem 'lograge'
   gem 'sentry-raven'
   gem 'sidekiq'
