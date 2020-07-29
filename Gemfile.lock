@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: de2e5e75b47472b35ba25a3f99f65423485a667a
-  branch: release/0.22-stable
+  revision: 61ceac6cc9c2385e7aa8ab06d6222c86c07fd1c7
+  tag: v0.22.0.rc1
   specs:
     decidim (0.22.0.rc1)
       decidim-accountability (= 0.22.0.rc1)
