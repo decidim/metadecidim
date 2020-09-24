@@ -22,6 +22,8 @@ gem "puma", ">= 4.3"
 # geocoder can not be upgraded to 1.6 until the Here maps api key is changed for the new one
 gem "geocoder", "~> 1.6.3"
 
+gem "redis", "~> 4.2.2"
+
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
 

@@ -675,7 +675,7 @@ GEM
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
     redcarpet (3.5.0)
-    redis (4.2.1)
+    redis (4.2.2)
     regexp_parser (1.8.0)
     request_store (1.5.0)
       rack (>= 1.4)
@@ -871,6 +871,7 @@ DEPENDENCIES
   omniauth-decidim!
   puma (>= 4.3)
   rails_autoscale_agent
+  redis (~> 4.2.2)
   rspec-rails
   scout_apm
   sendgrid-ruby
