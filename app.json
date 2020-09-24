@@ -27,10 +27,7 @@
     "CENSUS_USERNAME": {
       "required": true
     },
-    "HERE_APP_ID": {
-      "required": false
-    },
-    "HERE_APP_CODE": {
+    "HERE_API_KEY": {
       "required": false
     },
     "HEROKU_APP_NAME": {
