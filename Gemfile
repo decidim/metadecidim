@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.22.0.rc2" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.22-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
@@ -20,7 +20,9 @@ gem "faker", "~> 1.8.4"
 gem "deface"
 gem "puma", ">= 4.3"
 # geocoder can not be upgraded to 1.6 until the Here maps api key is changed for the new one
-gem "geocoder", "~> 1.5.2"
+gem "geocoder", "~> 1.6.3"
+
+gem "redis", "~> 4.2.2"
 
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
