@@ -42,6 +42,9 @@ Decidim.configure do |config|
   #
   config.enable_html_header_snippets = true
 
+  # See Devise :confirmable. We ask for confirmation before creating an account.
+  config.unconfirmed_access_for = 0.days
+
   if Rails.application.secrets.sms.values.all?(&:present?)
     config.sms_gateway_service = "SmsGateway"
   end
