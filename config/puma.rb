@@ -2,7 +2,7 @@
 # The solution is to comment the line where the workers are defined
 # The error stacktrace is:
 # GraphQL::Schema::InvalidTypeError (Query is invalid: Query must define at least 1 field. 0 defined.)
-workers Integer(ENV['WEB_CONCURRENCY'] || 2) unless Rails.env.development?
+workers Integer(ENV['WEB_CONCURRENCY'] || 2) if (ENV['RACK_ENV'] || ENV['RAILS_ENV']) == 'production'
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
