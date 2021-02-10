@@ -1,7 +1,5 @@
 # metadecidim
 
-[![CircleCI](https://circleci.com/gh/decidim/metadecidim.svg?style=svg)](https://circleci.com/gh/decidim/metadecidim)
-
 Citizen Participation and Open Government application.
 
 This is the open-source repository for metadecidim, based on [Decidim](https://github.com/decidim/decidim).
