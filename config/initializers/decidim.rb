@@ -14,6 +14,15 @@ Decidim.configure do |config|
     static_map_url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview",
     here_api_key: Rails.application.secrets.geocoder[:here_api_key]
   }
+  config.maps = {
+    provider: :here,
+    api_key: Rails.application.secrets.geocoder[:here_api_key],
+    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
+  }
+  config.geocoder = {
+    timeout: 5,
+    units: :km
+  }
 
   # Custom resource reference generator method
   # config.resource_reference_generator = lambda do |resource, feature|
