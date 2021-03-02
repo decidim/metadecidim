@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 68bdabf88455cbfbcecfdca17b2bccdbff213b74
+  revision: bdf580ed9b5da749d90a348012abde838365e62b
   branch: release/0.24-stable
   specs:
     decidim (0.24.0.rc1)
@@ -436,7 +436,7 @@ GEM
       rest-client (>= 1.6)
     eventmachine (1.2.7)
     eventmachine_httpserver (0.2.1)
-    excon (0.76.0)
+    excon (0.79.0)
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
