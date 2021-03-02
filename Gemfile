@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.23.2"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim.git", branch: "release/0.24-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
@@ -16,7 +16,7 @@ gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
 
 gem "uglifier", ">= 1.3.0"
 
-gem "faker", "~> 1.8.4"
+gem "faker", "~> 2.14"
 gem "deface"
 gem "puma", ">= 4.3"
 # geocoder can not be upgraded to 1.6 until the Here maps api key is changed for the new one
