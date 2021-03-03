@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: bdf580ed9b5da749d90a348012abde838365e62b
+  revision: 10ab14f7c097fd2651bdac17487b22b1bae553b5
   branch: release/0.24-stable
   specs:
     decidim (0.24.0.rc1)
@@ -657,7 +657,7 @@ GEM
       eventmachine_httpserver
       http_parser.rb (~> 0.6.0)
       multi_json
-    puma (5.2.1)
+    puma (5.2.2)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
