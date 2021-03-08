@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 10ab14f7c097fd2651bdac17487b22b1bae553b5
+  revision: 58cedc67cbfb0b30f24e3d341157c07b08a3e08d
   branch: release/0.24-stable
   specs:
     decidim (0.24.0.rc1)
@@ -450,7 +450,7 @@ GEM
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     faraday-net_http (1.0.1)
-    ffi (1.14.2)
+    ffi (1.15.0)
     file_validators (2.3.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
@@ -483,7 +483,7 @@ GEM
       activesupport (>= 4.1, < 6.0)
       railties (>= 4.1, < 6.0)
       tzinfo (~> 1.2, >= 1.2.2)
-    geocoder (1.6.5)
+    geocoder (1.6.6)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     graphiql-rails (1.4.11)
@@ -501,7 +501,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.33)
+    i18n-tasks (0.9.34)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
@@ -593,7 +593,7 @@ GEM
     multipart-post (2.1.1)
     mustache (1.1.1)
     netrc (0.11.0)
-    nio4r (2.5.5)
+    nio4r (2.5.7)
     nobspw (0.6.2)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
@@ -881,7 +881,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (3.12.0)
+    webmock (3.12.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
