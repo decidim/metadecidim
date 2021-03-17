@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: d5645d37c882b2a8ef2996cdbcbc05bdfe6d5405
+  revision: 38f5163b569282b54ffd41010c0d16ea5047a890
   branch: release/0.24-stable
   specs:
     decidim (0.24.0.rc2)
@@ -394,7 +394,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-i18n (1.9.2)
+    devise-i18n (1.9.3)
       devise (>= 4.7.1)
     devise_invitable (1.7.5)
       actionmailer (>= 4.1.0)
@@ -489,7 +489,7 @@ GEM
     graphiql-rails (1.4.11)
       railties
       sprockets-rails
-    graphql (1.12.5)
+    graphql (1.12.6)
     hashdiff (1.0.1)
     hashie (4.1.0)
     highline (2.0.3)
@@ -511,7 +511,7 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    icalendar (2.7.0)
+    icalendar (2.7.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     ice_nine (0.11.2)
@@ -595,7 +595,7 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.7)
     nobspw (0.6.2)
-    nokogiri (1.11.1)
+    nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     oauth (0.5.5)
@@ -610,10 +610,10 @@ GEM
       rack (>= 1.6.2, < 3)
     omniauth-facebook (5.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.8.1)
+    omniauth-google-oauth2 (0.8.2)
       jwt (>= 2.0)
       oauth2 (~> 1.1)
-      omniauth (>= 1.1.1)
+      omniauth (~> 1.1)
       omniauth-oauth2 (>= 1.6)
     omniauth-oauth (1.2.0)
       oauth

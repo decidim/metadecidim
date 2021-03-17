@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_084838) do
+ActiveRecord::Schema.define(version: 2021_03_17_083322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -173,6 +173,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.string "github_handler"
     t.bigint "decidim_assemblies_type_id"
     t.integer "weight", default: 1, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_area_id"], name: "index_decidim_assemblies_on_decidim_area_id"
     t.index ["decidim_assemblies_type_id"], name: "index_decidim_assemblies_on_decidim_assemblies_type_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_assembly_slug_and_organization", unique: true
@@ -276,6 +277,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.integer "decidim_user_group_id"
     t.integer "endorsements_count", default: 0, null: false
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_blogs_posts_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_blogs_posts_on_decidim_component_id"
     t.index ["decidim_user_group_id"], name: "index_decidim_blogs_posts_on_decidim_user_group_id"
@@ -323,6 +325,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.bigint "decidim_budgets_budget_id"
     t.date "selected_at"
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_projects_on_decidim_budgets_budget_id"
     t.index ["decidim_scope_id"], name: "index_decidim_budgets_projects_on_decidim_scope_id"
   end
@@ -472,6 +475,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.string "main_logo"
     t.date "sign_date"
     t.datetime "diploma_sent_at"
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_organization_id", "slug"], name: "index_unique_conference_slug_and_organization", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_conferences_on_decidim_organization_id"
     t.index ["decidim_scope_id"], name: "index_decidim_conferences_on_decidim_scope_id"
@@ -604,6 +608,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.jsonb "instructions"
     t.integer "response_groups_count", default: 0, null: false
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
     t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
@@ -694,6 +699,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.integer "last_comment_by_id"
     t.string "last_comment_by_type"
     t.bigint "decidim_scope_id"
+    t.integer "follows_count", default: 0, null: false
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
@@ -878,6 +884,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.jsonb "online_votes", default: {}
     t.jsonb "offline_votes", default: {}
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index "md5((description)::text)", name: "decidim_initiatives_description_search"
     t.index ["answered_at"], name: "index_decidim_initiatives_on_answered_at"
     t.index ["decidim_area_id"], name: "index_decidim_initiatives_on_decidim_area_id"
@@ -1018,6 +1025,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.string "type_of_meeting", default: "in_person"
     t.string "registration_type", default: "registration_disabled", null: false
     t.string "registration_url"
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
@@ -1304,6 +1312,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.bigint "decidim_scope_type_id"
     t.boolean "show_metrics", default: true
     t.integer "weight", default: 1, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["decidim_area_id"], name: "index_decidim_participatory_processes_on_decidim_area_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_process_slug_and_organization", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_processes_on_decidim_organization_id"
@@ -1361,6 +1370,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.datetime "updated_at", null: false
     t.integer "coauthorships_count", default: 0, null: false
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index ["body"], name: "decidim_proposals_collaborative_draft_body_search"
     t.index ["decidim_component_id"], name: "decidim_proposals_collaborative_drafts_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "decidim_proposals_collaborative_drafts_on_decidim_scope_id"
@@ -1428,6 +1438,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.jsonb "title"
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
+    t.integer "follows_count", default: 0, null: false
     t.index "md5((body)::text)", name: "decidim_proposals_proposal_body_search"
     t.index "md5((title)::text)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"
@@ -1734,6 +1745,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_084838) do
     t.datetime "blocked_at"
     t.integer "block_id"
     t.boolean "email_on_moderations", default: true
+    t.integer "follows_count", default: 0, null: false
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
