@@ -932,7 +932,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 2.7.3p183
 
 BUNDLED WITH
-   1.17.3
+   2.2.16
