@@ -26,6 +26,8 @@ gem "redis", "~> 4.2.2"
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
 
+gem "execjs", "~> 2.7.0"
+
 group :development, :test do
   gem "byebug", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION
