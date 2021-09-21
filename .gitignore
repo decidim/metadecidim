@@ -23,3 +23,11 @@ public/uploads
 public/assets/
 
 .rspec-failures
+
+/public/decidim-packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+/storage

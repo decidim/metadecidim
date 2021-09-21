@@ -1,5 +1,24 @@
 {
   "name": "metadecidim",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@decidim/browserslist-config": "~0.25.0-rc4",
+    "@decidim/core": "~0.25.0-rc4",
+    "@decidim/elections": "~0.25.0-rc4",
+    "@decidim/webpacker": "~0.25.0-rc4"
+  },
+  "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "extends @decidim/browserslist-config"
+  ],
+  "devDependencies": {
+    "@decidim/dev": "~0.25.0-rc4",
+    "@decidim/eslint-config": "~0.25.0-rc4",
+    "@decidim/stylelint-config": "~0.25.0-rc4"
+  }
 }

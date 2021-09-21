@@ -4,17 +4,15 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim.git", branch: "release/0.24-stable" }
+DECIDIM_VERSION = "0.25.0.rc4"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-# Change dependency to ruby-gems after term-customizer is compatible with decidim >= 0.20
-gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
-gem 'omniauth-decidim', git: 'https://github.com/decidim/omniauth-decidim'
+gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
-gem "uglifier", ">= 1.3.0"
+gem "omniauth-decidim", git: 'https://github.com/decidim/omniauth-decidim'
 
 gem "faker"
 gem "puma", ">= 4.3"
@@ -26,8 +24,6 @@ gem "redis", "~> 4.2.2"
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
 
-gem "execjs", "~> 2.7.0"
-
 group :development, :test do
   gem "byebug", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION
@@ -35,7 +31,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web", "~> 1.3.0"
+  gem "letter_opener_web", "~> 1.4.0"
   gem "listen", "~> 3.1.0"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
@@ -43,6 +39,7 @@ group :development do
 end
 
 group :production do
+  gem "aws-sdk-s3", require: false
   gem 'fog-aws'
   # security fix for excon gem, which is a fog-aws dependency
   gem 'excon', '>= 0.71.0'
