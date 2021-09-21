@@ -20,5 +20,9 @@
     "@decidim/dev": "~0.25.0-rc4",
     "@decidim/eslint-config": "~0.25.0-rc4",
     "@decidim/stylelint-config": "~0.25.0-rc4"
+  },
+  "engines": {
+    "node": "16.9.1",
+    "npm": "7.21.1"
   }
 }
