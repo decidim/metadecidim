@@ -1,15 +1,26 @@
 {
-  "name": "decidim_terrassa",
-  "description": "TODO: Add a short description about decidim_terrassa",
+  "name": "metadecidim",
+  "description": "Decidim community",
   "keywords": [],
+  "stack": "heroku-20",
+  "buildpacks": [
+    {
+      "url": "https://github.com/gaffneyc/heroku-buildpack-jemalloc"
+    },
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "addons": [
     "heroku-postgresql:hobby-dev",
     "heroku-redis:hobby-dev",
     "sendgrid:starter"
   ],
   "scripts": {
-    "postdeploy":
-      "DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:schema:load db:migrate db:seed"
+    "postdeploy": "DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:schema:load db:migrate db:seed"
   },
   "env": {
     "AWS_ACCESS_KEY_ID": {
