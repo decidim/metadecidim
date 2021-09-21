@@ -3,6 +3,7 @@ on: [push]
 
 env:
   RUBY_VERSION: 2.7.3
+  NODE_VERSION: 16.9.1
 
 jobs:
   tests:
@@ -34,6 +35,11 @@ jobs:
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
           bundler-cache: true
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - run: npm install
       - run: bundle exec rake db:test:prepare
         name: Setup database
       - run: bundle exec rspec
