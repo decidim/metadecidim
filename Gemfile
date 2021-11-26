@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.25-stable" }
+DECIDIM_VERSION = "0.25.2"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
@@ -12,7 +12,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
-gem "omniauth-decidim", git: 'https://github.com/decidim/omniauth-decidim'
+gem "omniauth-decidim", "0.2.1"
 
 gem "faker"
 gem "puma", ">= 4.3"
@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web", "~> 1.4.0"
+  gem "letter_opener_web"
   gem "listen", "~> 3.1.0"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
