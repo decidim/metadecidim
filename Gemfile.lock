@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer
+  revision: 6b5e50d9ae4cf16897cf193da4a55cd07d3fce81
+  branch: develop
+  specs:
+    decidim-term_customizer (0.26.0)
+      decidim-admin (~> 0.26.0.rc2)
+      decidim-core (~> 0.26.0.rc2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -847,6 +856,7 @@ DEPENDENCIES
   decidim-consultations (= 0.26.0.rc2)
   decidim-dev (= 0.26.0.rc2)
   decidim-initiatives (= 0.26.0.rc2)
+  decidim-term_customizer!
   excon (>= 0.71.0)
   faker
   fog-aws
@@ -871,4 +881,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   2.2.19
+   2.2.31
