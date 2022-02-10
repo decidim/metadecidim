@@ -4,13 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.25.2"
+DECIDIM_VERSION = "0.26.0.rc2"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
+gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
 
 gem "omniauth-decidim", "0.2.1"
 
