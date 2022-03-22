@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e5c31bfc10285a7d0c88ef5dd74c98e602c36eb5
+  revision: 9a9c1e310ea5f3bc33341f817c540fde6b88c745
   branch: release/0.26-stable
   specs:
     decidim (0.26.0)
@@ -297,7 +297,7 @@ GEM
       multi_json (~> 1)
       statsd-ruby (~> 1.1)
     batch-loader (1.5.0)
-    bcrypt (3.1.16)
+    bcrypt (3.1.17)
     better_html (1.0.16)
       actionview (>= 4.0)
       activesupport (>= 4.0)
@@ -339,7 +339,7 @@ GEM
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.7)
-    chef-utils (17.9.52)
+    chef-utils (17.10.0)
       concurrent-ruby
     childprocess (3.0.0)
     coercible (1.0.0)
@@ -489,7 +489,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    kramdown (2.3.1)
+    kramdown (2.3.2)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -560,7 +560,7 @@ GEM
       omniauth-oauth2 (>= 1.4.0, < 2.0)
     omniauth-facebook (5.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (1.0.0)
+    omniauth-google-oauth2 (1.0.1)
       jwt (>= 2.0)
       oauth2 (~> 1.1)
       omniauth (~> 2.0)
@@ -580,10 +580,10 @@ GEM
     origami (2.1.0)
       colorize (~> 0.7)
     orm_adapter (0.5.0)
-    paper_trail (12.2.0)
+    paper_trail (12.3.0)
       activerecord (>= 5.2)
       request_store (~> 1.1)
-    parallel (1.21.0)
+    parallel (1.22.0)
     parser (3.1.1.0)
       ast (~> 2.4.1)
     pg (1.1.4)
@@ -793,7 +793,7 @@ GEM
       rails
       rspec
       w3c_validators
-    w3c_validators (1.3.6)
+    w3c_validators (1.3.7)
       json (>= 1.8)
       nokogiri (~> 1.6)
       rexml (~> 3.2)
