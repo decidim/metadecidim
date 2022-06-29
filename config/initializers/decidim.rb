@@ -224,9 +224,7 @@ Decidim.configure do |config|
   #
   # config.sms_gateway_service = "MySMSGatewayService"
 
-  if Rails.application.secrets.sms.values.all?(&:present?)
-    config.sms_gateway_service = "SmsGateway"
-  end
+  config.sms_gateway_service = "SmsGateway" if Rails.application.secrets.sms.values.all?(&:present?)
 
   # Timestamp service configuration
   #
