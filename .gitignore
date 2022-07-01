@@ -13,21 +13,24 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
+# Ignore ruby tmp files
 .byebug_history
+.rspec-failures
 
 # Ignore public uploads
 public/uploads
-public/assets/
+public/assets
 
-.rspec-failures
+# Ignore webpack packs and related files
+public/decidim-packs
+public/packs-test
+public/sw.js
+public/sw.js.map
 
-/public/decidim-packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
+# Ignore NPM/yarn logs and temp files
 .yarn-integrity
-/storage
+node_modules/
+storage/
+yarn-debug.log*
+yarn-error.log
+

@@ -5,22 +5,21 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 #DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.26-stable" }
-DECIDIM_VERSION = "0.26.1"
+DECIDIM_VERSION = "0.27.0.rc1"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
+#gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
 
 gem "omniauth-decidim", "0.2.1"
 
 gem "faker"
 gem "puma", ">= 4.3"
-# geocoder can not be upgraded to 1.6 until the Here maps api key is changed for the new one
-gem "geocoder", "~> 1.6.3"
+gem "geocoder", "~> 1.8.0"
 
-gem "redis", "~> 4.2.2"
+gem "redis", "~> 4.7.0"
 
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
@@ -33,7 +32,7 @@ end
 
 group :development do
   gem "letter_opener_web"
-  gem "listen", "~> 3.1.0"
+  gem "listen", "~> 3.7.1"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console"
