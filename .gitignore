@@ -13,6 +13,11 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore env configuration files
+.env
+.envrc
+.rbenv-vars
+
 # Ignore ruby tmp files
 .byebug_history
 .rspec-failures
