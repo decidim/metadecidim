@@ -50,4 +50,5 @@ group :production do
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
   gem 'scout_apm'
+  gem 'rexml'
 end

@@ -854,6 +854,7 @@ DEPENDENCIES
   puma (>= 4.3)
   rails_autoscale_agent
   redis (~> 4.7.0)
+  rexml
   rspec-rails
   scout_apm
   sendgrid-ruby
