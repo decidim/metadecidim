@@ -485,3 +485,64 @@ Rails.application.config.i18n.default_locale = Decidim.default_locale
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
+Decidim.configure do |config|
+  config.consent_categories = [
+    {
+      slug: "essential",
+      mandatory: true,
+      cookies: [
+        {
+          type: "cookie",
+          name: "_session_id"
+        },
+        {
+          type: "cookie",
+          name: Decidim.consent_cookie_name
+        }
+      ]
+    },
+    {
+      slug: "preferences",
+      mandatory: false,
+      cookies: [
+        {
+          type: "cookie",
+          name: "YSC"
+        },
+        {
+          type: "cookie",
+          name: "VISITOR_INFO1_LIVE"
+        },
+        {
+          type: "cookie",
+          name: "PREF"
+        },
+        {
+          type: "cookie",
+          name: "CONSENT"
+        }
+      ]
+    },
+    {
+      slug: "analytics",
+      mandatory: false,
+      cookies: [
+        {
+          type: "cookie",
+          name: "VISITOR_INFO1_LIVE"
+        }
+      ]
+    },
+    {
+      slug: "marketing",
+      mandatory: false,
+      cookies: [
+        {
+          type: "cookie",
+          name: "VISITOR_INFO1_LIVE"
+        }
+      ]
+    }
+  ]
+end

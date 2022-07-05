@@ -3,3 +3,40 @@ en:
   decidim:
     sms:
       text: "Your code to be verified at Metadecidim is: %{code}"
+  layouts:
+    decidim:
+      cookie_consent:
+        cookie_details:
+          cookies:
+            _session_id:
+              description: Allows websites to remember user within a website when they move between web pages.
+              service: This website
+            decidim-consent:
+              description: Stores information about the cookies allowed by the user on this website.
+              service: This website
+            YSC:
+              description: Used for security. Lasts for the duration of a user's browsing session. Used to ensure that requests within a browsing session are made by the user, and not by other sites. This cookie prevent malicious sites from acting on behalf of a user without that user’s knowledge. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+              service: YouTube embeds
+            VISITOR_INFO1_LIVE:
+              description: Used for functionality, analytics, advertising, and personalization. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+              service: YouTube embeds
+            PREF:
+              description: Used for functionality. YouTube uses this cookie to store information such as your preferred page configuration and playback preferences like explicit autoplay choices, shuffle content, and player size. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+              service: YouTube embeds
+            CONSENT:
+              description: Used for functionality. Lasts for 2 years, Google uses it to store a user’s state regarding their cookies choices. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+              service: YouTube embeds
+        modal:
+          analytics:
+            description: Analytics cookies are cookies that track how users navigate and interact with a website. The information collected is used to help the website owner improve the website.
+            title: Analytics and statistics
+          description: We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.
+          essential:
+            description: These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly.
+            title: Essential
+          marketing:
+            description: These cookies collect information about how you use the website, which pages you visited and which links you clicked on.
+            title: Marketing
+          preferences:
+            description: These cookies allow the website to remember the choices you have made in the past
+            title: Preferences
