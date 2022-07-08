@@ -515,6 +515,30 @@ Decidim.configure do |config|
           name: "emojiPicker-recent"
         },
         {
+          type: "localstorage",
+          name: "graphiql:docExplorerOpen"
+        },
+        {
+          type: "localstorage",
+          name: "graphiql:editorFlex"
+        },
+        {
+          type: "localstorage",
+          name: "graphiql:historyPaneOpen"
+        },
+        {
+          type: "localstorage",
+          name: "graphiql:queries"
+        },
+        {
+          type: "localstorage",
+          name: "graphiql:query"
+        },
+        {
+          type: "localstorage",
+          name: "graphiql:tabState"
+        },
+        {
           type: "cookie",
           name: "YSC"
         },

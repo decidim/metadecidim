@@ -20,6 +20,24 @@ en:
             "emojiPicker-recent":
               description: Stores your most recent selected emojis
               service: This website
+            "graphiql:docExplorerOpen":
+              description: Saves wheter you have the documentation panel open when using the GraphQL API
+              service: This website
+            "graphiql:editorFlex":
+              description: Saves your tab preference when using the GraphQL API
+              service: This website
+            "graphiql:historyPaneOpen":
+              description: Saves wheter you have the history panel open when using the GraphQL API
+              service: This website
+            "graphiql:queries":
+              description: Saves the history of your queries when using the GraphQL API
+              service: This website
+            "graphiql:query":
+              description: Saves your last query when using the GraphQL API
+              service: This website
+            "graphiql:tabState":
+              description: Saves your tab configuration when using the GraphQL API
+              service: This website
             YSC:
               description: Used for security. Lasts for the duration of a user's browsing session. Used to ensure that requests within a browsing session are made by the user, and not by other sites. This cookie prevent malicious sites from acting on behalf of a user without that user’s knowledge. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
               service: YouTube embeds
