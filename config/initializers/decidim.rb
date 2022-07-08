@@ -499,6 +499,10 @@ Decidim.configure do |config|
         {
           type: "cookie",
           name: Decidim.consent_cookie_name
+        },
+        {
+          type: "cookie",
+          name: "remember_user_token"
         }
       ]
     },

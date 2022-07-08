@@ -14,6 +14,9 @@ en:
             decidim-consent:
               description: Stores information about the cookies allowed by the user on this website.
               service: This website
+            remember_user_token:
+              description: Allows to keep your session open if you click on "Remember me" when logging in.
+              service: This website
             YSC:
               description: Used for security. Lasts for the duration of a user's browsing session. Used to ensure that requests within a browsing session are made by the user, and not by other sites. This cookie prevent malicious sites from acting on behalf of a user without that user’s knowledge. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
               service: YouTube embeds
