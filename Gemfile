@@ -11,7 +11,7 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-#gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
+gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
 
 gem "omniauth-decidim", "0.2.1"
 
