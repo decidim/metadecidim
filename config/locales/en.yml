@@ -29,6 +29,8 @@ en:
             CONSENT:
               description: Used for functionality. Lasts for 2 years, Google uses it to store a user’s state regarding their cookies choices. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
               service: YouTube embeds
+          types:
+            localstorage: LocalStorage
         modal:
           analytics:
             description: Analytics cookies are cookies that track how users navigate and interact with a website. The information collected is used to help the website owner improve the website.
