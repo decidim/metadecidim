@@ -511,6 +511,10 @@ Decidim.configure do |config|
       mandatory: false,
       cookies: [
         {
+          type: "localstorage",
+          name: "emojiPicker-recent"
+        },
+        {
           type: "cookie",
           name: "YSC"
         },
