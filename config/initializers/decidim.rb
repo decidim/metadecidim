@@ -553,7 +553,63 @@ Decidim.configure do |config|
         {
           type: "cookie",
           name: "CONSENT"
-        }
+        },
+        {
+          type: "localstorage",
+          name: "language"
+        },
+        {
+          type: "localstorage",
+          name: "features/base/known-domains"
+        },
+        {
+          type: "localstorage",
+          name: "features/base/settings"
+        },
+        {
+          type: "localstorage",
+          name: "features/calendar-sync"
+        },
+        {
+          type: "localstorage",
+          name: "features/dropbox"
+        },
+        {
+          type: "localstorage",
+          name: "features/prejoin"
+        },
+        {
+          type: "localstorage",
+          name: "features/recent-list"
+        },
+        {
+          type: "localstorage",
+          name: "features/video-quality-persistent-storage"
+        },
+        {
+          type: "localstorage",
+          name: "features/virtual-background"
+        },
+        {
+          type: "localstorage",
+          name: "endpointID"
+        },
+        {
+          type: "localstorage",
+          name: "callStatsUserName"
+        },
+        {
+          type: "localstorage",
+          name: "endpointID"
+        },
+        {
+          type: "localstorage",
+          name: "callStatsUserName"
+        },
+        {
+          type: "localstorage",
+          name: "endpointID"
+        },
       ]
     },
     {
@@ -563,7 +619,19 @@ Decidim.configure do |config|
         {
           type: "cookie",
           name: "VISITOR_INFO1_LIVE"
-        }
+        },
+        {
+          type: "localstorage",
+          name: "amp_"
+        },
+        {
+          type: "localstorage",
+          name: "amplitude_unsent"
+        },
+        {
+          type: "localstorage",
+          name: "amplitude_unsent_identify"
+        },
       ]
     },
     {

@@ -50,6 +50,48 @@ en:
             CONSENT:
               description: Used for functionality. Lasts for 2 years, Google uses it to store a user’s state regarding their cookies choices. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
               service: YouTube embeds
+            language:
+              description: Save your language preference
+              service: Jitsi Meet
+            "features/base/known-domains":
+              description: Save a list of known domains
+              service: Jitsi Meet
+            "features/base/settings":
+              description: Used your save your Jtisi settings.
+              service: Jitsi Meet
+            "features/calendar-sync":
+              description: Used for the calendar sync feature.
+              service: Jitsi Meet
+            "features/dropbox":
+              description: Used for the dropbox integration feature.
+              service: Jitsi Meet
+            "features/prejoin":
+              description: Used for the prejoin screen feature.
+              service: Jitsi Meet
+            "features/recent-list":
+              description: Used for the recent list feature.
+              service: Jitsi Meet
+            "features/video-quality-persistent-storage":
+              description: Used for the video quality persistent storage feature.
+              service: Jitsi Meet
+            "features/virtual-background":
+              description: Used for the video background feature.
+              service: Jitsi Meet
+            amp_:
+              description: Used for Amplitude Analytics
+              service: Jitsi Meet
+            amplitude_unsent:
+              description: Used for Amplitude Analytics
+              service: Jitsi Meet
+            amplitude_unsent_identify:
+              description: Used for Amplitude Analytics
+              service: Jitsi Meet
+            callStatsUserName:
+              description: Used to save the user session on Jitsi.
+              service: Jitsi Meet
+            endpointID:
+              description: Used for communication purposes with the Jitsi server.
+              service: Jitsi Meet
           types:
             localstorage: LocalStorage
         modal:
