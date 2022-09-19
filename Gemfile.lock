@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: cb170d6e88ada190bf5f6946ad5f688995b6cffb
+  revision: 211c3e2e96f96a1d32310d98e364df66d3f38f69
   branch: develop
   specs:
     decidim-term_customizer (0.27.0)
-      decidim-admin (~> 0.27.0.rc1)
-      decidim-core (~> 0.27.0.rc1)
+      decidim-admin (~> 0.27.0.rc2)
+      decidim-core (~> 0.27.0.rc2)
 
 GEM
   remote: https://rubygems.org/
