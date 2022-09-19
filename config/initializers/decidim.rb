@@ -339,12 +339,12 @@ Decidim.configure do |config|
   # set cookies.
   config.consent_cookie_name = Rails.application.secrets.decidim[:consent_cookie_name] if Rails.application.secrets.decidim[:consent_cookie_name].present?
 
-  # Defines cookie consent categories and cookies.
+  # Defines data consent categories and items (aka cookies consent).
   # config.consent_categories = [
   #   {
   #     slug: "essential",
   #     mandatory: true,
-  #     cookies: [
+  #     items: [
   #       {
   #         type: "cookie",
   #         name: "_session_id"
@@ -491,7 +491,7 @@ Decidim.configure do |config|
     {
       slug: "essential",
       mandatory: true,
-      cookies: [
+      items: [
         {
           type: "cookie",
           name: "_session_id"
@@ -509,7 +509,7 @@ Decidim.configure do |config|
     {
       slug: "preferences",
       mandatory: false,
-      cookies: [
+      items: [
         {
           type: "localstorage",
           name: "emojiPicker-recent"
@@ -615,7 +615,7 @@ Decidim.configure do |config|
     {
       slug: "analytics",
       mandatory: false,
-      cookies: [
+      items: [
         {
           type: "cookie",
           name: "VISITOR_INFO1_LIVE"
@@ -637,7 +637,7 @@ Decidim.configure do |config|
     {
       slug: "marketing",
       mandatory: false,
-      cookies: [
+      items: [
         {
           type: "cookie",
           name: "VISITOR_INFO1_LIVE"

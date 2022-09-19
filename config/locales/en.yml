@@ -5,9 +5,9 @@ en:
       text: "Your code to be verified at Metadecidim is: %{code}"
   layouts:
     decidim:
-      cookie_consent:
-        cookie_details:
-          cookies:
+      data_consent:
+        details:
+          items:
             _session_id:
               description: Allows websites to remember user within a website when they move between web pages.
               service: This website
