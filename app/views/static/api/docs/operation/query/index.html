@@ -4,6 +4,58 @@
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
+  <span id="commentable" class="field-name anchored">commentable (<code><a href="/api/docs/object/commentable">Commentable!</a></code>)</span>
+  <div class="description-wrapper">
+     <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">id</code></td>
+  <td>
+    <code><a href="/api/docs/scalar/string">String!</a></code>
+  </td>
+  <td>
+    <p>The commentable's ID</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">type</code></td>
+  <td>
+    <code><a href="/api/docs/scalar/string">String!</a></code>
+  </td>
+  <td>
+    <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">locale</code></td>
+  <td>
+    <code><a href="/api/docs/scalar/string">String!</a></code>
+  </td>
+  <td>
+    <p>The locale for which to get the comments text</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">toggleTranslations</code></td>
+  <td>
+    <code><a href="/api/docs/scalar/boolean">Boolean!</a></code>
+  </td>
+  <td>
+    <p>Whether the user asked to toggle the machine translations or not.</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
   <span id="participatoryprocesses" class="field-name anchored">participatoryProcesses (<code><a href="/api/docs/object/participatoryprocess">[ParticipatoryProcess!]</a></code>)</span>
   <div class="description-wrapper">
    <p>Lists all participatory_processes</p>
@@ -250,58 +302,6 @@
   </td>
   <td>
     <p>Provides several methods to filter the results</p>
-   </td>
-  </tr>
-  </tbody>
-</table>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentable" class="field-name anchored">commentable (<code><a href="/api/docs/object/commentable">Commentable!</a></code>)</span>
-  <div class="description-wrapper">
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">id</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String!</a></code>
-  </td>
-  <td>
-    <p>The commentable's ID</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">type</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String!</a></code>
-  </td>
-  <td>
-    <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">locale</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String!</a></code>
-  </td>
-  <td>
-    <p>The locale for which to get the comments text</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">toggleTranslations</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/boolean">Boolean!</a></code>
-  </td>
-  <td>
-    <p>Whether the user asked to toggle the machine translations or not.</p>
    </td>
   </tr>
   </tbody>
