@@ -1,5 +1,12 @@
 ---
 es:
   decidim:
+    menu:
+      chat: Chat
+      governance: Cómo nos organizamos
+      meetings: Encuentros
+      news: Noticias
+      participate: Participa
+      welcome: Bienvenida
     sms:
       text: "Tu código para verificarte en Metadecidim es: %{code}"
