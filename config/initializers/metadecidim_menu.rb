@@ -1,14 +1,6 @@
 # frozen_string_literal: true
 
 Decidim.menu :metadecidim_menu do |menu|
-  menu.remove_item :assemblies
-  menu.remove_item :conferences
-  menu.remove_item :initiatives
-  menu.remove_item :consultations
-  menu.remove_item :participatory_processes
-  menu.remove_item :pages
-  menu.remove_item :root
-
   welcome_path = Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_path("Welcome")
   menu.add_item :welcome,
     I18n.t("menu.welcome", scope: "decidim"),
