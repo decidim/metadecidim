@@ -1,4 +1,6 @@
-Decidim.menu :menu do |menu|
+# frozen_string_literal: true
+
+Decidim.menu :metadecidim_menu do |menu|
   menu.remove_item :assemblies
   menu.remove_item :conferences
   menu.remove_item :initiatives
