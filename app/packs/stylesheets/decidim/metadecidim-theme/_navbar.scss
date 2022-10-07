@@ -1,5 +1,5 @@
-@media print, screen and (min-width: 40em) {
-  .main-nav__link a {
+.main-nav__link a {
+  @include breakpoint(medium) {
     padding: 0.75em 1em;
   }
 }
