@@ -1,0 +1,5 @@
+.main-nav__link a {
+  @include breakpoint(medium) {
+    padding: 0.75em 1em;
+  }
+}

@@ -1,5 +1,12 @@
 ---
 ca:
   decidim:
+    menu:
+      chat: Xat
+      governance: Com ens organitzem
+      meetings: Trobades
+      news: Notícies
+      participate: Participa
+      welcome: Benvinguda
     sms:
       text: "El teu codi per verificar-te a Metadecidim és: %{code}"
