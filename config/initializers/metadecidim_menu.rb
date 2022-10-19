@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Decidim.menu :metadecidim_menu do |menu|
-  welcome_path = Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_path("Welcome")
-  menu.add_item :welcome,
-    I18n.t("menu.welcome", scope: "decidim"),
-    welcome_path,
+  start_here_path = Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_path("Welcome")
+  menu.add_item :start_here,
+    I18n.t("menu.start_here", scope: "decidim"),
+    start_here_path,
     position: 10,
     active: :inclusive
 
