@@ -7,7 +7,7 @@ en:
       meetings: Meetings
       news: News
       participate: Participate
-      welcome: Welcome
+      start_here: Start here
     sms:
       text: "Your code to be verified at Metadecidim is: %{code}"
   layouts:

@@ -40,7 +40,8 @@ describe "Views the menu", type: :system, perform_enqueued: true do
       visit decidim.root_path
 
       within ".navbar" do
-        expect(page).to have_content("Welcome")
+        expect(page).to have_content("Home")
+        expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
         expect(page).to have_content("Meetings")
         expect(page).to have_content("Our governance")
