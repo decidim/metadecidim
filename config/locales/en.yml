@@ -9,81 +9,42 @@ en:
       participate: Participate
       start_here: Start here
     sms:
-      text: "Your code to be verified at Metadecidim is: %{code}"
+      text: 'Your code to be verified at Metadecidim is: %{code}'
   layouts:
     decidim:
       data_consent:
         details:
           items:
-            _session_id:
-              description: Allows websites to remember user within a website when they move between web pages.
-              service: This website
-            decidim-consent:
-              description: Stores information about the cookies allowed by the user on this website.
-              service: This website
-            remember_user_token:
-              description: Allows to keep your session open if you click on "Remember me" when logging in.
-              service: This website
-            "emojiPicker-recent":
-              description: Stores your most recent selected emojis
-              service: This website
-            "graphiql:docExplorerOpen":
-              description: Saves wheter you have the documentation panel open when using the GraphQL API
-              service: This website
-            "graphiql:editorFlex":
-              description: Saves your tab preference when using the GraphQL API
-              service: This website
-            "graphiql:historyPaneOpen":
-              description: Saves wheter you have the history panel open when using the GraphQL API
-              service: This website
-            "graphiql:queries":
-              description: Saves the history of your queries when using the GraphQL API
-              service: This website
-            "graphiql:query":
-              description: Saves your last query when using the GraphQL API
-              service: This website
-            "graphiql:tabState":
-              description: Saves your tab configuration when using the GraphQL API
-              service: This website
-            YSC:
-              description: Used for security. Lasts for the duration of a user's browsing session. Used to ensure that requests within a browsing session are made by the user, and not by other sites. This cookie prevent malicious sites from acting on behalf of a user without that user’s knowledge. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
-              service: YouTube embeds
-            VISITOR_INFO1_LIVE:
-              description: Used for functionality, analytics, advertising, and personalization. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+            CONSENT:
+              description: Used for functionality. Lasts for 2 years, Google uses
+                it to store a user’s state regarding their cookies choices. Read more
+                at <a href="https://policies.google.com/technologies/cookies">How
+                Google uses cookies</a>
               service: YouTube embeds
             PREF:
-              description: Used for functionality. YouTube uses this cookie to store information such as your preferred page configuration and playback preferences like explicit autoplay choices, shuffle content, and player size. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+              description: Used for functionality. YouTube uses this cookie to store
+                information such as your preferred page configuration and playback
+                preferences like explicit autoplay choices, shuffle content, and player
+                size. Read more at <a href="https://policies.google.com/technologies/cookies">How
+                Google uses cookies</a>
               service: YouTube embeds
-            CONSENT:
-              description: Used for functionality. Lasts for 2 years, Google uses it to store a user’s state regarding their cookies choices. Read more at <a href="https://policies.google.com/technologies/cookies">How Google uses cookies</a>
+            VISITOR_INFO1_LIVE:
+              description: Used for functionality, analytics, advertising, and personalization.
+                Read more at <a href="https://policies.google.com/technologies/cookies">How
+                Google uses cookies</a>
               service: YouTube embeds
-            language:
-              description: Save your language preference
-              service: Jitsi Meet
-            "features/base/known-domains":
-              description: Save a list of known domains
-              service: Jitsi Meet
-            "features/base/settings":
-              description: Used your save your Jtisi settings.
-              service: Jitsi Meet
-            "features/calendar-sync":
-              description: Used for the calendar sync feature.
-              service: Jitsi Meet
-            "features/dropbox":
-              description: Used for the dropbox integration feature.
-              service: Jitsi Meet
-            "features/prejoin":
-              description: Used for the prejoin screen feature.
-              service: Jitsi Meet
-            "features/recent-list":
-              description: Used for the recent list feature.
-              service: Jitsi Meet
-            "features/video-quality-persistent-storage":
-              description: Used for the video quality persistent storage feature.
-              service: Jitsi Meet
-            "features/virtual-background":
-              description: Used for the video background feature.
-              service: Jitsi Meet
+            YSC:
+              description: Used for security. Lasts for the duration of a user's browsing
+                session. Used to ensure that requests within a browsing session are
+                made by the user, and not by other sites. This cookie prevent malicious
+                sites from acting on behalf of a user without that user’s knowledge.
+                Read more at <a href="https://policies.google.com/technologies/cookies">How
+                Google uses cookies</a>
+              service: YouTube embeds
+            _session_id:
+              description: Allows websites to remember user within a website when
+                they move between web pages.
+              service: This website
             amp_:
               description: Used for Amplitude Analytics
               service: Jitsi Meet
@@ -96,22 +57,88 @@ en:
             callStatsUserName:
               description: Used to save the user session on Jitsi.
               service: Jitsi Meet
+            decidim-consent:
+              description: Stores information about the cookies allowed by the user
+                on this website.
+              service: This website
+            emojiPicker-recent:
+              description: Stores your most recent selected emojis
+              service: This website
             endpointID:
               description: Used for communication purposes with the Jitsi server.
               service: Jitsi Meet
+            features/base/known-domains:
+              description: Save a list of known domains
+              service: Jitsi Meet
+            features/base/settings:
+              description: Used your save your Jtisi settings.
+              service: Jitsi Meet
+            features/calendar-sync:
+              description: Used for the calendar sync feature.
+              service: Jitsi Meet
+            features/dropbox:
+              description: Used for the dropbox integration feature.
+              service: Jitsi Meet
+            features/prejoin:
+              description: Used for the prejoin screen feature.
+              service: Jitsi Meet
+            features/recent-list:
+              description: Used for the recent list feature.
+              service: Jitsi Meet
+            features/video-quality-persistent-storage:
+              description: Used for the video quality persistent storage feature.
+              service: Jitsi Meet
+            features/virtual-background:
+              description: Used for the video background feature.
+              service: Jitsi Meet
+            graphiql:docExplorerOpen:
+              description: Saves wheter you have the documentation panel open when
+                using the GraphQL API
+              service: This website
+            graphiql:editorFlex:
+              description: Saves your tab preference when using the GraphQL API
+              service: This website
+            graphiql:historyPaneOpen:
+              description: Saves wheter you have the history panel open when using
+                the GraphQL API
+              service: This website
+            graphiql:queries:
+              description: Saves the history of your queries when using the GraphQL
+                API
+              service: This website
+            graphiql:query:
+              description: Saves your last query when using the GraphQL API
+              service: This website
+            graphiql:tabState:
+              description: Saves your tab configuration when using the GraphQL API
+              service: This website
+            language:
+              description: Save your language preference
+              service: Jitsi Meet
+            remember_user_token:
+              description: Allows to keep your session open if you click on "Remember
+                me" when logging in.
+              service: This website
           types:
             localstorage: LocalStorage
         modal:
           analytics:
-            description: Analytics cookies are cookies that track how users navigate and interact with a website. The information collected is used to help the website owner improve the website.
+            description: Analytics cookies are cookies that track how users navigate
+              and interact with a website. The information collected is used to help
+              the website owner improve the website.
             title: Analytics and statistics
-          description: We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.
+          description: We use cookies to ensure the basic functionalities of the website
+            and to enhance your online experience. You can choose for each category
+            to opt-in/out whenever you want.
           essential:
-            description: These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly.
+            description: These cookies are essential for the proper functioning of
+              my website. Without these cookies, the website would not work properly.
             title: Essential
           marketing:
-            description: These cookies collect information about how you use the website, which pages you visited and which links you clicked on.
+            description: These cookies collect information about how you use the website,
+              which pages you visited and which links you clicked on.
             title: Marketing
           preferences:
-            description: These cookies allow the website to remember the choices you have made in the past
+            description: These cookies allow the website to remember the choices you
+              have made in the past
             title: Preferences

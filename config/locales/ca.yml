@@ -9,4 +9,4 @@ ca:
       participate: Participa
       welcome: Benvinguda
     sms:
-      text: "El teu codi per verificar-te a Metadecidim és: %{code}"
+      text: 'El teu codi per verificar-te a Metadecidim és: %{code}'

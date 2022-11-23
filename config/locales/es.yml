@@ -9,4 +9,4 @@ es:
       participate: Participa
       welcome: Bienvenida
     sms:
-      text: "Tu código para verificarte en Metadecidim es: %{code}"
+      text: 'Tu código para verificarte en Metadecidim es: %{code}'
