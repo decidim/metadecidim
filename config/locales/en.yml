@@ -142,3 +142,7 @@ en:
             description: These cookies allow the website to remember the choices you
               have made in the past
             title: Preferences
+      header:
+        main_menu: Main menu
+      user_menu:
+        title: Title
