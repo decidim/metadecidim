@@ -16,37 +16,41 @@ es:
         details:
           items:
             CONSENT:
-              description: Se utiliza para la funcionalidad. Tiene una duración de
-                2 años, Google la utiliza para almacenar el estado de un usuario con
-                respecto a sus opciones de cookies. Obtenga más información en <a
-                href="https://policies.google.com/technologies/cookies">Cómo Google
-                utiliza cookies</a>
+              description: >-
+                Se utiliza para la funcionalidad. Tiene una duración de 2 años, Google
+                la utiliza para almacenar el estado de un usuario con respecto a sus
+                opciones de cookies. Obtenga más información en <a href="https://policies.google.com/technologies/cookies">Cómo
+                Google utiliza cookies</a>
               service: Incrustaciones de YouTube
             PREF:
-              description: Se utiliza para la funcionalidad. YouTube utiliza esta
-                cookie para almacenar información como su configuración de página
-                preferida y preferencias de reproducción, como opciones de reproducción
-                automática, contenido aleatorio y medidas del reproductor. Obtenga
-                más información en <a href="https://policies.google.com/technologies/cookies">Cómo
+              description: >-
+                Se utiliza para la funcionalidad. YouTube utiliza esta cookie para
+                almacenar información como su configuración de página preferida y
+                preferencias de reproducción, como opciones de reproducción automática,
+                contenido aleatorio y medidas del reproductor. Obtenga más información
+                en <a href="https://policies.google.com/technologies/cookies">Cómo
                 Google utiliza cookies</a>
               service: Incrustaciones de YouTube
             VISITOR_INFO1_LIVE:
-              description: Se utiliza para la funcionalidad, el análisis, la publicidad
-                y la personalización. Obtenga más información en <a href="https://policies.google.com/technologies/cookies">Cómo
+              description: >-
+                Se utiliza para la funcionalidad, el análisis, la publicidad y la
+                personalización. Obtenga más información en <a href="https://policies.google.com/technologies/cookies">Cómo
                 Google utiliza cookies</a>
               service: Incrustaciones de YouTube
             YSC:
-              description: Se utiliza para la seguridad. Tiene una duración de la
-                sesión de navegación de un usuario. Se utiliza para garantizar que
-                las solicitudes dentro de una sesión de navegación sean realizadas
-                por el usuario, y no por otros sitios. Esta cookie previene a los
-                sitios maliciosos actuar en nombre de un usuario sin el conocimiento
-                de ese usuario. Obtenga más información en <a href="https://policies.google.com/technologies/cookies">Cómo
+              description: >-
+                Se utiliza para la seguridad. Tiene una duración de la sesión de navegación
+                de un usuario. Se utiliza para garantizar que las solicitudes dentro
+                de una sesión de navegación sean realizadas por el usuario, y no por
+                otros sitios. Esta cookie previene a los sitios maliciosos actuar
+                en nombre de un usuario sin el conocimiento de ese usuario. Obtenga
+                más información en <a href="https://policies.google.com/technologies/cookies">Cómo
                 Google utiliza cookies</a>
               service: Incrustaciones de YouTube
             _session_id:
-              description: Permite que los sitios web recuerden al usuario dentro
-                de un sitio web cuando se mueven entre páginas web.
+              description: >-
+                Permite que los sitios web recuerden al usuario dentro de un sitio
+                web cuando se mueven entre páginas web.
               service: Este sitio web
             amp_:
               description: Utilizado para Amplitude Analytics
@@ -61,8 +65,9 @@ es:
               description: Se usa para guardar la sesión del usuario en Jitsi.
               service: Jitsi Meet
             decidim-consent:
-              description: Almacena información sobre las cookies permitidas por el
-                usuario en este sitio web.
+              description: >-
+                Almacena información sobre las cookies permitidas por el usuario en
+                este sitio web.
               service: Este sitio web
             emojiPicker-recent:
               description: Almacena tus emojis seleccionados más recientes
@@ -96,8 +101,9 @@ es:
               description: Se utiliza para la función de fondo de video.
               service: Jitsi Meet
             graphiql:docExplorerOpen:
-              description: Guarda si tiene el panel de documentación abierto cuando
-                se utilitza la API de GraphQL
+              description: >-
+                Guarda si tiene el panel de documentación abierto cuando se utilitza
+                la API de GraphQL
               service: Este sitio web
             graphiql:editorFlex:
               description: Guarda su preferencia de pestaña cuando usa la API de GraphQL
@@ -121,32 +127,37 @@ es:
               description: Guarda su preferencia de idioma
               service: Jitsi Meet
             remember_user_token:
-              description: Permite mantener tu sesión abierta si haces clic en "Recordarme"
-                al iniciar sesión.
+              description: >-
+                Permite mantener tu sesión abierta si haces clic en "Recordarme" al
+                iniciar sesión.
               service: Este sitio web
           types:
             localstorage: Almacenamiento local
         modal:
           analytics:
-            description: Las cookies de análisis son cookies que rastrean cómo navegan
-              los usuarios e interactuar con un sitio web. La información recopilada
-              se utiliza para ayudar el propietario del sitio web mejorar el sitio
-              web.
+            description: >-
+              Las cookies de análisis son cookies que rastrean cómo navegan los usuarios
+              e interactuar con un sitio web. La información recopilada se utiliza
+              para ayudar el propietario del sitio web mejorar el sitio web.
             title: Análisis y estadísticas
-          description: Utilizamos cookies para asegurar las funcionalidades básicas
-            del sitio web y para mejorar su experiencia en línea. Puedes elegir
-            para cada categoría. para darte de alta o de baja cuando quieras.
+          description: >-
+            Utilizamos cookies para asegurar las funcionalidades básicas del sitio
+            web y para mejorar su experiencia en línea. Puedes elegir para cada categoría.
+            para darte de alta o de baja cuando quieras.
           essential:
-            description: Estas cookies son esenciales para el correcto funcionamiento
-              de Mi sitio web. Sin estas cookies, el sitio web no funcionaría correctamente.
+            description: >-
+              Estas cookies son esenciales para el correcto funcionamiento de Mi sitio
+              web. Sin estas cookies, el sitio web no funcionaría correctamente.
             title: Esencial
           marketing:
-            description: Estas cookies recopilan información sobre cómo utiliza
-              el sitio web, qué páginas visitó y en qué enlaces hizo clic.
+            description: >-
+              Estas cookies recopilan información sobre cómo utiliza el sitio web,
+              qué páginas visitó y en qué enlaces hizo clic.
             title: Mercadeo
           preferences:
-            description: Estas cookies permiten que el sitio web recuerde las opciones
-              que usted han hecho en el pasado
+            description: >-
+              Estas cookies permiten que el sitio web recuerde las opciones que usted
+              han hecho en el pasado
             title: Preferencias
       header:
         main_menu: Menú principal
