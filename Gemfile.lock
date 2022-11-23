@@ -874,6 +874,7 @@ DEPENDENCIES
   faker
   fog-aws
   geocoder (~> 1.8.0)
+  i18n-tasks (~> 0.9.37)
   letter_opener_web
   listen (~> 3.7.1)
   lograge
