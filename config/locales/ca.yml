@@ -41,7 +41,7 @@ ca:
                 S'utilitza per a la seguretat. Té una durada de la sessió de navegació
                 d'un usuari. S'utilitza per garantir que les sol·licituds dins d'una
                 sessió de navegació siguin fetes per l'usuari, i no per altres llocs.
-                Aquesta galeta evita llocs malliosos d'actuar en nom d'un usuari sense
+                Aquesta galeta evita que llocs maliciosos actuïn en nom d'un usuari sense
                 el coneixement d'aquest. Més informació a <a href="https://policies.google.com/technologies/cookies">Com
                 Google utilitza galetes</a>
               service: Incrustracions de YouTube
@@ -127,7 +127,7 @@ ca:
               service: Jitsi Meet
             remember_user_token:
               description: >-
-                Permet mantenir la sessió oberta si feu clic a "Recorda jo" en iniciar
+                Permet mantenir la sessió oberta si feu clic a "Recorda'm" en iniciar
                 la sessió.
               service: Aquest lloc web
           types:
@@ -137,7 +137,7 @@ ca:
             description: >-
               Les galetes d'anàlisi són galetes que fan un seguiment de com els usuaris
               naveguen i interactuen amb un lloc web. La informació recollida s'utilitza
-              per ajudar el propietari del lloc web millorar el lloc web.
+              per ajudar el propietari del lloc web a millorar-lo.
             title: Analítiques i estadístiques
           description: >-
             Fem servir galetes per garantir les funcionalitats bàsiques del lloc web
@@ -145,7 +145,7 @@ ca:
             per activar/desactivar-la quan vulguis.
           essential:
             description: >-
-              Aquestes galetes són essencials per al bon funcionament de el meu lloc
+              Aquestes galetes són essencials per al bon funcionament del lloc
               web. Sense aquestes galetes, el lloc web no funcionaria correctament.
             title: Imprescindible
           marketing:
