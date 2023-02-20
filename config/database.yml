@@ -84,4 +84,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  url: <%= ENV['HEROKU_POSTGRESQL_OLIVE_URL'] || ENV['DATABASE_URL'] || "postgresql://localhost/metadecidim" %>
+  url: <%= ENV['DATABASE_URL'] || "postgresql://localhost/metadecidim" %>
