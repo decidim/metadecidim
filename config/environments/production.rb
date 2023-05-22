@@ -120,4 +120,9 @@ Rails.application.configure do
 
   # Store files on Amazon S3.
   config.active_storage.service = :amazon
+
+  if ENV["STAGING_PASSWORD"].present?
+    # Block users that do not know a given password
+    config.middleware.use RackPassword::Block, auth_codes: [ENV["STAGING_PASSWORD"]]
+  end
 end
