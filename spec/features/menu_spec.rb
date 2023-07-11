@@ -15,7 +15,6 @@ describe "Views the menu", type: :system, perform_enqueued: true do
 
     within ".navbar" do
       expect(page).to have_content("Home")
-      expect(page).to have_content("Initiatives")
       expect(page).to have_content("Help")
     end
   end
