@@ -1,269 +1,18 @@
 <div class="content"><h1>
-<a id="consultationquestion" class="anchor" href="#consultationquestion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ConsultationQuestion</h1>
-<p>A consultation question</p>
-<h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
-<ul>
-   <li><code><a href="/api/docs/interface/attachableinterface">AttachableInterface</a></code></li>
-   <li><code><a href="/api/docs/interface/commentableinterface">CommentableInterface</a></code></li>
-   <li><code><a href="/api/docs/interface/scopableinterface">ScopableInterface</a></code></li>
-</ul>
+<a id="quantifiabletranslatedfield" class="anchor" href="#quantifiabletranslatedfield" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>QuantifiableTranslatedField</h1>
+<p>A quantifiable translated field with singular and plural formats</p>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="scope" class="field-name anchored">scope (<code><a href="/api/docs/object/scope">Scope</a></code>)</span>
+  <span id="single" class="field-name anchored">single (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The object's scope</p>
+   <p>The singular format.</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="attachments" class="field-name anchored">attachments (<code><a href="/api/docs/object/attachment">[Attachment]!</a></code>)</span>
+  <span id="plural" class="field-name anchored">plural (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
   <div class="description-wrapper">
-   <p>This object's attachments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Internal ID of the question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="acceptsnewcomments" class="field-name anchored">acceptsNewComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object can have new comments or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have alignment or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Whether the object comments have votes or not</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="comments" class="field-name anchored">comments (<code><a href="/api/docs/object/comment">[Comment!]!</a></code>)</span>
-  <div class="description-wrapper">
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">orderBy</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>Order the comments</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">singleCommentId</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>ID of the single comment to look at</p>
-   </td>
-  </tr>
-  </tbody>
-</table>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Title of the question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="subtitle" class="field-name anchored">subtitle (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The subtitle of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="slug" class="field-name anchored">slug (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Slug of the question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this question was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this question was updated</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this question was published</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="components" class="field-name anchored">components (<code><a href="/api/docs/interface/componentinterface">[ComponentInterface]</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Lists the components this space contains.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="bannerimage" class="field-name anchored">bannerImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The banner image for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="heroimage" class="field-name anchored">heroImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The hero image for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="whatisdecided" class="field-name anchored">whatIsDecided (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>What is decided in this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="promotergroup" class="field-name anchored">promoterGroup (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The promoter group of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="participatoryscope" class="field-name anchored">participatoryScope (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The participatory scope of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="questioncontext" class="field-name anchored">questionContext (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The context for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="reference" class="field-name anchored">reference (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The reference for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="hashtag" class="field-name anchored">hashtag (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The hashtag of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="votescount" class="field-name anchored">votesCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of votes in this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="originscope" class="field-name anchored">originScope (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The origin scope of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="origintitle" class="field-name anchored">originTitle (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The origin title of this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="originurl" class="field-name anchored">originUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The origin URL for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="iframeurl" class="field-name anchored">iFrameUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The iframe URL for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="externalvoting" class="field-name anchored">externalVoting (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
-  <div class="description-wrapper">
-   <p>If the question has external voting</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="responsescount" class="field-name anchored">responsesCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of responses for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="order" class="field-name anchored">order (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The order in which the question should be represented</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="maxvotes" class="field-name anchored">maxVotes (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The maximum number of votes in this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="minvotes" class="field-name anchored">minVotes (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The minimum number of votes in this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="responsegroupscount" class="field-name anchored">responseGroupsCount (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The number of group responses for this question</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="instructions" class="field-name anchored">instructions (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Instructions for this question</p>
+   <p>The plural format.</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">
@@ -452,20 +201,6 @@
       <li>
         <a href="/api/docs/object/conferencespeaker/" class="sidebar-link">
           ConferenceSpeaker
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/consultation/" class="sidebar-link">
-          Consultation
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/consultationquestion/" class="sidebar-link">
-          ConsultationQuestion
         </a>
       </li>
       
@@ -702,6 +437,13 @@
       
         
       <li>
+        <a href="/api/docs/object/participatoryspacemanifest/" class="sidebar-link">
+          ParticipatorySpaceManifest
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/post/" class="sidebar-link">
           Post
         </a>
@@ -753,6 +495,13 @@
       <li>
         <a href="/api/docs/object/proposals/" class="sidebar-link">
           Proposals
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/quantifiabletranslatedfield/" class="sidebar-link">
+          QuantifiableTranslatedField
         </a>
       </li>
       
@@ -1320,6 +1069,13 @@
       <li>
         <a href="/api/docs/directive/include/" class="sidebar-link">
           include
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/directive/oneof/" class="sidebar-link">
+          oneOf
         </a>
       </li>
       
