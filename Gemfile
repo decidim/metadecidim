@@ -5,13 +5,12 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 #DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.26-stable" }
-DECIDIM_VERSION = "0.27.3"
+DECIDIM_VERSION = "0.28.0.rc2"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
+# gem "decidim-term_customizer", { git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop" }
 
 gem "omniauth-decidim", "0.2.1"
 
