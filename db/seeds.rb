@@ -16,7 +16,11 @@ Decidim.seed!
 puts "Making local configurations changes..."
 
 puts "-- Changing the organization's name to Metadecidim"
-Decidim::Organization.first.update!(name: 'Metadecidim')
+organization = Decidim::Organization.first
+organization.update!(name: 'Metadecidim')
+
+puts "-- Applying corporative colors"
+organization.update!(colors: { alert: "#e7131a", primary: "#c8102e", success: "#28a745", warning: "#ffb703", tertiary: "#ebc34b", secondary: "#1a5fb4"})
 
 puts "-- Changing the slugs and IDs to correspond with the ones from the menu"
 Decidim::ParticipatoryProcess.first.update!(slug: 'Welcome')
