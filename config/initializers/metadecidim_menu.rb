@@ -49,3 +49,20 @@ Decidim.menu :metadecidim_menu do |menu|
     position: 60,
     active: :false
 end
+
+# Monkey patch MenuHelper to have a custom menu
+Rails.application.config.to_prepare do
+  Decidim::MenuHelper.module_eval do
+    def home_content_block_menu
+      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_menu : :home_content_block_menu
+
+      @home_content_block_menu ||= ::Decidim::MenuPresenter.new(
+        menu_name,
+        self,
+        element_class: "main-nav__link",
+        active_class: "main-nav__link--active",
+        label: t("layouts.decidim.header.main_menu")
+      )
+    end
+  end
+end
