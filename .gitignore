@@ -39,3 +39,4 @@ storage/
 yarn-debug.log*
 yarn-error.log
 
+tailwind.config.js
