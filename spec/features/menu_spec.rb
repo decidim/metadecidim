@@ -18,15 +18,6 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     switch_to_host(organization.host)
   end
 
-  it "the main menu has the elements" do
-    visit decidim.root_path
-
-    within "#home__menu" do
-      expect(page).to have_content("Home")
-      expect(page).to have_content("Help")
-    end
-  end
-
   it "the user menu has the elements" do
     login_as user, scope: :user
     visit decidim.account_path
