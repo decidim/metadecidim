@@ -646,6 +646,3 @@ Decidim.configure do |config|
     }
   ]
 end
-
-# Workaround until v0.28.0 or v0.28.0.rc3 is available
-Decidim.icons.register(name: "phone", icon: "phone", category: "system", description: "", engine: :core)
