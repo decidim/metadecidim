@@ -646,3 +646,5 @@ Decidim.configure do |config|
     }
   ]
 end
+
+Decidim.icons.register(name: "decidim-fill", icon: "decidim-fill", category: "system", description: "", engine: :core)

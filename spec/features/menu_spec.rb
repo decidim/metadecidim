@@ -7,23 +7,22 @@ describe "Views the menu", type: :system, perform_enqueued: true do
   let(:user) { create :user, :confirmed }
 
   before do
+    Decidim::ContentBlock.create!(
+      organization:,
+      scope_name: :homepage,
+      scoped_resource_id: nil,
+      manifest_name: :global_menu,
+      published_at: Time.zone.now
+    )
+
     switch_to_host(organization.host)
-  end
-
-  it "the main menu has the elements" do
-    visit decidim.root_path
-
-    within ".navbar" do
-      expect(page).to have_content("Home")
-      expect(page).to have_content("Help")
-    end
   end
 
   it "the user menu has the elements" do
     login_as user, scope: :user
     visit decidim.account_path
 
-    within ".side-panel" do
+    within "#dropdown-menu-profile" do
       expect(page).to have_content("Account")
       expect(page).to have_content("Notifications settings")
       expect(page).to have_content("My interests")
@@ -38,7 +37,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     it "the main menu has the Metadecidim elements" do
       visit decidim.root_path
 
-      within ".navbar" do
+      within "#home__menu" do
         expect(page).to have_content("Home")
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")

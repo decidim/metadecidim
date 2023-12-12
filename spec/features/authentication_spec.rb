@@ -13,14 +13,12 @@ describe 'Authentication', type: :system do
   describe 'Sign Up' do
     context 'when using email and password' do
       it 'ask confirmations on new Users' do
-        find('.sign-up-link').click
+        find('a[href="/users/sign_up"').click
 
         within '.new_user' do
           fill_in :registration_user_email, with: 'user@example.org'
           fill_in :registration_user_name, with: 'Responsible Citizen'
-          fill_in :registration_user_nickname, with: 'responsible'
           fill_in :registration_user_password, with: 'DfyvHn425mYAy2HL'
-          fill_in :registration_user_password_confirmation, with: 'DfyvHn425mYAy2HL'
           check :registration_user_tos_agreement
           check :registration_user_newsletter
           find('*[type=submit]').click

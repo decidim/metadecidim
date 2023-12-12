@@ -12,6 +12,8 @@ describe 'Visit the home page', type: :system, perform_enqueued: true do
   it 'renders the home page' do
     visit decidim.root_path
     # By default there isn't any Content Block enabled, so we search a content from the header
-    expect(page).to have_content('Search')
+    within ".main-bar" do
+      expect(page).to have_content('Help')
+    end
   end
 end
