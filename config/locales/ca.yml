@@ -7,6 +7,6 @@ ca:
       meetings: Trobades
       news: Notícies
       participate: Participa
-      welcome: Benvinguda
+      start_here: Comença aquí
     sms:
       text: "El teu codi per verificar-te a Metadecidim és: %{code}"
