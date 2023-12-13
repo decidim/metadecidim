@@ -64,5 +64,28 @@ Rails.application.config.to_prepare do
         label: t("layouts.decidim.header.main_menu")
       )
     end
+
+    def breadcrumb_root_menu
+      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_menu : :menu
+
+      @breadcrumb_root_menu ||= ::Decidim::BreadcrumbRootMenuPresenter.new(
+        menu_name,
+        self,
+        container_options: { class: "menu-bar__main-dropdown__menu" }
+      )
+    end
+
+    def footer_menu
+      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_menu : :menu
+
+      @footer_menu ||= ::Decidim::FooterMenuPresenter.new(
+        menu_name,
+        self,
+        element_class: "font-semibold underline",
+        active_class: "is-active",
+        container_options: { class: "space-y-4 break-inside-avoid" },
+        label: t("layouts.decidim.footer.decidim_title")
+      )
+    end
   end
 end
