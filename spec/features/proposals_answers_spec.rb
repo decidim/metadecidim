@@ -17,10 +17,10 @@ describe "Views the proposals answers overrides", type: :system do
   it "views the overrided colors" do
     within "main" do
       # Capybara understands rgba instead of hexadecimal colors
-      expect(page.find("span.label.success")).to match_style("background-color" => "rgba(204, 190, 230, 1)")
-      expect(page.find("span.label.success")).to match_style("color" => "rgba(102, 57, 186, 1)")
-      expect(page.find("span.label.warning")).to match_style("background-color" => "rgba(196, 236, 208, 1)")
-      expect(page.find("span.label.warning")).to match_style("color" => "rgba(22, 89, 46, 1)")
+      expect(page.find("span.label.finished")).to match_style("background-color" => "rgba(204, 190, 230, 1)")
+      expect(page.find("span.label.finished")).to match_style("color" => "rgba(102, 57, 186, 1)")
+      expect(page.find("span.label.progressing")).to match_style("background-color" => "rgba(196, 236, 208, 1)")
+      expect(page.find("span.label.progressing")).to match_style("color" => "rgba(22, 89, 46, 1)")
     end
   end
 

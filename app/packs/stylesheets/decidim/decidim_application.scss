@@ -1,10 +1,20 @@
 
-span.label.success {
+span.label.finished {
   background-color: #ccbee6;
   color: #6639ba;
 }
 
-span.label.warning {
+span.label.progressing {
   background-color: var(--bg-success);
   color: var(--success);
+}
+
+div.flash.finished {
+  background-color: #ccbee6;
+  border-color: #6639ba;
+}
+
+div.flash.progressing {
+  background-color: var(--bg-success);
+  border-color:  var(--success);
 }
