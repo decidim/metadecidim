@@ -44,4 +44,7 @@ en:
         filter_state_values:
           accepted: Finished
           evaluating: Accepted / In progress
-
+      proposals:
+        show:
+          proposal_accepted_reason: This proposal has been implemented
+          proposal_in_evaluation_reason: This proposal has been accepted

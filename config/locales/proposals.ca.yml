@@ -44,4 +44,7 @@ ca:
         filter_state_values:
           accepted: Finalitzada
           evaluating: Acceptada / En curs
-
+      proposals:
+        show:
+          proposal_accepted_reason: Aquesta proposta ha sigut implementada
+          proposal_in_evaluation_reason: Aquesta proposta ha sigut acceptada
