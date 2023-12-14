@@ -93,7 +93,7 @@ describe "Views the proposals answers overrides", type: :system do
       it "views the overrided colors" do
         within "main" do
           # Capybara understands rgba instead of hexadecimal colors
-          expect(page.find("div.flash.progressing")).to match_style("background-color" => "rgba(196, 236, 208, 1)")
+          expect(page.find("div.flash.progressing")).to match_style("background-color" => "rgba(246, 253, 249, 1)")
           expect(page.find("div.flash.progressing")).to match_style("border-color" => "rgb(22, 89, 34)")
         end
       end

@@ -3,6 +3,7 @@
   --bg-finished: #f6f5fc;
   --progressing: #165922;
   --bg-progressing: #c4ecd0;
+  --bg-progressing-2: #f6fdf9;
 }
 
 span.label.finished {
@@ -21,6 +22,6 @@ div.flash.finished {
 }
 
 div.flash.progressing {
-  background-color: var(--bg-progressing);
+  background-color: var(--bg-progressing-2);
   border-color: var(--progressing);
 }
