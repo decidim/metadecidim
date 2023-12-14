@@ -1,20 +1,26 @@
+:root {
+  --finished: #6639ba;
+  --bg-finished: #f6f5fc;
+  --progressing: #165922;
+  --bg-progressing: #c4ecd0;
+}
 
 span.label.finished {
-  background-color: #ccbee6;
-  color: #6639ba;
+  background-color: var(--bg-finished);
+  color: var(--finished);
 }
 
 span.label.progressing {
-  background-color: var(--bg-success);
-  color: var(--success);
+  background-color: var(--bg-progressing);
+  color: var(--progressing);
 }
 
 div.flash.finished {
-  background-color: #ccbee6;
-  border-color: #6639ba;
+  background-color: var(--bg-finished);
+  border-color: var(--finished);
 }
 
 div.flash.progressing {
-  background-color: var(--bg-success);
-  border-color:  var(--success);
+  background-color: var(--bg-progressing);
+  border-color: var(--progressing);
 }
