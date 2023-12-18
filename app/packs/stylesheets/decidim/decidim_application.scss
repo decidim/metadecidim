@@ -1,0 +1,27 @@
+:root {
+  --finished: #6639ba;
+  --bg-finished: #f6f5fc;
+  --progressing: #165922;
+  --bg-progressing: #c4ecd0;
+  --bg-progressing-2: #f6fdf9;
+}
+
+span.label.finished {
+  background-color: var(--bg-finished);
+  color: var(--finished);
+}
+
+span.label.progressing {
+  background-color: var(--bg-progressing);
+  color: var(--progressing);
+}
+
+div.flash.finished {
+  background-color: var(--bg-finished);
+  border-color: var(--finished);
+}
+
+div.flash.progressing {
+  background-color: var(--bg-progressing-2);
+  border-color: var(--progressing);
+}

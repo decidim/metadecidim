@@ -1,0 +1,50 @@
+ca:
+  decidim:
+    admin:
+      filters:
+        proposals:
+          state_eq:
+            values:
+              accepted: Finalitzada
+              evaluating: Acceptada / En curs
+    events:
+      proposals:
+        proposal_accepted:
+          affected_user:
+            email_intro: 'El desenvolupament de la teva proposta "%{resource_title}" s''ha completat. Pots llegir la resposta en aquesta pàgina:'
+            email_outro: Has rebut aquesta notificació perquè ets autora de "%{resource_title}".
+            email_subject: S'ha completat el desenvolupament de la teva proposta
+            notification_title: El desenvolupament de la teva proposta <a href="%{resource_path}">%{resource_title}</a> s'ha completat.
+          follower:
+            email_intro: 'El desenvolupament de la proposta "%{resource_title}" s''ha completat. Pots llegir la resposta des d''aquesta pàgina:'
+            email_outro: Has rebut aquesta notificació perquè que segueixes "%{resource_title}". El pots deixar de seguir al link anterior.
+            email_subject: S'ha completat el desenvolupament d'una proposta que segueixes
+            notification_title: El desenvolupament de la proposta <a href="%{resource_path}">%{resource_title}</a> s'ha completat.
+        proposal_evaluating:
+          affected_user:
+            email_intro: 'La teva proposta "%{resource_title}" s''ha acceptat. Pots consultar la resposta en aquesta pàgina:'
+            email_outro: Has rebut aquesta notificació perquè ets autora de "%{resource_title}".
+            email_subject: La teva proposta s'ha acceptat
+            notification_title: La teva proposta <a href="%{resource_path}">%{resource_title}</a> s'ha acceptat.
+          follower:
+            email_intro: 'La proposta "%{resource_title}" s''ha acceptat. Pots consultar una resposta en aquesta pàgina:'
+            email_outro: Has rebut aquesta notificació perquè que segueixes "%{resource_title}". El pots deixar de seguir al link anterior.
+            email_subject: S'ha acceptat una proposta que segueixes
+            notification_title: La proposta <a href="%{resource_path}">%{resource_title}</a> s'ha acceptat.
+    proposals:
+      admin:
+        proposal_answers:
+          form:
+            accepted: Finalitzada
+            evaluating: Acceptada / En curs
+      answers:
+        accepted: Finalitzada
+        evaluating: Acceptada / En curs
+      application_helper:
+        filter_state_values:
+          accepted: Finalitzada
+          evaluating: Acceptada / En curs
+      proposals:
+        show:
+          proposal_accepted_reason: Aquesta proposta ha sigut implementada
+          proposal_in_evaluation_reason: Aquesta proposta ha sigut acceptada

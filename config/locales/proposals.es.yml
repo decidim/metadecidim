@@ -1,0 +1,50 @@
+es:
+  decidim:
+    admin:
+      filters:
+        proposals:
+          state_eq:
+            values:
+              accepted: Finalizada
+              evaluating: Aceptada / En curso
+    events:
+      proposals:
+        proposal_accepted:
+          affected_user:
+            email_intro: 'El desarrollo de tu propuesta "%{resource_title}" se ha completado. Puedes leer la respuesta en esta página:'
+            email_outro: Has recibido esta notificación porque eres autora de "%{resource_title}".
+            email_subject: Se ha completado el desarrollo de tu propuesta
+            notification_title: El desarrollo de tu propuesta <a href="%{resource_path}">%{resource_title}</a> se ha completado.
+          follower:
+            email_intro: 'El desarrollo de la propuesta "%{resource_title}" se ha completado. Puedes leer la respuesta en esta página:'
+            email_outro: Has recibido esta notificación porque sigues "%{resource_title}". Puedes dejar de seguirlo en el enlace anterior.
+            email_subject: Se ha completado el desarrollo de una propuesta que estás siguiendo
+            notification_title: El desarrollo de la propuesta <a href="%{resource_path}">%{resource_title}</a> se ha completado.
+        proposal_evaluating:
+          affected_user:
+            email_intro: 'Tu propuesta "%{resource_title}" se ha aceptado. Puedes consultar la respuesta en esta página:'
+            email_outro: Has recibido esta notificación porque eres autora de "%{resource_title}".
+            email_subject: Tu propuesta se ha aceptado
+            notification_title: Tu propuesta <a href="%{resource_path}">%{resource_title}</a> se ha aceptado.
+          follower:
+            email_intro: 'La propuesta "%{resource_title}" se ha aceptado. Puedes encontrar la respuesta en esta página:'
+            email_outro: Has recibido esta notificación porque sigues "%{resource_title}". Puedes dejar de seguirlo en el enlace anterior.
+            email_subject: Se ha aceptado una propuesta que estás siguiendo
+            notification_title: La propuesta <a href="%{resource_path}">%{resource_title}</a> se ha aceptado.
+    proposals:
+      admin:
+        proposal_answers:
+          form:
+            accepted: Finalizada
+            evaluating: Aceptada / En curso
+      answers:
+        accepted: Finalizada
+        evaluating: Aceptada / En curso
+      application_helper:
+        filter_state_values:
+          accepted: Finalizada
+          evaluating: Aceptada / En curso
+      proposals:
+        show:
+          proposal_accepted_reason: Esta propuesta ha sido implementada
+          proposal_in_evaluation_reason: Esta propuesta ha sido aceptada
