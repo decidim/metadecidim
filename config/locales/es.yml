@@ -7,6 +7,6 @@ es:
       meetings: Encuentros
       news: Noticias
       participate: Participa
-      welcome: Bienvenida
+      start_here: Comienza aquí
     sms:
       text: "Tu código para verificarte en Metadecidim es: %{code}"

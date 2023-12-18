@@ -38,13 +38,61 @@ describe "Views the menu", type: :system, perform_enqueued: true do
       visit decidim.root_path
 
       within "#home__menu" do
-        expect(page).to have_content("Home")
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
         expect(page).to have_content("Meetings")
         expect(page).to have_content("Our governance")
         expect(page).to have_content("News")
         expect(page).to have_content("Chat")
+      end
+    end
+
+    it "the footer menu has the Metadecidim elements" do
+      visit decidim.root_path
+
+      within ".main-footer" do
+        expect(page).to have_content("Home")
+        expect(page).to have_content("Start here")
+        expect(page).to have_content("Participate")
+        expect(page).to have_content("Our governance")
+        expect(page).to have_content("News")
+        expect(page).to have_content("Chat")
+      end
+    end
+
+    it "the breadcrumb menu has the Metadecidim elements" do
+      visit decidim.pages_path
+
+      find("a.menu-bar__breadcrumb-desktop__dropdown-trigger").sibling("button[data-component='dropdown']").hover
+
+      within "#breadcrumb-main-dropdown-desktop" do
+        expect(page).to have_content("Home")
+        expect(page).to have_content("Start here")
+        expect(page).to have_content("Participate")
+        expect(page).to have_content("Our governance")
+        expect(page).to have_content("News")
+        expect(page).to have_content("Chat")
+      end
+    end
+
+    context "with another locale" do
+      before do
+        visit decidim.root_path
+
+        within_language_menu do
+          click_link "Català"
+        end
+      end
+
+      specify "the menu is translated" do
+        within "#home__menu" do
+          expect(page).to have_content("Comença aquí")
+          expect(page).to have_content("Participa")
+          expect(page).to have_content("Trobades")
+          expect(page).to have_content("Com ens organitzem")
+          expect(page).to have_content("Notícies")
+          expect(page).to have_content("Xat")
+        end
       end
     end
   end
