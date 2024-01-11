@@ -3,8 +3,14 @@
 - default
 - mailers
 - newsletter
-- decidim_events
 - events
 - metrics
 - exports
 - translations
+- close_meeting_reminder
+- conference_diplomas
+- newsletters_opt_in
+- reminders
+- user_report
+- vote_reminder
+- block_user
