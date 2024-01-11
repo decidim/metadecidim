@@ -2,20 +2,20 @@
   "name": "metadecidim",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "~0.28.0-rc5",
-    "@decidim/core": "~0.28.0-rc5",
-    "@decidim/elections": "~0.28.0-rc5",
-    "@decidim/webpacker": "~0.28.0-rc5"
+    "@decidim/browserslist-config": "file:packages/browserslist-config",
+    "@decidim/core": "file:packages/core",
+    "@decidim/elections": "file:packages/elections",
+    "@decidim/webpacker": "file:packages/webpacker"
   },
   "version": "0.1.0",
   "browserslist": [
     "extends @decidim/browserslist-config"
   ],
   "devDependencies": {
-    "@decidim/dev": "~0.28.0-rc5",
-    "@decidim/eslint-config": "~0.28.0-rc5",
-    "@decidim/prettier-config": "~0.28.0-rc5",
-    "@decidim/stylelint-config": "~0.28.0-rc5"
+    "@decidim/dev": "file:packages/dev",
+    "@decidim/eslint-config": "file:packages/eslint-config",
+    "@decidim/prettier-config": "file:packages/prettier-config",
+    "@decidim/stylelint-config": "file:packages/stylelint-config"
   },
   "engines": {
     "node": "18.17.1",
