@@ -79,6 +79,13 @@ Decidim.menu :metadecidim_menu do |menu|
     position: 50,
     active: :inclusive
 
+  conferences_path = Decidim::Conferences::Engine.routes.url_helpers.conferences_path
+  menu.add_item :decidim_fest,
+    I18n.t("menu.decidim_fest", scope: "decidim"),
+    conferences_path,
+    position: 55,
+    active: :inclusive
+
   chat_url = "http://chat.decidim.org"
   menu.add_item :chat,
     I18n.t("menu.chat", scope: "decidim"),
