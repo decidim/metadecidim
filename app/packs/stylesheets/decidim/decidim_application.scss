@@ -25,3 +25,11 @@ div.flash.progressing {
   background-color: var(--bg-progressing-2);
   border-color: var(--progressing);
 }
+
+.hero__container {
+  background-image: var(--hero-image);
+
+  .hero__title {
+    @apply bg-gray-4 bg-opacity-50;
+  }
+}

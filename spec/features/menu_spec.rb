@@ -40,9 +40,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
       within "#home__menu" do
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
-        expect(page).to have_content("Meetings")
-        expect(page).to have_content("Our governance")
+        expect(page).to have_content("The Association")
         expect(page).to have_content("News")
+        expect(page).to have_content("Decidim Fest")
         expect(page).to have_content("Chat")
       end
     end
@@ -54,8 +54,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         expect(page).to have_content("Home")
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
-        expect(page).to have_content("Our governance")
+        expect(page).to have_content("The Association")
         expect(page).to have_content("News")
+        expect(page).to have_content("Decidim Fest")
         expect(page).to have_content("Chat")
       end
     end
@@ -69,8 +70,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         expect(page).to have_content("Home")
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
-        expect(page).to have_content("Our governance")
+        expect(page).to have_content("The Association")
         expect(page).to have_content("News")
+        expect(page).to have_content("Decidim Fest")
         expect(page).to have_content("Chat")
       end
     end
@@ -88,9 +90,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         within "#home__menu" do
           expect(page).to have_content("Comença aquí")
           expect(page).to have_content("Participa")
-          expect(page).to have_content("Trobades")
-          expect(page).to have_content("Com ens organitzem")
+          expect(page).to have_content("L'Associació")
           expect(page).to have_content("Notícies")
+          expect(page).to have_content("Decidim Fest")
           expect(page).to have_content("Xat")
         end
       end

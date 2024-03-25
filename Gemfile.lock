@@ -658,7 +658,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.2.5)
+    rexml (3.2.6)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -734,7 +734,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     scout_apm (5.3.5)
       parser
-    selenium-webdriver (4.16.0)
+    selenium-webdriver (4.18.1)
+      base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)

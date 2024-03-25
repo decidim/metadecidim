@@ -15,13 +15,6 @@ Decidim.menu :metadecidim_home_content_block_menu do |menu|
     position: 20,
     active: :inclusive
 
-  meetings_path = Decidim::Meetings::DirectoryEngine.routes.url_helpers.root_path
-  menu.add_item :meetings,
-    I18n.t("menu.meetings", scope: "decidim"),
-    meetings_path,
-    position: 30,
-    active: :inclusive
-
   governance_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("our-governance")
   menu.add_item :governance,
     I18n.t("menu.governance", scope: "decidim"),
@@ -34,6 +27,13 @@ Decidim.menu :metadecidim_home_content_block_menu do |menu|
     I18n.t("menu.news", scope: "decidim"),
     news_path,
     position: 50,
+    active: :inclusive
+
+  conferences_path = Decidim::Conferences::Engine.routes.url_helpers.conferences_path
+  menu.add_item :decidim_fest,
+    I18n.t("menu.decidim_fest", scope: "decidim"),
+    conferences_path,
+    position: 55,
     active: :inclusive
 
   chat_url = "http://chat.decidim.org"
@@ -77,6 +77,13 @@ Decidim.menu :metadecidim_menu do |menu|
     I18n.t("menu.news", scope: "decidim"),
     news_path,
     position: 50,
+    active: :inclusive
+
+  conferences_path = Decidim::Conferences::Engine.routes.url_helpers.conferences_path
+  menu.add_item :decidim_fest,
+    I18n.t("menu.decidim_fest", scope: "decidim"),
+    conferences_path,
+    position: 55,
     active: :inclusive
 
   chat_url = "http://chat.decidim.org"

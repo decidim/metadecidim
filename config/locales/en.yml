@@ -3,8 +3,8 @@ en:
   decidim:
     menu:
       chat: Chat
-      governance: Our governance
-      meetings: Meetings
+      decidim_fest: Decidim Fest
+      governance: The Association
       news: News
       participate: Participate
       start_here: Start here

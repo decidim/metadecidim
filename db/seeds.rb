@@ -28,3 +28,17 @@ Decidim::ParticipatoryProcessGroup.first.update!(id: 76)
 Decidim::Assembly.first.update!(slug: 'our-governance')
 Decidim::ParticipatoryProcess.last.update!(slug: "news")
 Decidim::ParticipatoryProcess.last.components.where(manifest_name: 'blogs').first.update!(id: 1719, name: { en: 'news' })
+
+seeds_root = File.join(__dir__, "seeds")
+seeds_file = "homepage_image.png"
+
+seeds_image_blob = ActiveStorage::Blob.create_and_upload!(
+  io: File.open(File.join(seeds_root, seeds_file)),
+  filename: seeds_file,
+  content_type: "image/png",
+  metadata: nil
+)
+
+hero_content_block = Decidim::ContentBlock.find_by(organization:, manifest_name: :hero, scope_name: :homepage)
+hero_content_block.images_container.background_image = seeds_image_blob
+hero_content_block.save!
