@@ -5,7 +5,8 @@
     "@decidim/browserslist-config": "^0.28.1",
     "@decidim/core": "^0.28.1",
     "@decidim/elections": "^0.28.1",
-    "@decidim/webpacker": "^0.28.1"
+    "@decidim/webpacker": "^0.28.1",
+    "tailwindcss": "3.4.1"
   },
   "version": "0.1.0",
   "browserslist": [
