@@ -2,8 +2,4 @@
 
 ./spec
 *.md
-*.map.js.br
-*.map.js.gz
-*.map.css.br
-*.map.css.gz
 
