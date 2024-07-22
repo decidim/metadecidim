@@ -22,6 +22,7 @@ gem "redis", "~> 4.7.0"
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
 
+# See https://github.com/decidim/metadecidim/pull/130
 gem "wkhtmltopdf-binary", "0.12.6.6"
 
 group :development, :test do
