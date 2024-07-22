@@ -10,8 +10,6 @@ require "decidim/dev"
 
 Decidim::Dev.dummy_app_path = File.expand_path(File.join(__dir__, ".."))
 
-require "parallel_tests"
-
 require "decidim/dev/test/base_spec_helper"
 
 # Add additional requires below this line. Rails is not loaded until this point!
