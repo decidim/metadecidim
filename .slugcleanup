@@ -1,5 +1,2 @@
-*.map.js.br
-*.map.js.gz
-*.map.css.br
-*.map.css.gz
-
+public/decidim-packs/*/*.map.br
+public/decidim-packs/*/*.map.gz
