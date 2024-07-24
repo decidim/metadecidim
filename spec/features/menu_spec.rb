@@ -32,7 +32,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
   end
 
   context "with Metadecidim organization" do
-    let(:organization) { create :organization, name: "Metadecidim" }
+    let(:organization) { create :organization, name: { en: "Metadecidim" } }
 
     it "the main menu has the Metadecidim elements" do
       visit decidim.root_path

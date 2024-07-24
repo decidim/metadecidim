@@ -98,7 +98,7 @@ end
 Rails.application.config.to_prepare do
   Decidim::MenuHelper.module_eval do
     def home_content_block_menu
-      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_home_content_block_menu : :home_content_block_menu
+      menu_name = current_organization.name["en"] == "Metadecidim" ? :metadecidim_home_content_block_menu : :home_content_block_menu
 
       @home_content_block_menu ||= ::Decidim::MenuPresenter.new(
         menu_name,
@@ -110,7 +110,7 @@ Rails.application.config.to_prepare do
     end
 
     def breadcrumb_root_menu
-      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_menu : :menu
+      menu_name = current_organization.name["en"] == "Metadecidim" ? :metadecidim_menu : :menu
 
       @breadcrumb_root_menu ||= ::Decidim::BreadcrumbRootMenuPresenter.new(
         menu_name,
@@ -120,7 +120,7 @@ Rails.application.config.to_prepare do
     end
 
     def footer_menu
-      menu_name = current_organization.name == "Metadecidim" ? :metadecidim_menu : :menu
+      menu_name = current_organization.name["en"] == "Metadecidim" ? :metadecidim_menu : :menu
 
       @footer_menu ||= ::Decidim::FooterMenuPresenter.new(
         menu_name,
