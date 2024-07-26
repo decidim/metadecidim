@@ -131,5 +131,15 @@ Rails.application.config.to_prepare do
         label: t("layouts.decidim.footer.decidim_title")
       )
     end
+
+    def mobile_breadcrumb_root_menu
+      menu_name = current_organization.name["en"] == "Metadecidim" ? :metadecidim_menu : :mobile_menu
+
+      @mobile_breadcrumb_root_menu ||= ::Decidim::BreadcrumbRootMenuPresenter.new(
+        menu_name,
+        self,
+        container_options: { class: "menu-bar__main-dropdown__menu" }
+      )
+    end
   end
 end
