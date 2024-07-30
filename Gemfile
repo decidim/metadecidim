@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.29-stable" }
-DECIDIM_VERSION = "0.29.0.rc3"
+DECIDIM_VERSION = "0.29.0.rc4"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
