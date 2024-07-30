@@ -97,5 +97,26 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         end
       end
     end
+    context "when the device is mobile" do
+      before do
+        driven_by(:iphone)
+        switch_to_host(organization.host)
+        visit decidim.root_path
+      end
+
+      specify "the menu is customized" do
+        click_on "Main menu"
+
+        within "#breadcrumb-main-dropdown-mobile" do
+          expect(page).to have_content("Home")
+          expect(page).to have_content("Start here")
+          expect(page).to have_content("Participate")
+          expect(page).to have_content("The Association")
+          expect(page).to have_content("News")
+          expect(page).to have_content("Decidim Fest")
+          expect(page).to have_content("Chat")
+        end
+      end
+    end
   end
 end
