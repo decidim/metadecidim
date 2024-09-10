@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.29-stable" }
-DECIDIM_VERSION = "0.29.0.rc4"
+DECIDIM_VERSION = "0.29.0"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
@@ -34,8 +34,6 @@ end
 group :development do
   gem "letter_opener_web"
   gem "listen", "~> 3.7.1"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console"
 end
 
