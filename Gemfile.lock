@@ -776,8 +776,17 @@ GEM
     semantic_range (3.0.0)
     sendgrid-ruby (6.7.0)
       ruby_http_client (~> 3.4)
+    sentry-rails (5.19.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.19.0)
     sentry-raven (3.1.2)
       faraday (>= 1.0)
+    sentry-ruby (5.19.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+    sentry-sidekiq (5.19.0)
+      sentry-ruby (~> 5.19.0)
+      sidekiq (>= 3.0)
     shakapacker (7.1.0)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -806,6 +815,7 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
+    stackprof (0.2.26)
     statsd-ruby (1.5.0)
     stringio (3.1.1)
     temple (0.10.3)
@@ -898,8 +908,12 @@ DEPENDENCIES
   rspec-rails
   scout_apm
   sendgrid-ruby
+  sentry-rails
   sentry-raven
+  sentry-ruby
+  sentry-sidekiq
   sidekiq
+  stackprof
   web-console
   wkhtmltopdf-binary (= 0.12.6.6)
 
