@@ -1,6 +1,7 @@
-# This migration comes from decidim_surveys (originally 20180405015147)
 # frozen_string_literal: true
 
+# This migration comes from decidim_surveys (originally 20180405015147)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:39 UTC
 class CreateDecidimSurveyAnswerChoices < ActiveRecord::Migration[5.1]
   class SurveyAnswer < ApplicationRecord
     self.table_name = :decidim_surveys_survey_answers
@@ -27,12 +28,13 @@ class CreateDecidimSurveyAnswerChoices < ActiveRecord::Migration[5.1]
 
     SurveyAnswer.find_each do |answer|
       question = SurveyQuestion.find_by(id: answer.decidim_survey_question_id)
+      choices = SurveyAnswerChoice.where(decidim_survey_answer_id: answer.id)
 
-      answer.choices.each do |answer_choice|
+      choices.each do |answer_choice|
         answer_options = SurveyAnswerOption.where(decidim_survey_question_id: question.id)
 
         answer_option = answer_options.find do |option|
-          option.body.values.include?(answer_choice)
+          option.body.has_value?(answer_choice)
         end
 
         SurveyAnswerChoice.create!(

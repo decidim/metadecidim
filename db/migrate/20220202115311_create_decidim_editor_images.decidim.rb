@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20210730112319)
 
+# This migration comes from decidim (originally 20210730112319)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
 class CreateDecidimEditorImages < ActiveRecord::Migration[6.0]
   def change
     create_table :decidim_editor_images do |t|

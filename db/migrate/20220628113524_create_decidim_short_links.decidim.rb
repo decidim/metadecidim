@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20220524195530)
 
+# This migration comes from decidim (originally 20220524195530)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
 class CreateDecidimShortLinks < ActiveRecord::Migration[6.1]
   def change
     create_table :decidim_short_links do |t|

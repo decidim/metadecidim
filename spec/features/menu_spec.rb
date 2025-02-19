@@ -25,7 +25,6 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     within "#dropdown-menu-profile" do
       expect(page).to have_content("Account")
       expect(page).to have_content("Notifications settings")
-      expect(page).to have_content("My interests")
       expect(page).to have_content("My data")
       expect(page).to have_content("Delete my account")
     end
