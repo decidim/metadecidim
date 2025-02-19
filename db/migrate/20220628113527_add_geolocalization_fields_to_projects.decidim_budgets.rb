@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_budgets (originally 20220428072638)
 
+# This migration comes from decidim_budgets (originally 20220428072638)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
 class AddGeolocalizationFieldsToProjects < ActiveRecord::Migration[6.1]
   def change
     add_column :decidim_budgets_projects, :address, :text

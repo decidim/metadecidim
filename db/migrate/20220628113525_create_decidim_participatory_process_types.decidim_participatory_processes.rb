@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_participatory_processes (originally 20211125202008)
 
+# This migration comes from decidim_participatory_processes (originally 20211125202008)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
 class CreateDecidimParticipatoryProcessTypes < ActiveRecord::Migration[6.0]
   def change
     create_table :decidim_participatory_process_types do |t|
