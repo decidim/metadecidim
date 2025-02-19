@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20181029112820)
 
+# This migration comes from decidim (originally 20181029112820)
 class FixUserFollows < ActiveRecord::Migration[5.2]
   class Follow < ApplicationRecord
     self.table_name = "decidim_follows"

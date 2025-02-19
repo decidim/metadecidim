@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20210419165805)
 
+# This migration comes from decidim (originally 20210419165805)
 class CreateDecidimContentBlockAttachments < ActiveRecord::Migration[6.0]
   def change
     create_table :decidim_content_block_attachments do |t|

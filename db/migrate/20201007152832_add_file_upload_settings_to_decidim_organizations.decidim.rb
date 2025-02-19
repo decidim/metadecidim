@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20200730142511)
 
+# This migration comes from decidim (originally 20200730142511)
 class AddFileUploadSettingsToDecidimOrganizations < ActiveRecord::Migration[5.2]
   def change
     add_column :decidim_organizations, :file_upload_settings, :jsonb

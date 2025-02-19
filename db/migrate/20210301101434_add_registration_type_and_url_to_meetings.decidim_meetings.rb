@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20201016112641)
 
+# This migration comes from decidim_meetings (originally 20201016112641)
 class AddRegistrationTypeAndUrlToMeetings < ActiveRecord::Migration[5.2]
   class Meetings < ApplicationRecord
     self.table_name = :decidim_meetings_meetings
@@ -14,7 +14,7 @@ class AddRegistrationTypeAndUrlToMeetings < ActiveRecord::Migration[5.2]
     Meetings.reset_column_information
     Meetings.find_each do |meeting|
       meeting.registration_type = "on_this_platform" if meeting.decidim_author_type == "Decidim::Organization"
-      meeting.save(validate: false)
+      meeting.save!
     end
   end
 end

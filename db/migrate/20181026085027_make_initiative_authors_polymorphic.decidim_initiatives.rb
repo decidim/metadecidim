@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20181016095744)
 
+# This migration comes from decidim_initiatives (originally 20181016095744)
 class MakeInitiativeAuthorsPolymorphic < ActiveRecord::Migration[5.2]
   class Initiative < ApplicationRecord
     self.table_name = :decidim_initiatives

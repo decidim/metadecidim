@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20211209121025)
 
+# This migration comes from decidim (originally 20211209121025)
 class CreateDecidimReminderRecords < ActiveRecord::Migration[6.0]
   def change
     create_table :decidim_reminder_records do |t|

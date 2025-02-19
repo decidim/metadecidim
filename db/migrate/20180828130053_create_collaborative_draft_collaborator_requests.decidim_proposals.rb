@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_proposals (originally 20180613151121)
 
+# This migration comes from decidim_proposals (originally 20180613151121)
 class CreateCollaborativeDraftCollaboratorRequests < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_proposals_collaborative_draft_collaborator_requests do |t|

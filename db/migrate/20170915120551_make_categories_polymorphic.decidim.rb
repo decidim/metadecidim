@@ -1,6 +1,6 @@
-# This migration comes from decidim (originally 20170726145242)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20170726145242)
 class MakeCategoriesPolymorphic < ActiveRecord::Migration[5.1]
   def change
     remove_index :decidim_categories,

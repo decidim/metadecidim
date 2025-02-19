@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_proposals (originally 20230427105700)
 
+# This migration comes from decidim_proposals (originally 20230427105700)
 class ChangeStatesOnCollaborativeDrafts < ActiveRecord::Migration[6.1]
   class CollaborativeDraft < ApplicationRecord
     self.table_name = :decidim_proposals_collaborative_drafts

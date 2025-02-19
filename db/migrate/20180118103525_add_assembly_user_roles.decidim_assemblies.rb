@@ -1,6 +1,6 @@
-# This migration comes from decidim_assemblies (originally 20180109105917)
 # frozen_string_literal: true
 
+# This migration comes from decidim_assemblies (originally 20180109105917)
 class AddAssemblyUserRoles < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_assembly_user_roles do |t|

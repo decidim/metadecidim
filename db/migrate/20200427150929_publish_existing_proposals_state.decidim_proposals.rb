@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_proposals (originally 20200306123652)
 
+# This migration comes from decidim_proposals (originally 20200306123652)
 class PublishExistingProposalsState < ActiveRecord::Migration[5.2]
   def up
     execute <<-SQL.squish

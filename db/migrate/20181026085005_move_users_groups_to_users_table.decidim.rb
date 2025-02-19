@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20181001124950)
 
+# This migration comes from decidim (originally 20181001124950)
 class MoveUsersGroupsToUsersTable < ActiveRecord::Migration[5.2]
   class Organization < ApplicationRecord
     self.table_name = "decidim_organizations"
@@ -65,8 +65,8 @@ class MoveUsersGroupsToUsersTable < ActiveRecord::Migration[5.2]
         verified_at: old_user_group.verified_at
       }
       new_attributes = clean_attributes.merge(
-        nickname: User.nicknamize(clean_attributes["name"]),
-        extended_data: extended_data
+        nickname: UserBaseEntity.nicknamize(clean_attributes["name"]),
+        extended_data:
       )
       new_user_group = NewUserGroup.create!(new_attributes)
       new_ids[old_user_group.id] = new_user_group.id

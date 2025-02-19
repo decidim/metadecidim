@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_proposals (originally 20180927111721)
 
+# This migration comes from decidim_proposals (originally 20180927111721)
 class CreateParticipatoryTexts < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_proposals_participatory_texts do |t|

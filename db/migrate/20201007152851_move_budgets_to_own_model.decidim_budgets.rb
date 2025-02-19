@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_budgets (originally 20200714103519)
 
+# This migration comes from decidim_budgets (originally 20200714103519)
 class MoveBudgetsToOwnModel < ActiveRecord::Migration[5.2]
   class Component < ApplicationRecord
     self.table_name = :decidim_components

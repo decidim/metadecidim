@@ -1,6 +1,6 @@
-# This migration comes from decidim_meetings (originally 20170810120836)
 # frozen_string_literal: true
 
+# This migration comes from decidim_meetings (originally 20170810120836)
 class AddRegistrationAttributesToMeetings < ActiveRecord::Migration[5.1]
   def change
     add_column :decidim_meetings_meetings, :registrations_enabled, :boolean, null: false, default: false

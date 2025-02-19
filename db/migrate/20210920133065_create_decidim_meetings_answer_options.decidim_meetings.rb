@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20210520084330)
 
+# This migration comes from decidim_meetings (originally 20210520084330)
 class CreateDecidimMeetingsAnswerOptions < ActiveRecord::Migration[6.0]
   def change
     create_table :decidim_meetings_answer_options do |t|

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20201011074641)
 
+# This migration comes from decidim (originally 20201011074641)
 class CreateDecidimUserSuspensions < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_user_suspensions do |t|

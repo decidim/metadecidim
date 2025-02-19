@@ -1,6 +1,6 @@
-# This migration comes from decidim (originally 20171117100533)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20171117100533)
 class CreateDecidimReceipts < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_messaging_receipts do |t|

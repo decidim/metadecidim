@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_forms (originally 20201110152921)
 
+# This migration comes from decidim_forms (originally 20201110152921)
 class AddSaltToDecidimFormsQuestionnaires < ActiveRecord::Migration[5.2]
   class Questionnaire < ApplicationRecord
     self.table_name = :decidim_forms_questionnaires

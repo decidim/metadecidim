@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20200401073419)
 
+# This migration comes from decidim (originally 20200401073419)
 class AddIndexOnContentBlockScopeId < ActiveRecord::Migration[5.2]
   def change
     add_index(

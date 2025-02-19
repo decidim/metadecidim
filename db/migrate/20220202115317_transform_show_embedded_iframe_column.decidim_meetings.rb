@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20210922140454)
 
+# This migration comes from decidim_meetings (originally 20210922140454)
 class TransformShowEmbeddedIframeColumn < ActiveRecord::Migration[6.0]
   def up
     add_column :decidim_meetings_meetings, :iframe_embed_type, :integer, default: 0

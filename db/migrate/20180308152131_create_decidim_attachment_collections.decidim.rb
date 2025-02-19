@@ -1,6 +1,6 @@
-# This migration comes from decidim (originally 20171207182729)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20171207182729)
 class CreateDecidimAttachmentCollections < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_attachment_collections do |t|

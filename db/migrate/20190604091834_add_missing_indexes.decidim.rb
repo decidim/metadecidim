@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20190412105836)
 
+# This migration comes from decidim (originally 20190412105836)
 class AddMissingIndexes < ActiveRecord::Migration[5.2]
   def change
     add_index :decidim_follows, [:decidim_followable_id, :decidim_followable_type], name: "index_follows_followable_id_and_type"

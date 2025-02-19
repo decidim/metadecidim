@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_surveys (originally 20200610105927)
 
+# This migration comes from decidim_surveys (originally 20200610105927)
 class RemoveSurveyColumns < ActiveRecord::Migration[5.2]
   def change
     remove_column :decidim_surveys_surveys, :title if ActiveRecord::Base.connection.column_exists?(:decidim_surveys_surveys, :title)

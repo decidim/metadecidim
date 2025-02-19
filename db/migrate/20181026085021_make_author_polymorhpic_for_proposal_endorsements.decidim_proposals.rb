@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_proposals (originally 20181017084221)
 
+# This migration comes from decidim_proposals (originally 20181017084221)
 class MakeAuthorPolymorhpicForProposalEndorsements < ActiveRecord::Migration[5.2]
   class ProposalEndorsement < ApplicationRecord
     self.table_name = :decidim_proposals_proposal_endorsements

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20181010044613)
 
+# This migration comes from decidim (originally 20181010044613)
 class CreateDecidimContinuityBadgeStatuses < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_continuity_badge_statuses do |t|

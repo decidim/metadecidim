@@ -1,5 +1,6 @@
-# This migration comes from decidim_debates (originally 20170118141619)
 # frozen_string_literal: true
+
+# This migration comes from decidim_debates (originally 20170118141619)
 class CreateDebates < ActiveRecord::Migration[5.0]
   def change
     create_table :decidim_debates_debates do |t|

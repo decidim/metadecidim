@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_assemblies (originally 20200108123050)
 
+# This migration comes from decidim_assemblies (originally 20200108123050)
 # Migrates freezed assembly types to a table where to configure them
 class MigrateDecidimAssemblyTypes < ActiveRecord::Migration[5.2]
   LEGACY_TYPES = {
@@ -37,7 +37,7 @@ class MigrateDecidimAssemblyTypes < ActiveRecord::Migration[5.2]
         unless type == "others"
           assembly_type = AssemblyType.find_or_create_by(
             decidim_organization_id: organization.id,
-            title: title
+            title:
           )
         end
         Assembly.where(decidim_organization_id: organization.id, assembly_type: type).each do |assembly|

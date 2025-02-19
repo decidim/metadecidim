@@ -1,6 +1,6 @@
-# This migration comes from decidim_initiatives (originally 20170917072556)
 # frozen_string_literal: true
 
+# This migration comes from decidim_initiatives (originally 20170917072556)
 class CreateDecidimInitiativesVotes < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_initiatives_votes do |t|

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20171109132011)
 
+# This migration comes from decidim_initiatives (originally 20171109132011)
 class EnablePgTrgmExtensionForInitiatives < ActiveRecord::Migration[5.1]
   def change
     return if extension_enabled?("pg_trgm")

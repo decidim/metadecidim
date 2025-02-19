@@ -1,6 +1,6 @@
-# This migration comes from decidim (originally 20171107103253)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20171107103253)
 # This migration creates the `versions` table, the only schema PT requires.
 # All other migrations PT provides are optional.
 class CreateVersions < ActiveRecord::Migration[5.1]

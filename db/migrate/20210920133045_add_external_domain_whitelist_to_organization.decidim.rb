@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20210210114657)
 
+# This migration comes from decidim (originally 20210210114657)
 class AddExternalDomainWhitelistToOrganization < ActiveRecord::Migration[5.2]
   def change
     add_column :decidim_organizations, :external_domain_whitelist, :string, array: true, default: []

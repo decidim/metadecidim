@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_conferences (originally 20181004144411)
 
+# This migration comes from decidim_conferences (originally 20181004144411)
 class AddConferencesPartner < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_conferences_partners do |t|

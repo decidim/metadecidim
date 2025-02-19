@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20180706111847)
 
+# This migration comes from decidim (originally 20180706111847)
 class FixResultFollows < ActiveRecord::Migration[5.2]
   def change
     # rubocop:disable Rails/SkipsModelValidations

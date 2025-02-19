@@ -1,9 +1,14 @@
-# This migration comes from decidim (originally 20170713131206)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20170713131206)
 class AddAdminToUsers < ActiveRecord::Migration[5.1]
   def up
     add_column :decidim_users, :admin, :boolean, null: false, default: false
-    Decidim::User.where("roles @> ?", "{admin}").update_all(admin: true)
+
+    execute <<~SQL.squish
+      UPDATE decidim_users
+      SET admin = true
+      WHERE roles @> '{admin}'
+    SQL
   end
 end

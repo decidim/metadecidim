@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20201010124756)
 
+# This migration comes from decidim (originally 20201010124756)
 class CreateDecidimUserReports < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_user_reports do |t|

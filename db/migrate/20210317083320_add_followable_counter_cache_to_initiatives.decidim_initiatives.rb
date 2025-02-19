@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20210310120720)
 
+# This migration comes from decidim_initiatives (originally 20210310120720)
 class AddFollowableCounterCacheToInitiatives < ActiveRecord::Migration[5.2]
   def change
     add_column :decidim_initiatives, :follows_count, :integer, null: false, default: 0, index: true

@@ -1,6 +1,6 @@
-# This migration comes from decidim_surveys (originally 20170515144119)
 # frozen_string_literal: true
 
+# This migration comes from decidim_surveys (originally 20170515144119)
 class CreateDecidimSurveyAnswers < ActiveRecord::Migration[5.0]
   def change
     create_table :decidim_surveys_survey_answers do |t|

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20230427105701)
 
+# This migration comes from decidim_meetings (originally 20230427105701)
 class ChangeTypesAndRegistrationTypesOnMeetings < ActiveRecord::Migration[6.1]
   class Meeting < ApplicationRecord
     self.table_name = :decidim_meetings_meetings

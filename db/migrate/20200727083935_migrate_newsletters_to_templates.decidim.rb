@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20200327082257)
 
+# This migration comes from decidim (originally 20200327082257)
 class MigrateNewslettersToTemplates < ActiveRecord::Migration[5.2]
   class ContentBlock < ApplicationRecord
     self.table_name = :decidim_content_blocks

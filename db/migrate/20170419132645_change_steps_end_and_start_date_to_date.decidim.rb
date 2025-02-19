@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This migration comes from decidim (originally 20170404132616)
 class ChangeStepsEndAndStartDateToDate < ActiveRecord::Migration[5.0]
   def change

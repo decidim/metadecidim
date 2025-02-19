@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20181011080252)
 
+# This migration comes from decidim (originally 20181011080252)
 class AddRolesToMemberships < ActiveRecord::Migration[5.2]
   def up
     add_column :decidim_user_group_memberships, :role, :string, default: "requested"

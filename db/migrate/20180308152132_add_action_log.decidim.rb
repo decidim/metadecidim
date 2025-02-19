@@ -1,6 +1,6 @@
-# This migration comes from decidim (originally 20180130093153)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20180130093153)
 class AddActionLog < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_action_logs do |t|

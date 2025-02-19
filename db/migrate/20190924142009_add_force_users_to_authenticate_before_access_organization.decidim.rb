@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20190610093742)
 
+# This migration comes from decidim (originally 20190610093742)
 class AddForceUsersToAuthenticateBeforeAccessOrganization < ActiveRecord::Migration[5.2]
   def change
     add_column :decidim_organizations,

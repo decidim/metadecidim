@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20220527130640)
 
+# This migration comes from decidim_initiatives (originally 20220527130640)
 class CreateDecidimInitiativesSettings < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_initiatives_settings do |t|

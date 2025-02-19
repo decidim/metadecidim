@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20191116170841)
 
+# This migration comes from decidim_initiatives (originally 20191116170841)
 class AllowMultipleInitiativeVotesCounterCaches < ActiveRecord::Migration[5.2]
   class InitiativeVote < ApplicationRecord
     self.table_name = :decidim_initiatives_votes
