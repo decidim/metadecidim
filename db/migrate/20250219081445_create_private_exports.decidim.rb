@@ -3,6 +3,8 @@
 # This migration comes from decidim (originally 20241022002600)
 class CreatePrivateExports < ActiveRecord::Migration[7.0]
   def change
+    enable_extension "pgcrypto"
+
     create_table :decidim_private_exports, id: :uuid do |t|
       t.string :export_type, null: false
       t.string :attached_to_type
