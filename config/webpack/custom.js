@@ -79,12 +79,7 @@ module.exports = {
     }
   },
   optimization: {
-    minimizer: [
-      new EsbuildPlugin({
-        target: "es2015",
-        css: true
-      })
-    ]
+    minimize: false
   },
   entry: config.entrypoints,
   plugins: [
