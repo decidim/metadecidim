@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20240110203504)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:39 UTC
 class CreateDefaultProposalStates < ActiveRecord::Migration[6.1]
-  class Proposal < ApplicationRecord
+  class CustomProposal < ApplicationRecord
     belongs_to :proposal_state,
                class_name: "Decidim::Proposals::ProposalState",
                foreign_key: "decidim_proposals_proposal_state_id",
@@ -15,13 +16,17 @@ class CreateDefaultProposalStates < ActiveRecord::Migration[6.1]
   end
 
   def up
-    Decidim::Component.where(manifest_name: "proposals").find_each do |component|
+    CustomProposal.reset_column_information
+    Decidim::Proposals::ProposalState.reset_column_information
+    Decidim::Component.unscoped.where(manifest_name: "proposals").find_each do |component|
       admin_user = component.organization.admins.first
-
       default_states = Decidim::Proposals.create_default_states!(component, admin_user)
 
-      Proposal.where(decidim_component_id: component.id).find_each do |proposal|
-        proposal.update!(proposal_state: default_states.dig(proposal.old_state.to_sym, :object))
+      CustomProposal.where(decidim_component_id: component.id).find_each do |proposal|
+        next if proposal.old_state == "not_answered"
+
+        token = default_states[proposal.old_state.to_sym][:object]&.token
+        proposal.update!(proposal_state: Decidim::Proposals::ProposalState.where(component:, token:).first!)
       end
     end
   end

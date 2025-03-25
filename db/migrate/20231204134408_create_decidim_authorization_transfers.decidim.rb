@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20220629194812)
 
+# This migration comes from decidim (originally 20220629194812)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
 class CreateDecidimAuthorizationTransfers < ActiveRecord::Migration[6.1]
   def change
     create_table :decidim_authorization_transfers do |t|
