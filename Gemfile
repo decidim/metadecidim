@@ -45,9 +45,13 @@ group :production do
   gem 'dalli'
   gem 'sendgrid-ruby'
   gem 'lograge'
+  gem "sentry-rails"
   gem 'sentry-raven'
+  gem "sentry-ruby"
+  gem "sentry-sidekiq"
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
   gem 'scout_apm'
+  gem "stackprof"
   gem 'rexml'
 end
