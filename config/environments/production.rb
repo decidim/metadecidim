@@ -8,7 +8,7 @@ Rails.application.configure do
       params: event.payload[:params].except('controller', 'action', 'format', 'utf8'),
       user_id: event.payload[:user_id],
       organization_id: event.payload[:organization_id],
-      referer: event.payload[:referer],
+      referer: event.payload[:referer]
     }
   end
   # Settings specified here will take precedence over those in config/application.rb.
@@ -55,17 +55,13 @@ Rails.application.configure do
   config.log_level = :info
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
-  if ENV["MEMCACHEDCLOUD_SERVERS"].present?
-    config.cache_store = :mem_cache_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(","), {
-      username: ENV["MEMCACHEDCLOUD_USERNAME"], password: ENV["MEMCACHEDCLOUD_PASSWORD"]
-    }
-  end
+  config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_STORE_URL', 'redis://localhost:6379') }
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  config.active_job.queue_adapter     = :sidekiq
+  config.active_job.queue_adapter = :sidekiq
   # config.active_job.queue_name_prefix = "metadecidim_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
@@ -83,33 +79,32 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.smtp_settings = {
-    :address        => Rails.application.secrets.smtp_address,
-    :port           => Rails.application.secrets.smtp_port,
-    :authentication => Rails.application.secrets.smtp_authentication,
-    :user_name      => Rails.application.secrets.smtp_username,
-    :password       => Rails.application.secrets.smtp_password,
-    :domain         => Rails.application.secrets.smtp_domain,
-    :enable_starttls_auto => Rails.application.secrets.smtp_starttls_auto,
-    :openssl_verify_mode => 'none'
+    address: Rails.application.secrets.smtp_address,
+    port: Rails.application.secrets.smtp_port,
+    authentication: Rails.application.secrets.smtp_authentication,
+    user_name: Rails.application.secrets.smtp_username,
+    password: Rails.application.secrets.smtp_password,
+    domain: Rails.application.secrets.smtp_domain,
+    enable_starttls_auto: Rails.application.secrets.smtp_starttls_auto,
+    openssl_verify_mode: 'none'
   }
 
   if Rails.application.secrets.sendgrid
     config.action_mailer.default_options = {
-      "X-SMTPAPI" => {
-        filters:  {
+      'X-SMTPAPI' => {
+        filters: {
           clicktrack: { settings: { enable: 0 } },
-          opentrack:  { settings: { enable: 0 } }
+          opentrack: { settings: { enable: 0 } }
         }
       }.to_json
     }
   end
 
-
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
