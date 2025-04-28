@@ -50,4 +50,5 @@ group :production do
   gem 'rails_autoscale_agent'
   gem 'scout_apm'
   gem 'rexml'
+  gem "whenever"
 end
