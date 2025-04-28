@@ -36,7 +36,7 @@ jobs:
           ruby-version: ${{ env.RUBY_VERSION }}
           bundler-cache: true
       - uses: nanasess/setup-chromedriver@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
