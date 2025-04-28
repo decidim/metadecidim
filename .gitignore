@@ -29,8 +29,8 @@ public/assets
 # Ignore webpack packs and related files
 public/decidim-packs
 public/packs-test
-public/sw.js
-public/sw.js.map
+public/sw.js*
+public/sw.js.map*
 
 # Ignore NPM/yarn logs and temp files
 .yarn-integrity
@@ -40,3 +40,6 @@ yarn-debug.log*
 yarn-error.log
 
 tailwind.config.js
+
+Capfile
+config/deploy*
