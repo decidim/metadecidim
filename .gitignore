@@ -40,6 +40,3 @@ yarn-debug.log*
 yarn-error.log
 
 tailwind.config.js
-
-Capfile
-config/deploy*
