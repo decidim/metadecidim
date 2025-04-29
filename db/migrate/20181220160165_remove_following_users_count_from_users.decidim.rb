@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181204110723)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:42 UTC
 class RemoveFollowingUsersCountFromUsers < ActiveRecord::Migration[5.2]
   class UserBaseEntity < ApplicationRecord
     self.table_name = :decidim_users

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20171220084719)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:39 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 class AddPublishedAtToProposals < ActiveRecord::Migration[5.1]
   def up
     add_column :decidim_proposals_proposals, :published_at, :datetime, index: true

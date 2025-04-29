@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_proposals (originally 20240404202756)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:39 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 class AddValuationAssignmentsCountToDecidimProposalsProposals < ActiveRecord::Migration[6.1]
   def change
     add_column :decidim_proposals_proposals, :valuation_assignments_count, :integer, default: 0

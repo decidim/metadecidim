@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_sortitions (originally 20180322082150)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:39 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 class FixSortitionsFeature < ActiveRecord::Migration[5.1]
   def up
     rename_column :decidim_sortitions_sortitions, :decidim_feature_id, :decidim_component_id

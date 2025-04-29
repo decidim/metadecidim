@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20181115102958)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:42 UTC
 class AddFollowingAndFollowersCountersToUsers < ActiveRecord::Migration[5.2]
   def up
     add_column :decidim_users, :following_count, :integer, null: false, default: 0
