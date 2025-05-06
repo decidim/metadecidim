@@ -35,6 +35,15 @@ group :development do
   gem "letter_opener_web"
   gem "listen", "~> 3.7.1"
   gem "web-console"
+
+  gem "capistrano"
+  gem "capistrano3-puma", "~> 6.0"
+  gem "capistrano-bundler"
+  gem "capistrano-passenger"
+  gem "capistrano-rails"
+  gem "capistrano-rails-console"
+  gem "capistrano-rbenv"
+  gem "capistrano-sidekiq"
 end
 
 group :production do
