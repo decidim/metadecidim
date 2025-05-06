@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20170125135937)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 class RenameAttachableToAttachedTo < ActiveRecord::Migration[5.0]
   def change
     remove_index :decidim_attachments, name: "index_decidim_attachments_on_attachable_id_and_attachable_type"

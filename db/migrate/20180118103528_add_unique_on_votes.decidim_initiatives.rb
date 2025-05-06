@@ -1,7 +1,7 @@
 # This migration comes from decidim_initiatives (originally 20171214161410)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 # This migration comes from decidim_initiatives (originally 20171214161410)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 # frozen_string_literal: true
 
 class AddUniqueOnVotes < ActiveRecord::Migration[5.1]

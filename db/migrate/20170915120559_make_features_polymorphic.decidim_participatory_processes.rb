@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_participatory_processes (originally 20170720120135)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-02-19 10:36:38 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-04-29 11:25:43 UTC
 class MakeFeaturesPolymorphic < ActiveRecord::Migration[5.1]
   def change
     remove_index :decidim_components, name: "index_decidim_components_on_decidim_participatory_process_id"
