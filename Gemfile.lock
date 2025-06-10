@@ -164,6 +164,7 @@ GEM
     chartkick (5.1.5)
     childprocess (5.1.0)
       logger (~> 1.5)
+    chronic (0.10.2)
     cmdparse (3.0.7)
     commonmarker (0.23.11)
     concurrent-ruby (1.3.4)
@@ -953,6 +954,8 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
     wisper (3.0.0)
     wisper-rspec (1.1.0)
     wkhtmltopdf-binary (0.12.6.6)
@@ -1010,6 +1013,7 @@ DEPENDENCIES
   sentry-raven
   sidekiq
   web-console
+  whenever
   wkhtmltopdf-binary (= 0.12.6.6)
 
 RUBY VERSION
