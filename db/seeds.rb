@@ -25,7 +25,7 @@ organization.update!(colors: { alert: "#e7131a", primary: "#c8102e", success: "#
 puts "-- Changing the slugs and IDs to correspond with the ones from the menu"
 Decidim::ParticipatoryProcess.first.update!(slug: 'Welcome')
 Decidim::ParticipatoryProcessGroup.first.update!(id: 76)
-Decidim::Assembly.first.update!(slug: 'our-governance')
+Decidim::Assembly.first.update!(slug: 'the-association')
 Decidim::ParticipatoryProcess.last.update!(slug: "news")
 Decidim::ParticipatoryProcess.last.components.where(manifest_name: 'blogs').first.update!(id: 1719, name: { en: 'news' })
 
