@@ -15,7 +15,7 @@ Decidim.menu :metadecidim_home_content_block_menu do |menu|
     position: 20,
     active: :inclusive
 
-  governance_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("our-governance")
+  governance_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("the-association")
   menu.add_item :governance,
     I18n.t("menu.governance", scope: "decidim"),
     governance_path,
@@ -65,7 +65,7 @@ Decidim.menu :metadecidim_menu do |menu|
     position: 20,
     active: :inclusive
 
-  governance_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("our-governance")
+  governance_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("the-association")
   menu.add_item :governance,
     I18n.t("menu.governance", scope: "decidim"),
     governance_path,
