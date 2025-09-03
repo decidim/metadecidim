@@ -42,6 +42,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         expect(page).to have_content("The Association")
         expect(page).to have_content("News")
         expect(page).to have_content("Decidim Fest")
+        expect(page).to have_content("Community Meetings")
         expect(page).to have_content("Chat")
       end
     end
@@ -56,6 +57,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         expect(page).to have_content("The Association")
         expect(page).to have_content("News")
         expect(page).to have_content("Decidim Fest")
+        expect(page).to have_content("Community Meetings")
         expect(page).to have_content("Chat")
       end
     end
@@ -72,6 +74,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
         expect(page).to have_content("The Association")
         expect(page).to have_content("News")
         expect(page).to have_content("Decidim Fest")
+        expect(page).to have_content("Community Meetings")
         expect(page).to have_content("Chat")
       end
     end
@@ -92,6 +95,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
           expect(page).to have_content("L'Associació")
           expect(page).to have_content("Notícies")
           expect(page).to have_content("Decidim Fest")
+          expect(page).to have_content("Trobades de la Comunitat")
           expect(page).to have_content("Xat")
         end
       end
@@ -113,6 +117,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
           expect(page).to have_content("The Association")
           expect(page).to have_content("News")
           expect(page).to have_content("Decidim Fest")
+          expect(page).to have_content("Community Meetings")
           expect(page).to have_content("Chat")
         end
       end
