@@ -29,6 +29,13 @@ Decidim.menu :metadecidim_home_content_block_menu do |menu|
     position: 50,
     active: :inclusive
 
+  community_meetings_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("eix-comunitat")
+  menu.add_item :community_meetings,
+    I18n.t("menu.community_meetings", scope: "decidim"),
+    community_meetings_path,
+    position: 52,
+    active: :inclusive
+
   conferences_path = Decidim::Conferences::Engine.routes.url_helpers.conferences_path
   menu.add_item :decidim_fest,
     I18n.t("menu.decidim_fest", scope: "decidim"),
@@ -77,6 +84,13 @@ Decidim.menu :metadecidim_menu do |menu|
     I18n.t("menu.news", scope: "decidim"),
     news_path,
     position: 50,
+    active: :inclusive
+
+  community_meetings_path = Decidim::Assemblies::Engine.routes.url_helpers.assembly_path("eix-comunitat")
+  menu.add_item :community_meetings,
+    I18n.t("menu.community_meetings", scope: "decidim"),
+    community_meetings_path,
+    position: 52,
     active: :inclusive
 
   conferences_path = Decidim::Conferences::Engine.routes.url_helpers.conferences_path
