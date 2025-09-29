@@ -65,7 +65,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     it "the breadcrumb menu has the Metadecidim elements" do
       visit decidim.pages_path
 
-      find("a.menu-bar__breadcrumb-desktop__dropdown-trigger").sibling("button[data-component='dropdown']").hover
+      find("a.menu-bar__breadcrumb-desktop__dropdown-trigger").sibling("button[data-controller='dropdown']").hover
 
       within "#breadcrumb-main-dropdown-desktop" do
         expect(page).to have_content("Home")
