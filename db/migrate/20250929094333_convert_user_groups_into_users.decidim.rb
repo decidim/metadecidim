@@ -22,6 +22,7 @@ class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
   # rubocop:disable Rails/SkipsModelValidations
   def up
     User.old_group.find_each do |group|
+      pp group.id
       group.update_attribute(:extended_data, (group.extended_data || {}).merge("group" => true))
       group.update_attribute(:type, "Decidim::User")
       group.update_attribute(:officialized_at, group.verified_at) if group.verified_at.present?
