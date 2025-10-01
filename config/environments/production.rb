@@ -114,5 +114,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Store files on Amazon S3.
-  config.active_storage.service = :amazon
+  config.active_storage.service = Decidim::Env.new('STORAGE_PROVIDER', 'local').to_s
 end
