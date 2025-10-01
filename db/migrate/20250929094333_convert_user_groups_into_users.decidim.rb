@@ -21,8 +21,10 @@ class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
 
   # rubocop:disable Rails/SkipsModelValidations
   def up
-    User.old_group.find_each do |group|
-      pp group.id
+    delete_reason = "User Group deleted because it did not have an email address"
+    User.old_group.where(email: "", deleted_at: nil).update_all(deleted_at: Time.now, delete_reason:)
+
+    User.old_group.where(deleted_at: nil).find_each do |group|
       group.update_attribute(:extended_data, (group.extended_data || {}).merge("group" => true))
       group.update_attribute(:type, "Decidim::User")
       group.update_attribute(:officialized_at, group.verified_at) if group.verified_at.present?
