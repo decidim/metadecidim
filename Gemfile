@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "fix/user-groups" }
 # DECIDIM_VERSION = "0.31.0.rc1"
 
 gem "decidim", DECIDIM_VERSION

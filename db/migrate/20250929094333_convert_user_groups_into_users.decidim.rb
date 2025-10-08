@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20250217192438)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-10-08 12:51:11 UTC
 class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
   class User < ApplicationRecord
     self.table_name = "decidim_users"
     self.inheritance_column = nil
 
-    scope :new_group, -> { where("extended_data @> ?", Arel.sql({ group: true }.to_json)) }
+    scope :new_group, -> { where("extended_data @> ?", { group: true }.to_json) }
     scope :old_group, -> { where(type: "Decidim::UserGroup") }
 
     def verified_at
@@ -21,10 +22,7 @@ class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
 
   # rubocop:disable Rails/SkipsModelValidations
   def up
-    delete_reason = "User Group deleted because it did not have an email address"
-    User.old_group.where(email: "", deleted_at: nil).update_all(deleted_at: Time.now, delete_reason:)
-
-    User.old_group.where(deleted_at: nil).find_each do |group|
+    User.old_group.find_each do |group|
       group.update_attribute(:extended_data, (group.extended_data || {}).merge("group" => true))
       group.update_attribute(:type, "Decidim::User")
       group.update_attribute(:officialized_at, group.verified_at) if group.verified_at.present?
