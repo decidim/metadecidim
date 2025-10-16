@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 28ff4f80d131e71f460ebbf02fec1827c66f3a63
-  ref: 28ff4f80d1
+  revision: 0a8f1218f6944bee423344609aceadf511bff9ab
+  ref: 0a8f1218f6
   branch: fix/user-groups
   specs:
     decidim (0.31.0.rc1)

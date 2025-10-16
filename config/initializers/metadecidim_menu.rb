@@ -129,7 +129,7 @@ Rails.application.config.to_prepare do
       @breadcrumb_root_menu ||= ::Decidim::BreadcrumbRootMenuPresenter.new(
         menu_name,
         self,
-        container_options: { class: "menu-bar__main-dropdown__menu" }
+        container_options: { class: "menu-bar__dropdown-menu" }
       )
     end
 
@@ -152,7 +152,7 @@ Rails.application.config.to_prepare do
       @mobile_breadcrumb_root_menu ||= ::Decidim::BreadcrumbRootMenuPresenter.new(
         menu_name,
         self,
-        container_options: { class: "menu-bar__main-dropdown__menu" }
+        container_options: { class: "menu-bar__dropdown-menu" }
       )
     end
   end
