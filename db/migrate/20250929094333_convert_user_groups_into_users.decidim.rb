@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20250217192438)
-# This file has been modified by `decidim upgrade:migrations` task on 2025-10-08 12:51:11 UTC
+# This file has been modified by `decidim upgrade:migrations` task on 2025-10-28 13:57:33 UTC
 class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
   class User < ApplicationRecord
+    belongs_to :organization, foreign_key: "decidim_organization_id", class_name: "Decidim::Organization"
+
     self.table_name = "decidim_users"
     self.inheritance_column = nil
-
-    belongs_to :organization, foreign_key: "decidim_organization_id", class_name: "Decidim::Organization"
 
     scope :new_group, -> { where("extended_data @> ?", { group: true }.to_json) }
     scope :old_group, -> { where(type: "Decidim::UserGroup") }
@@ -18,7 +18,6 @@ class ConvertUserGroupsIntoUsers < ActiveRecord::Migration[7.0]
   end
 
   class UserGroup < ApplicationRecord
-
     belongs_to :organization, foreign_key: "decidim_organization_id", class_name: "Decidim::Organization"
 
     self.table_name = "decidim_users"
