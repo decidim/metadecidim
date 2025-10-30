@@ -4,10 +4,11 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-# DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.29-stable" }
-DECIDIM_VERSION = "0.30.0"
+#DECIDIM_VERSION = { github: "decidim/decidim", branch: "fix/user-groups", ref: "0a8f1218f6" }
+DECIDIM_VERSION = "0.31.0.rc2"
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-core", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 

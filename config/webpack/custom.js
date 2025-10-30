@@ -44,7 +44,7 @@ module.exports = {
           filename: "media/documents/[hash][ext][query]"
         }
       },
-      // Overwrite webpacker files rule to amend the filename output
+      // Overwrite shakapacker files rule to amend the filename output
       // and include the name of the file, otherwise some SVGs
       // are not generated because the hash is the same between them
       {
@@ -79,8 +79,12 @@ module.exports = {
     }
   },
   optimization: {
-    minimize: false,
-    minimizer: []
+    minimizer: [
+      new EsbuildPlugin({
+        target: "es2015",
+        css: true
+      })
+    ]
   },
   entry: config.entrypoints,
   plugins: [
