@@ -1,16 +1,11 @@
 # frozen_string_literal: true
 
-
 every 1.day, at: "1:30 am", roles: [:worker] do
   rake "decidim:participants:delete_inactive_participants"
 end
 
 every 1.day, at: "2:00 am", roles: [:worker] do
   rake "decidim:open_data:export"
-end
-
-every 1.day, at: "4:00 am", roles: [:worker] do
-  rake "decidim:metrics:all"
 end
 
 every 1.day, at: "5:00 am", roles: [:worker] do
