@@ -37,6 +37,7 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano/rails/console"
 require "capistrano/sidekiq"
+require "whenever/capistrano"
 install_plugin Capistrano::Sidekiq # Default sidekiq tasks
 install_plugin Capistrano::Sidekiq::Systemd # Systemd integration
 install_plugin Capistrano::Puma
