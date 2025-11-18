@@ -7,6 +7,14 @@ end
 every 1.day, at: "2:00 am", roles: [:worker] do
   rake "decidim:open_data:export"
 end
+every 15.minutes do
+  rake "decidim_participatory_processes:change_active_step"
+end
+
+# Delete old registrations forms
+every 1.day, at: "3:00 am" do
+  rake "decidim_meetings:clean_registration_forms"
+end
 
 every 1.day, at: "5:00 am", roles: [:worker] do
   rake "decidim:delete_download_your_data_files"
