@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 every 1.day, at: "1:30 am", roles: [:worker] do
   rake "decidim:participants:delete_inactive_participants"
 end
@@ -8,9 +7,13 @@ end
 every 1.day, at: "2:00 am", roles: [:worker] do
   rake "decidim:open_data:export"
 end
+every 15.minutes do
+  rake "decidim_participatory_processes:change_active_step"
+end
 
-every 1.day, at: "4:00 am", roles: [:worker] do
-  rake "decidim:metrics:all"
+# Delete old registrations forms
+every 1.day, at: "3:00 am" do
+  rake "decidim_meetings:clean_registration_forms"
 end
 
 every 1.day, at: "5:00 am", roles: [:worker] do
