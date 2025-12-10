@@ -41,6 +41,7 @@ server ENV["PRODUCTION_SERVER"], user: ENV["PRODUCTION_USER"], roles: %w{app db 
 # --------------
 
 set :rails_env, 'production'
+set :appsignal_env, :production
 
 set :ssh_options, {
   verify_host_key: :never

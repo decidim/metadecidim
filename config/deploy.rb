@@ -65,3 +65,6 @@ namespace :deploy do
 
   before 'deploy:assets:precompile', 'deploy:decidim_webpacker_install'
 end
+
+set :appsignal_config, name: "Metadecidim"
+set :appsignal_revision, `git rev-parse --short #{fetch(:branch)}`.strip
