@@ -41,7 +41,6 @@ server ENV["STAGING_SERVER"], user: ENV["STAGING_USER"], roles: %w{app db web wo
 # --------------
 
 set :rails_env, 'production'
-set :appsignal_env, :staging
 
 set :ssh_options, {
   verify_host_key: :never
