@@ -58,7 +58,6 @@ group :production do
   gem 'lograge'
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
-  gem 'scout_apm'
   gem 'rexml'
   gem "whenever", require: false
 end
