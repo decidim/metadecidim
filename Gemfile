@@ -48,6 +48,7 @@ group :development do
 end
 
 group :production do
+  gem "appsignal"
   gem "aws-sdk-s3", require: false
   gem 'fog-aws'
   # security fix for excon gem, which is a fog-aws dependency
@@ -55,10 +56,8 @@ group :production do
   gem 'dalli'
   gem 'sendgrid-ruby'
   gem 'lograge'
-  gem 'sentry-raven'
   gem 'sidekiq'
   gem 'rails_autoscale_agent'
-  gem 'scout_apm'
   gem 'rexml'
   gem "whenever", require: false
 end
