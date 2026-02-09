@@ -245,6 +245,8 @@ GEM
     decidim-budgets (0.31.1)
       decidim-comments (= 0.31.1)
       decidim-core (= 0.31.1)
+    decidim-collaborative_texts (0.31.1)
+      decidim-core (= 0.31.1)
     decidim-comments (0.31.1)
       decidim-core (= 0.31.1)
       redcarpet (~> 3.5, >= 3.5.1)
@@ -1080,6 +1082,7 @@ DEPENDENCIES
   capistrano3-puma (~> 6.0)
   dalli
   decidim (= 0.31.1)
+  decidim-collaborative_texts (= 0.31.1)
   decidim-conferences (= 0.31.1)
   decidim-core (= 0.31.1)
   decidim-dev (= 0.31.1)
