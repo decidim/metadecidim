@@ -19,8 +19,8 @@ gem "omniauth-decidim", "0.2.1"
 gem "faker"
 gem "puma", ">= 4.3"
 gem "geocoder", "~> 1.8.0"
-
 gem "redis", "~> 4.7.0"
+gem "i18n-tasks", "~> 0.9.37"
 
 # Report GC usage data to StatsD with 'barnes' gem so that Heroku can monitor
 gem "barnes"
