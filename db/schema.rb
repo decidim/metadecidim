@@ -44,6 +44,9 @@ ActiveRecord::Schema[7.2].define(version: 2026_02_09_155314) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
+  end
+
   create_table "decidim_accountability_milestones", id: :serial, force: :cascade do |t|
     t.date "entry_date"
     t.jsonb "description"
