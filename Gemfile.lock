@@ -140,6 +140,8 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (2.2.0)
       capistrano (~> 3.1)
+    capistrano-nvm (0.0.7)
+      capistrano (~> 3.1)
     capistrano-passenger (0.2.1)
       capistrano (~> 3.0)
     capistrano-rails (1.7.0)
@@ -1107,6 +1109,7 @@ DEPENDENCIES
   byebug
   capistrano
   capistrano-bundler
+  capistrano-nvm
   capistrano-passenger
   capistrano-rails
   capistrano-rails-console
@@ -1179,6 +1182,7 @@ CHECKSUMS
   byebug (13.0.0) sha256=d2263efe751941ca520fa29744b71972d39cbc41839496706f5d9b22e92ae05d
   capistrano (3.20.1) sha256=b0d54ba5cf49bb194998bf6b427e889aa36ed05f545ecf7cc37acb9d529e9ae9
   capistrano-bundler (2.2.0) sha256=47b4cf2ea17ea132bb0a5cabc5663443f5190a54f4da5b322d04e1558ff1468c
+  capistrano-nvm (0.0.7) sha256=08840032d33705052a7d101781302c2938b56f28ea4d640ab3cba34f1ee8210f
   capistrano-passenger (0.2.1) sha256=07a1d25edd5c1d909c19d4fe45fe2ea5f11200569f6967f6bff1d605ade98e13
   capistrano-rails (1.7.0) sha256=aca57455e8c5435785e0f938e16aa5b79c263694a755e1dca1c5d1743b40aae7
   capistrano-rails-console (2.3.0) sha256=32fc936a8f142837d1da8a9067d224356db7c9beb1baa63a64be6527421332bc

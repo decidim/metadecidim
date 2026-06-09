@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.19.2"
+lock "~> 3.20.1"
 
 SSHKit.config.command_map[:sidekiq] = 'bundle exec sidekiq'
 SSHKit.config.command_map[:sidekiqctl] = 'bundle exec sidekiqctl'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.4.7'
+
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, "v22.14.0"
+set :nvm_map_bins, %w(node npm rake)
 
 set :application, "metadecidim"
 set :repo_url, "https://github.com/decidim/metadecidim.git"
@@ -57,8 +61,7 @@ namespace :deploy do
   task :decidim_webpacker_install do
     on roles(:all) do
       within release_path do
-        execute :'. ~/.nvm/nvm.sh'
-        execute 'npm', 'ci'
+        execute :npm, 'ci'
       end
     end
   end
