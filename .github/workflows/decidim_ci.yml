@@ -32,7 +32,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Install required libraries
-        run: sudo apt-get update && sudo apt-get install -y -y libicu-dev imagemagick libvips libvips-tools
+        run: sudo apt-get update && sudo apt-get install -y libicu-dev imagemagick libvips libvips-tools
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
