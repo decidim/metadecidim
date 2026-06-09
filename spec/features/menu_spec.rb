@@ -7,14 +7,6 @@ describe "Views the menu", type: :system, perform_enqueued: true do
   let(:user) { create :user, :confirmed }
 
   before do
-    Decidim::ContentBlock.create!(
-      organization:,
-      scope_name: :homepage,
-      scoped_resource_id: nil,
-      manifest_name: :global_menu,
-      published_at: Time.zone.now
-    )
-
     switch_to_host(organization.host)
   end
 
@@ -36,7 +28,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     it "the main menu has the Metadecidim elements" do
       visit decidim.root_path
 
-      within "#home__menu" do
+      find("#main-dropdown-summary-desktop").click
+
+      within "#breadcrumb-main-dropdown-desktop" do
         expect(page).to have_content("Start here")
         expect(page).to have_content("Participate")
         expect(page).to have_content("The Association")
@@ -65,7 +59,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
     it "the breadcrumb menu has the Metadecidim elements" do
       visit decidim.pages_path
 
-      find("a.menu-bar__breadcrumb-desktop__dropdown-trigger").sibling("button[data-controller='dropdown']").hover
+      find("#main-dropdown-summary-desktop").click
 
       within "#breadcrumb-main-dropdown-desktop" do
         expect(page).to have_content("Home")
@@ -89,7 +83,9 @@ describe "Views the menu", type: :system, perform_enqueued: true do
       end
 
       specify "the menu is translated" do
-        within "#home__menu" do
+        find("#main-dropdown-summary-desktop").click
+
+        within "#breadcrumb-main-dropdown-desktop" do
           expect(page).to have_content("Comença aquí")
           expect(page).to have_content("Participa")
           expect(page).to have_content("L'Associació")
@@ -108,7 +104,7 @@ describe "Views the menu", type: :system, perform_enqueued: true do
       end
 
       specify "the menu is customized" do
-        click_on "Main menu"
+        find("#main-dropdown-summary-mobile").click
 
         within "#breadcrumb-main-dropdown-mobile" do
           expect(page).to have_content("Home")

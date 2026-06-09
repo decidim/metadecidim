@@ -13,7 +13,7 @@ describe 'Authentication', type: :system do
   describe 'Sign Up' do
     context 'when using email and password' do
       it 'ask confirmations on new Users' do
-        find('a[href="/users/sign_up"').click
+        visit decidim.new_user_registration_path
 
         within '.new_user' do
           fill_in :registration_user_email, with: 'user@example.org'
