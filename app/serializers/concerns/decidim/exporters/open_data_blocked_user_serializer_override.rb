@@ -25,7 +25,9 @@ module Decidim
         private
 
         def blocking
-          @blocking ||= resource.blocking || Decidim::UserBlock.where(decidim_user_id: resource.decidim_user_id).order(:id).last
+          return @blocking if defined?(@blocking)
+
+          @blocking = resource.blocking || Decidim::UserBlock.where(decidim_user_id: resource.decidim_user_id).order(:id).last
         end
       end
     end
