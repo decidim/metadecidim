@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_02_091166) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_24_080045) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_catalog.plpgsql"
@@ -112,8 +112,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_091166) do
     t.bigint "resource_id", null: false
     t.string "resource_type", null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.bigint "user_id", null: false
-    t.string "user_type", default: "Decidim::User", null: false
+    t.bigint "user_id"
+    t.string "user_type", default: "Decidim::User"
     t.integer "version_id"
     t.string "visibility", default: "admin-only"
     t.index ["created_at"], name: "index_decidim_action_logs_on_created_at"
@@ -305,7 +305,9 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_091166) do
   create_table "decidim_authorizations", id: :serial, force: :cascade do |t|
     t.datetime "created_at", precision: nil, null: false
     t.integer "decidim_user_id", null: false
+    t.integer "failed_attempts", default: 0, null: false
     t.datetime "granted_at", precision: nil
+    t.datetime "locked_at"
     t.jsonb "metadata"
     t.string "name", null: false
     t.string "unique_id"
@@ -550,6 +552,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_091166) do
     t.string "role"
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_conference_id", "decidim_user_id", "role"], name: "index_unique_user_and_conference_role", unique: true
+    t.index ["decidim_user_id"], name: "index_decidim_conference_user_role_on_decidim_user_id"
   end
 
   create_table "decidim_conferences", force: :cascade do |t|
